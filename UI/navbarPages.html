@@ -1,6 +1,13 @@
 <ul class="nav navbar-nav">
     <!-------------------------------------------------------------ЛИЧНЫЙ КАБИНЕТ--------------------------------------------------------------------->
-    <li id="usersLi" ng-class="{'my-active':selectedTab == 'users'}" ng-click="setSelectedTabInTab('users')" ng-mouseenter="selectedTab = 'users'"><a href="#/users">Личный кабинет</a></li>
+    <li id="applyLi" ng-class="{'my-active':selectedTab == 'apply'}" ng-click="setSelectedTabInTab('apply')" ng-mouseenter="selectedTab = 'apply'"><a href="#/apply">Личный кабинет</a></li>
     <!--===========================================================ЛИЧНЫЙ КАБИНЕТ===================================================================-->
-    <li id="loginPageLi" ng-class="{'my-active':selectedTab == 'loginPage'}" ng-click="setSelectedTabInTab('loginPage')" ng-mouseenter="selectedTab = 'loginPage'"><a href="#/loginPage">Войти в кабинет</a></li>
+    <li id="PageLi" ng-class="{'my-active':selectedTab == 'loginPage'}" ng-click="setSelectedTabInTab('loginPage')" ng-mouseenter="selectedTab = 'loginPage'"><a href="#/loginPage"Подать заявление</a></li>
+
+    <li id="directionPageLi" ng-class="{'my-active':selectedTab == 'direction'}" ng-click="setSelectedTabInTab('direction')" ng-mouseenter="selectedTab = 'direction'"><a href="#/direction">Направления</a></li>
+
+    <li id="prkomPageLi" ng-class="{'my-active':selectedTab == 'priemnaya-komissiya'}" ng-click="setSelectedTabInTab('priemnaya-komissiya')" ng-mouseenter="selectedTab = 'priemnaya-komissiya'"><a href="#/priemnaya-komissiya">Применая комиссия</a></li>
+
+    <li id="supportPageLi" ng-class="{'my-active':selectedTab == 'support'}" ng-click="setSelectedTabInTab('support')" ng-mouseenter="selectedTab = 'support'"><a href="#/support">Поддержка</a></li>
+
 </ul>
