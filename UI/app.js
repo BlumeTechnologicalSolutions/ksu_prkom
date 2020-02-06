@@ -27,13 +27,13 @@ function loadXML(url) {
     };
 };
 
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.user' , 'myApp.loginPage']);
 
-myApp.config(function() {
+myApp.config(function($routeProvider) {
 
     var Auth={
         authorize: function(userService) {
-            return userService.getNewUser();
+           // return userService.getNewUser();
         }
     };
 

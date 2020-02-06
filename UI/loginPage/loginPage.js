@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module('myApp.loginPage', ['ngRoute']);
+var loginPage = angular.module('myApp.loginPage', ['ngRoute']);
 
-app.controller('LoginPageController', function($scope, userService, $timeout, $location) {
+loginPage.controller('LoginPageController', function($scope, userService, $timeout) {
 
     $timeout(function() {
         if (localStorage.token || sessionStorage.token) {
