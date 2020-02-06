@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Приемная комиссия</title>
+    <meta name="description" content="Применая комиссия КГУ">
+    <meta name="keywords" content="ksu, abiturient">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="app.css?v1.102">
+    <link rel="stylesheet" href="adaptive.css?v1.20">
+    <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
+    <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
+</head>
+<body ng-cloak>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container">
+        <div class="navbar-header">
+            <button id="TTSNav" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#KsuNav" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo" href="" title="Костромской Государственный Университет">
+                <img data-placeholder="no" src="images/kgynewlogo.png" alt="Костромской Государственный Университет" style="width:184px;height:90px;">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="KsuNav"  ng-controller="UserCtrl" ng-cloak>
+            <div ng-include src="'navbarPages.html'"></div>
+        </div>
+    </div>
+</nav>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div ng-view class="theme-showcase" role="main"></div>
+<div class="container">
+    <div class="footer">
+        <p ng-controller="CopyrightDateCtrl">&copy; Костромско Государственный Университет, {{ dateString }} </p>
+    </div>
+</div>
+
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/jquery/jquery.maskedinput.min.js"></script>
+<script src="bower_components/jquery/1.12.1/jquery-ui.js"></script>
+<script src="bower_components/jquery/jquery.blockUI.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+<script src="bower_components/angular-ui-select/select.js"></script>
+
+<script src="app.js?v1.180"></script>
+<script src="services.js?v1.52"></script>
+
+</body>
+</html>

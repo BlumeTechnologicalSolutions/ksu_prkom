@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d7c8350c-9bb3-43f7-962b-932756caefd1" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/UI$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1579507967216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="356" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginPage/loginPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="243" column="46" selection-start-line="243" selection-start-column="46" selection-end-line="243" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loginPage/loginPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="34" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navbarPages.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adaptive.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="4" column="72109" selection-start-line="4" selection-start-column="72109" selection-end-line="4" selection-end-column="72109" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>newProgrammName</find>
+      <find>programCatalogUpdate()</find>
+      <find>$scope.projectSelect</find>
+      <find>$scope.catalogEdited =</find>
+      <find>catalogEdit</find>
+      <find>catalogEdited</find>
+      <find>default payment methods saved to program with id:</find>
+      <find>uri decode</find>
+      <find>\\\&quot;</find>
+      <find>getFile</find>
+      <find>removeFile(fileInfo, project)</find>
+      <find>removeFileWithListReturn</find>
+      <find>catalogName</find>
+      <find>Шабло</find>
+      <find>Ответственные за заполнение отчетов</find>
+      <find>getComment</find>
+      <find>$scope.getComment = function(comment){</find>
+      <find>getProjectWorkTypesAsposeNew</find>
+      <find>rProjects'+item.clientId].map(function(e){return e.projectId;}).index</find>
+      <find>Добавить</find>
+      <find>if(data.isSuccess){</find>
+      <find>192.168</find>
+      <find>submit</find>
+      <find>getProjectInvoicing</find>
+      <find>Выс</find>
+      <find>TTSNavbar</find>
+      <find>fav</find>
+      <find>favic</find>
+      <find>userService</find>
+      <find>userService'</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>user.</replace>
+      <replace>form-control-sm</replace>
+      <replace>text-muted</replace>
+      <replace>btn-secondary</replace>
+      <replace>list-group-item-action</replace>
+      <replace>table-sm</replace>
+      <replace>form-check-checkbox</replace>
+      <replace>nav-item</replace>
+      <replace>infoService.infoFunction</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\resourcePlanning</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\modalWindows\OrganizationStructureModals</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\modalWindows\ProgrammModal</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\app.js</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\modalWindows\ProgrammModal\programmIncludePages</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\bower_components\angular-ui-select2\src</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\bower_components\angular-ui-select2</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\bower_components</dir>
+      <dir>C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\projects</dir>
+      <dir>C:\Users\dsmirnov\Desktop\miniatureBackup\TimeTrackingSystem\UI\app</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/bower_components/snowstorm-min.js" />
+        <option value="$PROJECT_DIR$/app/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+        <option value="$PROJECT_DIR$/app/bower_components/bootstrap/dist/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/navbarPages.html" />
+        <option value="$PROJECT_DIR$/app/test_page/test_page.html" />
+        <option value="$PROJECT_DIR$/app/test_page/test_page.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ClientModal/clientsIncludePages/clientNetPromoterScore.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ServerRestartModal/serverRestartModal.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ServerRestartModal/serverRestartModal.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/loginPage/loginPage.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ProgrammModal/programmModal.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ClientModal/clientModal.html" />
+        <option value="$PROJECT_DIR$/app/employees/employees.html" />
+        <option value="$PROJECT_DIR$/app/employees/employees.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/PhotoMiniatureModal/photoMiniatureModal.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/PhotoMiniatureModal/photoMiniatureModal.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ClientModal/clientsIncludePages/clientSettings.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ProgrammModal/programmIncludePages/programSettings.html" />
+        <option value="$PROJECT_DIR$/app/projects/projectsNew.html" />
+        <option value="$PROJECT_DIR$/app/projects/projectsNew.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/UserReport/userReport.js" />
+        <option value="$PROJECT_DIR$/app/reports/reports_of_filling/reports_of_filling.js" />
+        <option value="$PROJECT_DIR$/app/users/users.js" />
+        <option value="$PROJECT_DIR$/app/clients/clients.html" />
+        <option value="$PROJECT_DIR$/app/clients/clients.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ProjectModal/projectModal.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ProgrammModal/programmModal.js" />
+        <option value="$PROJECT_DIR$/app/programs/programs.html" />
+        <option value="$PROJECT_DIR$/app/programs/programs.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ClientModal/clientsIncludePages/clientProgramms.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ClientModal/clientModal.js" />
+        <option value="$PROJECT_DIR$/app/services.js" />
+        <option value="$PROJECT_DIR$/app/projects/projectsIncludePages/projectFiles.html" />
+        <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/reports/staffEfficiencyReport/staffEfficiencyReport.js" />
+        <option value="$PROJECT_DIR$/app/modalWindows/ProjectModal/projectModal.js" />
+        <option value="$PROJECT_DIR$/app/projects/projects.html" />
+        <option value="$PROJECT_DIR$/app/projects/projects.js" />
+        <option value="$PROJECT_DIR$/app/client.config.xml" />
+        <option value="$PROJECT_DIR$/app/reports/invoicesReport/invoicingReport.html" />
+        <option value="$PROJECT_DIR$/app/modalWindows/InvoicingPaymentModal/InvoicingPaymentModal.js" />
+        <option value="$PROJECT_DIR$/app/reports/invoicesReport/invoicingReport.js" />
+        <option value="$PROJECT_DIR$/client.config.xml" />
+        <option value="$PROJECT_DIR$/navbarPages.html" />
+        <option value="$PROJECT_DIR$/adaptive.css" />
+        <option value="$PROJECT_DIR$/app.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/loginPage/loginPage.js" />
+        <option value="$PROJECT_DIR$/services.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="width" value="1918" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bookmarks" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lectures" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lectures" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lecturesService" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="avatars" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UI" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="usersIncludePages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="loginPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580980486269" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dsmirnov\Desktop\miniatureBackup\TimeTrackingSystem\UI\app\bower_components" />
+      <recent name="C:\Users\dsmirnov\Desktop\miniatureBackup\TimeTrackingSystem\UI\app\images" />
+      <recent name="C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\bower_components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI" />
+      <recent name="C:\Users\dsmirnov\Desktop\miniatureBackup\TimeTrackingSystem\UI\app\bower_components" />
+      <recent name="C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\modalWindows" />
+      <recent name="C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\bower_components" />
+      <recent name="C:\Users\dsmirnov\Desktop\TimeTrackingSystem\UI\app\projects\projectsIncludePages" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/UI/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/UI/app/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="invoicingReport.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/UI/app/reports/invoicesReport/invoicingReport.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.invoicingReport.html" />
+      <item itemvalue="JavaScript Debug.index.html (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.invoicingReport.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration />
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7c8350c-9bb3-43f7-962b-932756caefd1" name="Default Changelist" comment="" />
+      <created>1557837601947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557837601947</updated>
+      <workItem from="1557837605930" duration="6611000" />
+      <workItem from="1557924230550" duration="9201000" />
+      <workItem from="1558102328742" duration="694000" />
+      <workItem from="1558103056322" duration="2504000" />
+      <workItem from="1558340043956" duration="268000" />
+      <workItem from="1558340652350" duration="35433000" />
+      <workItem from="1558953675616" duration="8085000" />
+      <workItem from="1559130931701" duration="598000" />
+      <workItem from="1559138233066" duration="596000" />
+      <workItem from="1559214887048" duration="300000" />
+      <workItem from="1559218925829" duration="6171000" />
+      <workItem from="1559546710901" duration="27841000" />
+      <workItem from="1559885982822" duration="15026000" />
+      <workItem from="1560148523181" duration="60952000" />
+      <workItem from="1561367496568" duration="6629000" />
+      <workItem from="1561443603256" duration="655000" />
+      <workItem from="1561445571367" duration="9000" />
+      <workItem from="1561446810408" duration="52872000" />
+      <workItem from="1561718915898" duration="184000" />
+      <workItem from="1561719127716" duration="7918000" />
+      <workItem from="1561966122294" duration="186161000" />
+      <workItem from="1562933681599" duration="75096000" />
+      <workItem from="1564378584484" duration="29698000" />
+      <workItem from="1564746352065" duration="80305000" />
+      <workItem from="1565601676724" duration="84093000" />
+      <workItem from="1566389905739" duration="28847000" />
+      <workItem from="1566550236007" duration="17388000" />
+      <workItem from="1566808341996" duration="15760000" />
+      <workItem from="1566900077187" duration="3924000" />
+      <workItem from="1566974025444" duration="77405000" />
+      <workItem from="1569305182174" duration="22888000" />
+      <workItem from="1569592088391" duration="549000" />
+      <workItem from="1569848966825" duration="110000" />
+      <workItem from="1570688954242" duration="630000" />
+      <workItem from="1570689735720" duration="12939000" />
+      <workItem from="1570708833357" duration="34684000" />
+      <workItem from="1571384337725" duration="4652000" />
+      <workItem from="1571742933624" duration="18164000" />
+      <workItem from="1574925794553" duration="64233000" />
+      <workItem from="1575547375424" duration="9845000" />
+      <workItem from="1575634331767" duration="67824000" />
+      <workItem from="1576670519409" duration="53584000" />
+      <workItem from="1577183297032" duration="696000" />
+      <workItem from="1577184462880" duration="217000" />
+      <workItem from="1577184892767" duration="43546000" />
+      <workItem from="1577775328332" duration="47500000" />
+      <workItem from="1578906452906" duration="75000" />
+      <workItem from="1578906543150" duration="49600000" />
+      <workItem from="1579178862348" duration="2660000" />
+      <workItem from="1579504845001" duration="43343000" />
+      <workItem from="1579770415916" duration="37086000" />
+      <workItem from="1580114771018" duration="29514000" />
+      <workItem from="1580364880561" duration="4409000" />
+      <workItem from="1580722862962" duration="6303000" />
+      <workItem from="1580977220655" duration="3259000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1399591000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.49920508" weight="0.32995737" />
+      <window_info id="Structure" order="6" sideWeight="0.5007949" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733475" visible="true" weight="0.4084507" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.2426869" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.26218852" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="1" weight="0.32995737" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsIncludePages/projectSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsNew.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="221" column="129" selection-start-line="221" selection-start-column="112" selection-end-line="221" selection-end-column="129" />
+          <folding>
+            <element signature="e#740#746#0" expanded="true" />
+            <element signature="n#style#0;n#ui-select-choices#0;n#ui-select#0;n#div#0;n#div#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ui-select-choices#0;n#ui-select#0;n#div#0;n#div#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ui-select-choices#0;n#ui-select#0;n#div#0;n#div#0;n#div#2;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#16632#16638#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#2;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#1;n#div#2;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#3;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#9;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#10;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#10;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#label#0;n#div#11;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#11;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#11;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#11;n#div#0;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#p#0;n#div#0;n#div#3;n#div#2;n#form#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#li#3;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/reports/reports_of_filling/reports_of_filling.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="237" column="35" selection-start-line="237" selection-start-column="28" selection-end-line="237" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/UserReport/userReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="475" column="64" selection-start-line="475" selection-start-column="64" selection-end-line="475" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/clients/clients.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="106" lean-forward="true" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsIncludePages/createNewProject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="65" column="48" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsIncludePages/templateFiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ProgrammModal/programmModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1161" column="31" selection-start-line="1161" selection-start-column="31" selection-end-line="1161" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ProgrammModal/programmIncludePages/programSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ClientModal/clientModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ClientModal/clientsIncludePages/clientSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/clients/clients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="266" column="10" selection-start-line="266" selection-start-column="10" selection-end-line="266" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="310" column="33" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="844" column="18" selection-start-line="844" selection-start-column="18" selection-end-line="844" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/programs/programs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ProjectModal/projectModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="143" column="124" selection-start-line="143" selection-start-column="104" selection-end-line="143" selection-end-column="124" />
+          <folding>
+            <element signature="e#15529#15535#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#2;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#3;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ClientModal/clientsIncludePages/clientProgramms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10250" column="10" selection-start-line="10250" selection-start-column="10" selection-end-line="10250" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ClientModal/clientModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/reports/staffEfficiencyReport/staffEfficiencyReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://localhost:63342/UI/app/modalWindows/ProjectModal/projectModal.js?v1.43">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/users/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="3349" column="8" selection-start-line="3349" selection-start-column="8" selection-end-line="3349" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://localhost:63342/UI/app/projects/projects.js?v1.98">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/client.config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="4746" column="45" selection-start-line="4746" selection-start-column="45" selection-end-line="4746" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/ProjectModal/projectModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44795">
+          <caret line="2635" column="69" selection-start-line="2635" selection-start-column="69" selection-end-line="2635" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsIncludePages/projectJournal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="117" column="141" selection-start-line="117" selection-start-column="141" selection-end-line="117" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32045">
+          <caret line="1885" column="42" selection-start-line="1885" selection-start-column="42" selection-end-line="1885" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/reports/invoicesReport/invoicingReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5253">
+          <caret line="309" column="29" selection-start-line="309" selection-start-column="29" selection-end-line="309" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modalWindows/InvoicingPaymentModal/InvoicingPaymentModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="64" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/reports/invoicesReport/invoicingReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="138" column="44" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13872">
+          <caret line="816" column="120" selection-start-line="816" selection-start-column="120" selection-end-line="816" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/projects/projectsIncludePages/projectFiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/navbarPages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="81" column="10" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="81" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1284" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robots.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TimeTrackingSystem/UI/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="4" column="72109" selection-start-line="4" selection-start-column="72109" selection-end-line="4" selection-end-column="72109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbarPages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adaptive.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TimeTrackingSystem/UI/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="1936" column="3" lean-forward="true" selection-start-line="1625" selection-end-line="1936" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TimeTrackingSystem/UI/app/users/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="568" column="27" selection-start-line="568" selection-start-column="16" selection-end-line="568" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="243" column="46" selection-start-line="243" selection-start-column="46" selection-end-line="243" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginPage/loginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginPage/loginPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
