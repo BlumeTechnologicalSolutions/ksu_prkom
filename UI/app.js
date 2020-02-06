@@ -38,15 +38,35 @@ myApp.config(function($routeProvider) {
     };
 
    $routeProvider
-       .otherwise({redirectTo: '/loginPage'})
+       .otherwise({redirectTo: '/priemnaya-komissiya'})
        .when('/loginPage', {
            templateUrl: 'loginPage/loginPage.html',
            controller: 'LoginPageController'
        })
-       .when('/users', {
-           templateUrl: 'users/users.html',
+       .when('/lk', {
+           templateUrl: 'users/lk.html',
            controller: 'AbiturientCtrl'
        })
+        .when('/apply', {
+            templateUrl: 'apply/applyDocuments.html',
+            controller: 'ApplyDocumentCtrl'
+        })
+        .when('/lk', {
+            templateUrl: 'users/lk.html',
+            controller: 'AbiturientCtrl'
+        })
+        .when('/direction', {
+            templateUrl: 'direction/direction.html',
+            controller: 'DirectionCtrl'
+        })
+        .when('/priemnaya-komissiya', {
+            templateUrl: 'prkom/prkom.html',
+            controller: 'PriemCtrl'
+        })
+        .when('/support', {
+            templateUrl: 'support/support.html',
+            controller: 'SupportCtrl'
+        })
 });
 
 myApp.controller('CopyrightDateCtrl',function ($scope, dateFilter) {

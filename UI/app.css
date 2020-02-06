@@ -3,11 +3,26 @@ body {
     padding-top: 90px;
 }
 
+.navbar-nav{
+    background:  #0000006e;
+}
+
+nav {
+    background: #1e4a91 !important;
+}
+.nav{
+    margin-left: 25px;
+}
+
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
     color: #fff;
     background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color:white; !important;
 }
 
 .navbar-collapse {
@@ -24,10 +39,6 @@ body {
 
 .navbar-nav-new-year {
     margin: 0 0 0 150px;
-}
-
-.navbar {
-    min-height: 70px;
 }
 
 
