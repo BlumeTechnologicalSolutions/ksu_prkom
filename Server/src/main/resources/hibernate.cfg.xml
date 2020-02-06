@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+
+
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:31889;databaseName=prkom</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">7417</property>
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.charSet">UTF-8</property>
+        <property name="hibernate.connection.shutdown">false</property>
+        <property name="connection.autoReconnectForPools">true</property>
+        <property name="connection.is-connection-validation-required">true</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="connection.pool_size">1000</property>
+        <property name="hibernate.c3p0.max_size">1000</property>
+        <property name="testConnectionOnCheckin">false</property>
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <mapping resource="User.hbm.xml"></mapping>
+        <mapping resource="OtherUniversityReceipt.hbm.xml"></mapping>
+        <mapping resource="LichnoeDelo.hbm.xml"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
