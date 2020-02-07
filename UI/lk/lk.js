@@ -19,7 +19,7 @@ loginPage.controller('AbiturientCtrl', function($scope, userService) {
 
     $scope.authorization = function () {
         var loginUser = $scope.loginUser;
-        if(!loginUser || !loginUser.login || !loginUser.password){
+        if(!loginUser || !loginUser.login || !loginUser.password) {
             if(!loginUser || !loginUser.login) { $("#inputLogin").focus();$("#inputLogin").css({"border": "1px solid red"});}
             if(!loginUser || !loginUser.password) {
                 $("#inputPassword").css({"border": "1px solid red"});

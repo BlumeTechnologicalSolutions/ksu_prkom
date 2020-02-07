@@ -291,6 +291,16 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         return deferred.promise;
     };
 
+    service.remember = function() {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject(null);
+        });
+        return deferred.promise;
+    };
+
     service.LogOut = function() {
         service.User = undefined;
         //to do

@@ -22,23 +22,24 @@ function loadXML(url) {
     };
 };
 
-var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply',
-                                                     'myApp.direction', 'myApp.prkom', 'myApp.support', 'myApp.registration']);
+var myApp = angular.module('myApp',
+    ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply', 'myApp.direction',
+        'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember']);
 
 myApp.config(function($routeProvider) {
 
     var Auth={
         authorize: function(userService) {
-           // return userService.getNewUser();
+            // return userService.getNewUser();
         }
     };
 
-   $routeProvider
-       .otherwise({redirectTo: '/lk'})
-       .when('/lk', {
-           templateUrl: 'lk/lk.html',
-           controller: 'AbiturientCtrl'
-       })
+    $routeProvider
+        .otherwise({redirectTo: '/lk'})
+        .when('/lk', {
+            templateUrl: 'lk/lk.html',
+            controller: 'AbiturientCtrl'
+        })
         .when('/apply', {
             templateUrl: 'apply/applyDocuments.html',
             controller: 'ApplyDocumentCtrl'
@@ -56,9 +57,12 @@ myApp.config(function($routeProvider) {
             controller: 'SupportCtrl'
         })
         .when('/registration', {
-           templateUrl: 'registration/registration.html',
-           controller: 'RegistrationCtrl'
-       })
+            templateUrl: 'registration/registration.html',
+            controller: 'RegistrationCtrl'
+        }).when('/remember', {
+            templateUrl: 'remember/remember.html',
+            controller: 'RememberCtrl'
+        })
 
 });
 
