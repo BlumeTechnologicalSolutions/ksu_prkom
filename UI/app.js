@@ -7,12 +7,7 @@ function parseXML() {
 };
 function loadXML(url) {
     var oXML;
-    if (window.XMLHttpRequest) {
-        oXML = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {
-        oXML=new ActiveXObject("Microsoft.XMLHTTP");
-    };
-
+    if (window.XMLHttpRequest) { oXML = new XMLHttpRequest(); } else if (window.ActiveXObject) {oXML=new ActiveXObject("Microsoft.XMLHTTP");};
     if (oXML) {
         oXML.onreadystatechange = function() {
             if (oXML.readyState == 4) {
@@ -27,7 +22,8 @@ function loadXML(url) {
     };
 };
 
-var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.user' , 'myApp.loginPage']);
+var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.loginPage', 'myApp.lk', 'myApp.apply',
+                                                     'myApp.direction', 'myApp.prkom', 'myApp.support', 'myApp.registration']);
 
 myApp.config(function($routeProvider) {
 
@@ -38,22 +34,14 @@ myApp.config(function($routeProvider) {
     };
 
    $routeProvider
-       .otherwise({redirectTo: '/priemnaya-komissiya'})
-       .when('/loginPage', {
-           templateUrl: 'loginPage/loginPage.html',
-           controller: 'LoginPageController'
-       })
+       .otherwise({redirectTo: '/lk'})
        .when('/lk', {
-           templateUrl: 'users/lk.html',
+           templateUrl: 'lk/lk.html',
            controller: 'AbiturientCtrl'
        })
         .when('/apply', {
             templateUrl: 'apply/applyDocuments.html',
             controller: 'ApplyDocumentCtrl'
-        })
-        .when('/lk', {
-            templateUrl: 'users/lk.html',
-            controller: 'AbiturientCtrl'
         })
         .when('/direction', {
             templateUrl: 'direction/direction.html',
@@ -67,6 +55,7 @@ myApp.config(function($routeProvider) {
             templateUrl: 'support/support.html',
             controller: 'SupportCtrl'
         })
+
 });
 
 myApp.controller('CopyrightDateCtrl',function ($scope, dateFilter) {

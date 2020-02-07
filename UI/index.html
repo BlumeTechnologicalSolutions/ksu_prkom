@@ -13,8 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
-    <link rel="stylesheet" href="app.css?v1.00">
-    <link rel="stylesheet" href="adaptive.css?v1.00">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="adaptive.css">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
 </head>
@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="logo" href="" title="Костромской Государственный Университет">
-                <img data-placeholder="no" src="images/kgynewlogo.png" alt="Костромской Государственный Университет" style="width:184px;height:90px;">
+                <img class="marginTop7" data-placeholder="no" src="images/kgynewlogo.png" alt="Костромской Государственный Университет"  >
             </a>
         </div>
         <div class="collapse navbar-collapse" id="KsuNav"  ng-controller="UserCtrl" ng-cloak>
@@ -42,7 +42,7 @@
 <div ng-view class="theme-showcase" role="main"></div>
 <div class="container">
     <div class="footer">
-        <p ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>
+        <!--<p class="main-text" ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>-->
     </div>
 </div>
 
@@ -58,10 +58,15 @@
 <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
 <script src="bower_components/angular-ui-select/select.js"></script>
 
-<script src="app.js?v1.00"></script>
-<script src="services.js?v1.00"></script>
-<script src="users/users.js?v1.00"></script>
+<script src="app.js"></script>
+<script src="services.js"></script>
+<script src="lk/lk.js"></script>
+<script src="apply/applyDocuments.js"></script>
+<script src="direction/direction.js"></script>
+<script src="prkom/prkom.js"></script>
+<script src="support/support.js"></script>
 <script src="loginPage/loginPage.js"></script>
+<script src="registration/registration.js"></script>
 
 </body>
 </html>

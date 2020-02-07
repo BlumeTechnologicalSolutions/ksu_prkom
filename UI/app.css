@@ -1,17 +1,74 @@
 
 body {
     padding-top: 90px;
+    font-family: "Montserrat Regular" !important;
 }
 
-.navbar-nav{
-    background:  #0000006e;
+@font-face {
+    font-family: Montserrat Regular; /* шрифт  */
+    src: url('font/Montserrat Regular.ttf');
 }
 
-nav {
+.navbar-nav{ /*Цвет кнопок nav бара*/
+    background:  #1e4a91;
+}
+
+.nav > li{
+    padding: 0 30px;
+}
+
+nav {/*Цвет шапки*/
     background: #1e4a91 !important;
 }
-.nav{
+.nav { /*отсутп преед логотипом*/
     margin-left: 25px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: white;
+    height: 15px;
+    width: 15px;
+    border: 1px solid gray;
+}
+
+input[type="checkbox"]:checked {
+    background: white;
+}
+
+input[type="checkbox"]:hover {
+    filter: brightness(90%);
+}
+
+input[type="checkbox"]:disabled {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+input[type="checkbox"]:after {
+    content: '';
+    position: relative;
+    left: 33%;
+    top: 5%;
+    width: 35%;
+    height: 70%;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+input[type="checkbox"]:disabled:after {
+    border-color: #7b7b7b;
 }
 
 .navbar-inverse .navbar-nav > .open > a,

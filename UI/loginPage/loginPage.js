@@ -4,24 +4,14 @@ var loginPage = angular.module('myApp.loginPage', ['ngRoute']);
 
 loginPage.controller('LoginPageController', function($scope, userService, $timeout) {
 
-    $timeout(function() {
-        if (localStorage.token || sessionStorage.token) {
-            getUserByToken();
-        };
-    }, 200);
-
-    function getUserByToken() {
-        userService.GetUserByToken().then(function (data) {
-            if (userService.User) {
-                console.log("ok")
-            };
-        });
-    };
+    $scope.loginUser = {};
 
     $scope.authorization = function () {
         var loginUser = $scope.loginUser;
         if(!loginUser || !loginUser.login || !loginUser.password){
-            if(!loginUser || !loginUser.login) { $("#inputLogin").focus();$("#inputLogin").css({"border": "1px solid red"});}
+            if(!loginUser || !loginUser.login) {
+                $("#inputLogin").focus();$("#inputLogin").css({"border": "1px solid red"});
+            }
             if(!loginUser || !loginUser.password) {
                 $("#inputPassword").css({"border": "1px solid red"});
                 if(loginUser && loginUser.login) {
@@ -33,20 +23,24 @@ loginPage.controller('LoginPageController', function($scope, userService, $timeo
                 $("#inputPassword").css({"border": ""});
             },2000);
         } else {
-            userService.Authorize(loginUser, $scope.rememberMe).then(function(user) {
-                if (user != null) {
-                   console.log("ok")
+            userService.Authorize(loginUser).then(function(user) {
+                if (!user) {
+                    console.log("ok")
                 } else {
-                    $scope.alert = {
-                        msg: "Имя пользователя или пароль не верны. Используйте для авторизации ваши имя и пароль, используемые для входа в операционную систему."
-                    };
-
+                    alert("Email или пароль не врены. Пожалуйста, проверьте данные и повторите попытку");
                 };
             }).catch(function (response) {
-                $scope.alert = {
-                    msg: "Сервер авторизации не доступен. Обратитесь к администратору."
-                };
+                alert("Сервер временно не доступен.");
             });
         }
     };
+
+    function getUserByToken() {
+        userService.GetUserByToken().then(function (data) {
+            if (userService.User) {
+                console.log("ok")
+            };
+        });
+    };
+
 });

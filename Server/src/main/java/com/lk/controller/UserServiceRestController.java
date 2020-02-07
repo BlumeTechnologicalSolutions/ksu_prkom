@@ -26,7 +26,14 @@ public class UserServiceRestController {
     }
 
 
-    @RequestMapping(value = "/getUseByToken/{token}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/authorization", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public User authorization (@RequestBody User user, final HttpServletRequest request) {
+        return userService.authorization();
+    }
+
+    @RequestMapping(value = "/getUserByToken/{token}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public User getUserByToken (@PathVariable("token") String tokenInfo, final HttpServletRequest request) {
         return userService.getUserByToken(tokenInfo);

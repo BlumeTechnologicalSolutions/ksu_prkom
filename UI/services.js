@@ -231,26 +231,36 @@ services.filter('orderObjectBy', function() {
 myApp.factory('userService', function($http, $window, $q, $location, $timeout, $rootScope) {
 
     var service = {};
-    if (!localStorage.token) {
+    service.conf={headers: {}};
+    service.conf.headers.Authorization = {};
+
+    if (!document.cookie) {
         service = { User: undefined };
     };
 
-    service.conf={headers: {}};
-    service.conf.headers.Authorization = "";
+    service.getTokenFromCookie = function(){
+        //to do parse token from cookie
+        service.conf.headers.Authorization = getCookie('token');
+    }
 
-    if (localStorage.token)
-        service.conf.headers.Authorization =  localStorage.token;
-    else if (sessionStorage.token)
-        service.conf.headers.Authorization =  sessionStorage.token;
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2)
+            return parts.pop().split(";").shift();
+        else
+            return {};
+    }
 
     service.GetUserByToken = function() {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ts-rest/employee/user_by_token', service.conf).success(function(user){
-            service.User = testIsActiveUser(user);
-            deferred.resolve(user);
-            if (!service.User) {
-                $location.path('/loginPage');
-            };
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken', service.conf).success(function(user){
+            if (!user) {
+                //$location.path('/lk');
+            } else {
+                service.User = user;
+                deferred.resolve(user);
+            }
         }).error(function(){
             service.User = undefined;
             $location.path('/loginPage');
@@ -258,27 +268,22 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         return deferred.promise;
     };
 
-    service.Authorize = function(employee) {
+    service.Authorize = function(user) {
         var deferred = $q.defer();
-        $http.post(ipAdress + '/ts-rest/employee/authorization', employee).success(function (user) {
-            //todo
+        $http.post(ipAdress + '/ksu-prkom-rest/UserService/authorization', user).success(function (autorizedUser) {
+            console.log(autorizedUser);
         }).error(function (data) {
             service.User = undefined;
-            delete localStorage.token;
-            delete sessionStorage.token;
-            $location.path('/loginPage');
+            $location.path('/lk');
             deferred.reject(null);
         });
 
         return deferred.promise;
     };
 
-
-
     service.LogOut = function() {
         service.User = undefined;
-        if (localStorage.token) delete localStorage.token;
-        else delete sessionStorage.token;
+        //to do
     };
 
     return service;
