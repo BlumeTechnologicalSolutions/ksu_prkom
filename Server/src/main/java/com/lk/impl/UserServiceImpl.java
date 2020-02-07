@@ -40,6 +40,26 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    public User authorization (User user){
+        logger.info("Start function authorization");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            String login = user.getLogin();
+            List<User> userList = session.createSQLQuery("Select * from Users as usr where usr.Login = (:userLogin)")
+                    .addEntity(User.class)
+                    .setParameter("userLogin",login)
+                    .list();
+            transaction.commit();
+            return userList.get(0);
+        } catch (Exception ex){
+            logger.error("Exception in authorization with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+        }
+        return null;
+    }
+
     public User getUserById(Integer userId) {
         logger.info("Start function getUserById, by userId: " + userId);
         Session session = HibernateUtil.getSessionFactory().openSession();

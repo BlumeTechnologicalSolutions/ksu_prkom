@@ -7,24 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../UI/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/apply/applyDocuments.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/apply/applyDocuments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/direction/direction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/direction/direction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/images/kgynewlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/images/kgynewlogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/loginPage/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/loginPage/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/prkom/prkom.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/prkom/prkom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/support/support.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/users/users.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/users/users.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="510">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,19 +46,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KsuLkProject.iml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="314">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -123,10 +112,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/OtherUniversityReceipt.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -141,7 +128,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/impl/OtherUniversityReceiptServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -374,12 +363,12 @@
       <workItem from="1580982131648" duration="348000" />
       <workItem from="1580985038876" duration="22000" />
       <workItem from="1580985646630" duration="1942000" />
-      <workItem from="1581064801494" duration="1250000" />
+      <workItem from="1581064801494" duration="1438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50208000" />
+    <option name="totallyTimeSpent" value="50396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -490,23 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -636,11 +608,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="510">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
         </state>
       </provider>
     </entry>

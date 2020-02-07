@@ -30,7 +30,7 @@ public class UserServiceRestController {
     @RequestMapping(value = "/authorization", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public User authorization (@RequestBody User user, final HttpServletRequest request) {
-        return userService.authorization();
+        return userService.authorization(user);
     }
 
     @RequestMapping(value = "/getUserByToken/{token}", method = RequestMethod.GET)

@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c9a43a-d90a-4a09-a92f-4f977e24cf11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/controller/UserServiceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/controller/UserServiceRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply/applyDocuments.js" beforeDir="false" afterPath="$PROJECT_DIR$/apply/applyDocuments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/direction/direction.js" beforeDir="false" afterPath="$PROJECT_DIR$/direction/direction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kgynewlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/kgynewlogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginPage/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginPage/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prkom/prkom.js" beforeDir="false" afterPath="$PROJECT_DIR$/prkom/prkom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/support/support.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/support.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/users.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -215,7 +201,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581067965692" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581068196418" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -257,12 +243,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581059964104</updated>
-      <workItem from="1581059965495" duration="7128000" />
+      <workItem from="1581059965495" duration="7358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7128000" />
+    <option name="totallyTimeSpent" value="7358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />

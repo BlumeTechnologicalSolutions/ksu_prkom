@@ -11,4 +11,6 @@ public interface UserService {
 
     public User getUserByToken(String tokenInfo);
 
+    public User authorization (User user );
+
 }
