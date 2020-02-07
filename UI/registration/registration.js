@@ -5,7 +5,6 @@ var registration = angular.module('myApp.registration', ['ngRoute']);
 registration.controller('RegistrationCtrl', function($scope, userService) {
 
     $scope.newUser = {};
-    // firstName lastName patronymic phone password passwordReply controlQuestion controlAnswer
     $scope.continueRegistration = function(){
         if(!$scope.newUser || !$scope.newUser.firstName || !$scope.newUser.lastName || !$scope.newUser.patronymic || !$scope.newUser.phone || !$scope.newUser.password
             || !$scope.newUser.passwordReply || !$scope.newUser.controlQuestion || !$scope.newUser.controlAnswer){
@@ -24,15 +23,21 @@ registration.controller('RegistrationCtrl', function($scope, userService) {
                 $("#controlQuestion").css({"border": ""});$("#controlAnswer").css({"border": ""});
             },2000);
         } else {
-            userService.registration($scope.newUser).then(function(response) {
-                if (response.isSuccess) {
-                    console.log("ok")
-                } else {
-                    alert(response.message)
-                };
-            }).catch(function (response) {
-                alert("Сервер временно не доступен.");
-            });
+            if($scope.newUser.password == $scope.newUser.passwordReply) {
+                var newUser = $scope.newUser;
+                newUser.passwordReply  = undefined;
+                userService.registration(newUser).then(function(response) {
+                    if (response.isSuccess) {
+                        console.log("ok")
+                    } else {
+                        alert(response.message)
+                    };
+                }).catch(function (response) {
+                    alert("Сервер временно не доступен.");
+                });
+            } else {
+                alert("Пароли не совпадают!")
+            }
         }
     }
 

@@ -1,6 +1,8 @@
 package com.lk.controller;
 
+import com.lk.entity.Response;
 import com.lk.entity.User;
+import com.lk.entity.UserRegistration;
 import com.lk.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +41,10 @@ public class UserServiceRestController {
         return userService.getUserByToken(tokenInfo);
     }
 
-
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public Response authorization (@RequestBody UserRegistration user) {
+        return userService.registration(user);
+    }
 
 }

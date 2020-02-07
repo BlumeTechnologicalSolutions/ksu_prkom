@@ -1,6 +1,8 @@
 package com.lk.impl;
 
+import com.lk.entity.Response;
 import com.lk.entity.User;
+import com.lk.entity.UserRegistration;
 import com.lk.persistence.HibernateUtil;
 import com.lk.service.UserService;
 import org.hibernate.Hibernate;
@@ -58,6 +60,11 @@ public class UserServiceImpl implements UserService {
             if (transaction!=null) { transaction.rollback(); }
         }
         return null;
+    }
+
+    public Response registration(UserRegistration user){
+
+        return new Response(true, "Ok");
     }
 
     public User getUserById(Integer userId) {

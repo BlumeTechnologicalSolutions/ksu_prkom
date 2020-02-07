@@ -1,7 +1,9 @@
 package com.lk.service;
 
 
+import com.lk.entity.Response;
 import com.lk.entity.User;
+import com.lk.entity.UserRegistration;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -12,5 +14,7 @@ public interface UserService {
     public User getUserByToken(String tokenInfo);
 
     public User authorization (User user );
+
+    public Response registration(UserRegistration user);
 
 }

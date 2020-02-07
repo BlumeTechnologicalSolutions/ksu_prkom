@@ -281,9 +281,9 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         return deferred.promise;
     };
 
-    service.registration = function() {
+    service.registration = function(newUser) {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ksu-prkom-rest/UserService/registration').success(function(response){
+        $http.post(ipAdress + '/ksu-prkom-rest/UserService/registration',newUser).success(function(response){
             deferred.resolve(response);
         }).error(function(){
             deferred.reject(null);
@@ -293,10 +293,10 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
 
     service.remember = function() {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
+        $http.post(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
             deferred.resolve(response);
         }).error(function(){
-            deferred.reject(null);
+            deferred.reject('Error in registration function');
         });
         return deferred.promise;
     };
