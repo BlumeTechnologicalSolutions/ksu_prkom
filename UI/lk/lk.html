@@ -1,6 +1,6 @@
 <div class="container">
     <div class="login-form">
-        <p class="text-center black">Личный кабинет</p>
+        <p class="text-center black main-text">Личный кабинет</p>
         <br>
         <div class="form-group row">
             <!--<label for="inputLogin" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">ТЕЛЕФОН ИЛИ EMAIL</label>-->
@@ -16,20 +16,18 @@
         </div>
         <div class="form-group row">
             <div class="col-xs-12">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me" ng-model="rememberMe"> <span style="vertical-align: text-top;" class="text-nowrap">Запомнить меня</span>
-                    </label>
-                </div>
+                <label><input type="checkbox" value="remember-me" ng-model="rememberMe">
+                    <span style="vertical-align: text-bottom;" class="text-nowrap">Запомнить меня</span>
+                </label>
             </div>
-            <div class="col-xs-12">
+            <div class="col-xs-12 marginTop10">
                 <button type="submit" class="btn btn-primary" ng-click="authorization()">Войти</button>
             </div>
             <div class="col-xs-12 marginTop10">
-                <p class="pointer text-nowrap">Забыли E-mail или пароль?</p>
+                <a href="#/remember" class="pointer text-nowrap">Забыли пароль?</a>
             </div>
-            <div class="col-xs-12">
-                <p class="pointer text-nowrap">Создать аккаунт</p>
+            <div class="col-xs-12 marginTop10">
+                <a href="#/registration" class="pointer text-nowrap">Создать аккаунт</a>
             </div>
         </div>
 

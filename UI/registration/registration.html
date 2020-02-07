@@ -1,35 +1,41 @@
 <div class="container">
     <div class="login-form">
-        <p class="text-center black">Личный кабинет</p>
+        <p class="text-center black main-text">Создание аккаунта</p>
         <br>
         <div class="form-group row">
-            <!--<label for="inputLogin" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">ТЕЛЕФОН ИЛИ EMAIL</label>-->
             <div class="col-xs-12">
-                <input type="login" ng-model="loginUser.login" class="form-control"  id="inputLogin" placeholder="Телефон или Email">
+                <input type="firstName" ng-model="newUser.firstName" class="form-control"  id="firstName" placeholder="Фамилия">
+            </div>
+            <div class="col-xs-12 marginTop5">
+                <input type="lastName" ng-model="newUser.lastName" class="form-control"  id="lastName" placeholder="Имя">
+            </div>
+            <div class="col-xs-12 marginTop5">
+                <input type="patronymic" ng-model="newUser.patronymic" class="form-control"  id="patronymic" placeholder="Отчество">
             </div>
         </div>
+        <hr>
         <div class="form-group row">
-            <!--<label for="inputPassword" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">Пароль</label>-->
+
             <div class="col-xs-12">
-                <input type="password" ng-model="loginUser.password" class="form-control"   id="inputPassword" placeholder="Пароль">
+                <input type="login" ng-model="newUser.phone" class="form-control"   id="phone" placeholder="Email или телефон">
+            </div>
+            <div class="col-xs-12 marginTop5">
+                <input type="password" ng-model="newUser.password" class="form-control"   id="password" placeholder="Пароль">
+            </div>
+            <div class="col-xs-12 marginTop5">
+                <input type="password" ng-model="newUser.passwordReply" class="form-control"   id="passwordReply" placeholder="Подтверждение пароля">
             </div>
         </div>
-        <div class="form-group row">
-            <div class="col-xs-12">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me" ng-model="rememberMe"> <span style="vertical-align: text-top;" class="text-nowrap">Запомнить меня</span>
-                    </label>
-                </div>
+        <hr>
+        <div class="form-group row ">
+            <div class="col-xs-12 ">
+                <input type="controlQuestion" ng-model="newUser.controlQuestion" class="form-control"   id="controlQuestion" placeholder="Контрольный вопрос">
             </div>
-            <div class="col-xs-12">
-                <button type="submit" class="btn btn-primary" ng-click="authorization()">Войти</button>
+            <div class="col-xs-12 marginTop5 ">
+                <input type="controlAnswer" ng-model="newUser.controlAnswer" class="form-control"   id="controlAnswer" placeholder="Ответ">
             </div>
             <div class="col-xs-12 marginTop10">
-                <p class="pointer text-nowrap">Забыли E-mail или пароль?</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="pointer text-nowrap">Создать аккаунт</p>
+                <button type="submit" class="btn btn-primary" ng-click="continueRegistration()">Продолжить</button>
             </div>
         </div>
 

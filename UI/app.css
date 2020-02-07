@@ -71,6 +71,31 @@ input[type="checkbox"]:disabled:after {
     border-color: #7b7b7b;
 }
 
+.btn-primary{
+    border-color:unset;
+    background-color:#469eff !important;
+}
+
+.btn-primary{
+    border-color:unset;
+    background-color:#469eff !important;
+}
+
+.main-text{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {

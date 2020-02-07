@@ -22,7 +22,7 @@ function loadXML(url) {
     };
 };
 
-var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.loginPage', 'myApp.lk', 'myApp.apply',
+var myApp = angular.module('myApp', ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply',
                                                      'myApp.direction', 'myApp.prkom', 'myApp.support', 'myApp.registration']);
 
 myApp.config(function($routeProvider) {
@@ -55,6 +55,10 @@ myApp.config(function($routeProvider) {
             templateUrl: 'support/support.html',
             controller: 'SupportCtrl'
         })
+        .when('/registration', {
+           templateUrl: 'registration/registration.html',
+           controller: 'RegistrationCtrl'
+       })
 
 });
 

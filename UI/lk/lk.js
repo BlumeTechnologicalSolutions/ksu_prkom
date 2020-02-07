@@ -2,13 +2,12 @@
 
 var loginPage = angular.module('myApp.lk', ['ngRoute']);
 
-loginPage.controller('AbiturientCtrl', function($scope, userService, $timeout) {
+loginPage.controller('AbiturientCtrl', function($scope, userService) {
 
-    $timeout(function() {
-        if (localStorage.token || sessionStorage.token) {
-            getUserByToken();
-        };
-    }, 200);
+
+    //if (localStorage.token || sessionStorage.token) {
+    //    getUserByToken();
+    //};
 
     function getUserByToken() {
         userService.GetUserByToken().then(function (data) {
@@ -34,19 +33,19 @@ loginPage.controller('AbiturientCtrl', function($scope, userService, $timeout) {
             },2000);
         } else {
             userService.Authorize(loginUser, $scope.rememberMe).then(function(user) {
-                if (user != null) {
+                if (!user) {
                     console.log("ok")
                 } else {
-                    $scope.alert = {
-                        msg: "Имя пользователя или пароль не верны. Используйте для авторизации ваши имя и пароль, используемые для входа в операционную систему."
-                    };
-
+                    alert("Имя пользователя или пароль не верны. Используйте для авторизации ваши имя и пароль, используемые для входа в операционную систему.");
                 };
             }).catch(function (response) {
-                $scope.alert = {
-                    msg: "Сервер авторизации не доступен. Обратитесь к администратору."
-                };
+                alert("Сервер авторизации не доступен. Обратитесь к администратору.");
             });
         }
     };
+
+    $scope.createAccount = function(){
+
+    }
+
 });
