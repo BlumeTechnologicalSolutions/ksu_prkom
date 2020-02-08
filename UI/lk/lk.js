@@ -1,8 +1,8 @@
 'use strict';
 
-var loginPage = angular.module('myApp.lk', ['ngRoute']);
+var lk = angular.module('myApp.lk', ['ngRoute']);
 
-loginPage.controller('AbiturientCtrl', function($scope, userService) {
+lk.controller('AbiturientCtrl', function($scope, userService) {
 
 
     //if (localStorage.token || sessionStorage.token) {
@@ -32,14 +32,14 @@ loginPage.controller('AbiturientCtrl', function($scope, userService) {
                 $("#inputPassword").css({"border": ""});
             },2000);
         } else {
-            userService.Authorize(loginUser, $scope.rememberMe).then(function(user) {
-                if (!user) {
-                    console.log("ok")
+            userService.Authorize(loginUser, $scope.rememberMe).then(function(response) {
+                if (response.isSuccess) {
+                    console.log(response.object)
                 } else {
-                    alert("Имя пользователя или пароль не верны. Используйте для авторизации ваши имя и пароль, используемые для входа в операционную систему.");
+                    alert(response.message);
                 };
             }).catch(function (response) {
-                alert("Сервер авторизации не доступен. Обратитесь к администратору.");
+                alert("Сервер авторизации не доступен. Обратитесь к администратору. With message:"+response);
             });
         }
     };

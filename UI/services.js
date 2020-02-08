@@ -244,6 +244,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
     }
 
     function getCookie(name) {
+        //to do check for getting token
         var value = "; " + document.cookie;
         var parts = value.split("; " + name + "=");
         if (parts.length == 2)
@@ -271,13 +272,13 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
     service.Authorize = function(user) {
         var deferred = $q.defer();
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/authorization', user).success(function (autorizedUser) {
-            console.log(autorizedUser);
+            defered.resolve(autorizedUser);
+            //to do save token
         }).error(function (data) {
             service.User = undefined;
             $location.path('/lk');
-            deferred.reject(null);
+            deferred.reject('Error in authtorize user function');
         });
-
         return deferred.promise;
     };
 
@@ -286,7 +287,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/registration',newUser).success(function(response){
             deferred.resolve(response);
         }).error(function(){
-            deferred.reject(null);
+            deferred.reject('Error in registration user');
         });
         return deferred.promise;
     };
@@ -296,7 +297,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
             deferred.resolve(response);
         }).error(function(){
-            deferred.reject('Error in registration function');
+            deferred.reject('Error in remember user function');
         });
         return deferred.promise;
     };

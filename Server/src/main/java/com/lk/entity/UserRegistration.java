@@ -5,7 +5,7 @@ public class UserRegistration {
     private String FirstName;
     private String LastName;
     private String Patronymic;
-    private String Phone;
+    private String Login;
     private String Password;
     private String ControlQuestion;
     private String ControlAnswer;
@@ -16,8 +16,8 @@ public class UserRegistration {
     public void setLastName(String lastName) { LastName = lastName; }
     public String getPatronymic() { return Patronymic; }
     public void setPatronymic(String patronymic) { Patronymic = patronymic; }
-    public String getPhone() { return Phone; }
-    public void setPhone(String phone) { Phone = phone; }
+    public String getLogin() { return Login; }
+    public void setLogin(String login) { Login = login; }
     public String getPassword() { return Password; }
     public void setPassword(String password) { Password = password; }
     public String getControlQuestion() { return ControlQuestion; }

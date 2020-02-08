@@ -7,16 +7,12 @@ import com.lk.persistence.HibernateUtil;
 import com.lk.persistence.MongoDbUtill;
 import com.lk.service.UserService;
 import com.mongodb.*;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Named;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Named("userService")
@@ -47,11 +43,11 @@ public class UserServiceImpl implements UserService {
     public Response authorization (User user){
         logger.info("Start function authorization");
         DB database = new MongoDbUtill().getDataBase();
-        DBCollection collection = database.getCollection("testCol");
-        BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("login", user.getLogin());
-        searchQuery.put("password", user.getPassword());
-        DBCursor cursor = collection.find(searchQuery);
+        DBCollection collection = database.getCollection("Accounts");
+        BasicDBObject seaarchUserForAuthorization = new BasicDBObject();
+        seaarchUserForAuthorization.put("login", user.getLogin());
+        seaarchUserForAuthorization.put("password", user.getPassword());
+        DBCursor cursor = collection.find(seaarchUserForAuthorization);
         if(cursor.size()>0){
             if(cursor.hasNext()) {
                 DBObject dbObject = cursor.next();
@@ -64,8 +60,22 @@ public class UserServiceImpl implements UserService {
     }
 
     public Response registration(UserRegistration user){
-
-        return new Response(true, "Ok");
+        logger.info("Start function authorization");
+        String login = user.getLogin();
+        DB database = new MongoDbUtill().getDataBase();
+        DBCollection collection = database.getCollection("Accounts");
+        BasicDBObject searchForDublicate = new BasicDBObject();
+        searchForDublicate.put("login", login);
+        DBCursor cursor = collection.find(searchForDublicate);
+        if(cursor.size()==0){
+            logger.info("registration user:" + login);
+           // BasicDBObject document = new BasicDBObject();
+            //document.put("name", "Shubham");
+            //document.put("company", "Baeldung");
+            //.insert(document);
+            return new Response(true, (Object) "Пользователь успешно зарегистрирован");
+        }
+        return new Response(false, "Указанный логин уже существует");
     }
 
     public User getUserById(Integer userId) {
