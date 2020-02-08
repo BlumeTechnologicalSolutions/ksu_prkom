@@ -13,7 +13,7 @@ public interface UserService {
 
     public User getUserByToken(String tokenInfo);
 
-    public User authorization (User user );
+    public Response authorization (User user );
 
     public Response registration(UserRegistration user);
 

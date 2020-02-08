@@ -32,7 +32,9 @@ public class testClass {
 
         cursor = collection.find();
         while (cursor.hasNext()) {
-            System.out.println(cursor.next());
+            DBObject dbObject = cursor.next();
+
+            System.out.println( dbObject);
         }
     }
 
