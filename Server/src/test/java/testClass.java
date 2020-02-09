@@ -17,8 +17,10 @@ public class testClass {
         MongoClient mongoClient = new MongoClient("localhost", 27017);
         MongoDatabase database = mongoClient.getDatabase("prkom");
         MongoCollection<Document> collection =  database.getCollection("Accounts");
+        BasicDBObject basicDBObject = new BasicDBObject();
+        basicDBObject.put("abiturientInfo.login", "test");
+        FindIterable<Document> findIt = collection.find(basicDBObject);
 
-        FindIterable<Document> findIt = collection.find(new Document ());
         for (Document doc : findIt) {
             System.out.println(doc.toJson());
         }

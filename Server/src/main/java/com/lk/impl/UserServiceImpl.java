@@ -81,7 +81,7 @@ public class UserServiceImpl implements UserService {
         String login = user.getLogin();
         MongoDatabase database = new MongoDbUtill().getDataBase();
         MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> findIt = collection.find(eq("login", user.getLogin()));
+        FindIterable<Document> findIt = collection.find(eq("abiturientInfo.login", user.getLogin()));
         Iterator iterator = findIt.iterator();
         if(!iterator.hasNext()) {
             logger.info("registration user:" + login);
