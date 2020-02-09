@@ -236,7 +236,6 @@
     <orderEntry type="library" name="Maven: asm:asm-tree:3.2" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.1" level="project" />
     <orderEntry type="library" name="Maven: com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8" level="project" />
     <orderEntry type="library" name="Maven: com.microsoft.azure:azure-keyvault:0.9.3" level="project" />

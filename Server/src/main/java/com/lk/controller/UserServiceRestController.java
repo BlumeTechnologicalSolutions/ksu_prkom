@@ -21,13 +21,10 @@ public class UserServiceRestController {
     private UserService userService;
     private Logger logger = LoggerFactory.getLogger(UserServiceRestController.class);
 
-
     @Inject
     public UserServiceRestController(@Named("userService") UserService userService) {
         this.userService = userService;
     }
-
-
 
     @RequestMapping(value = "/authorization", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)

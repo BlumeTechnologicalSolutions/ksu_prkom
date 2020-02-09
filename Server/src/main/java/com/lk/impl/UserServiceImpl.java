@@ -41,26 +41,36 @@ public class UserServiceImpl implements UserService {
     }
 
     public Response authorization (User user){
-        logger.info("User authorization start:"+ user.getLogin());
-        DB database = new MongoDbUtill().getDataBase();
-        DBCollection collection = database.getCollection("Accounts");
-        BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
-        searchForAuthorizationCheck.put("login", user.getLogin());
-        searchForAuthorizationCheck.put("password", user.getPassword());
-        DBCursor cursor = collection.find(searchForAuthorizationCheck);
-        if(cursor.size()>0){
-            if(cursor.hasNext()) {
-                DBObject dbObject = cursor.next();
-                logger.info("Autorization user:" + dbObject);
-                return new Response(true, dbObject);
+
+        if(user.getLogin() != null || user.getPassword() != null) {
+            logger.info("User authorization start: " + user.getLogin());
+            DB database = new MongoDbUtill().getDataBase();
+            DBCollection collection = database.getCollection("Accounts");
+            BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
+            searchForAuthorizationCheck.put("login", user.getLogin());
+            searchForAuthorizationCheck.put("password", user.getPassword());
+            DBCursor cursor = collection.find(searchForAuthorizationCheck);
+            if (cursor.size() > 0) {
+                if (cursor.hasNext()) {
+                    DBObject dbObject = cursor.next();
+                    logger.info("Autorization user:" + dbObject);
+                    return new Response(true, dbObject);
+                }
+                return new Response(false, "Неверно указан логин или пароль");
             }
-            return new Response(false, "Неверно указан логин или пароль");
         }
         return new Response(false, "Неверно указан логин или пароль");
     }
 
     public Response registration(UserRegistration user){
-        logger.info("Start function authorization");
+        logger.info("Start user registration with login:"+user.getLogin());
+        if(user.getLogin() == null || user.getLogin() == "") return new Response(false, "Логин недопустим");
+        if(user.getPassword() == null || user.getPassword() == "") return new Response(false, "Пароль недопустим");
+        if(user.getControlAnswer() == null || user.getControlAnswer() == "") return new Response(false, "Контрольный ответ недопустим");
+        if(user.getControlQuestion() == null || user.getControlQuestion() == "") return new Response(false, "Контрольный вопрос недопустим");
+        if(user.getFirstName() == null || user.getFirstName() == "") return new Response(false, "Имя недопустимо");
+        if(user.getLastName() == null || user.getLastName() == "") return new Response(false, "Фамилия недопустима");
+
         String login = user.getLogin();
         DB database = new MongoDbUtill().getDataBase();
         DBCollection collection = database.getCollection("Accounts");
