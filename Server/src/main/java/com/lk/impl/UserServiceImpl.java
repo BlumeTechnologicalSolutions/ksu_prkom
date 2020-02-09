@@ -7,13 +7,21 @@ import com.lk.persistence.HibernateUtil;
 import com.lk.persistence.MongoDbUtill;
 import com.lk.service.UserService;
 import com.mongodb.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Named;
+import java.util.Iterator;
 import java.util.List;
+
+import static com.mongodb.client.model.Filters.and;
+import static com.mongodb.client.model.Filters.eq;
 
 @Named("userService")
 public class UserServiceImpl implements UserService {
@@ -44,19 +52,18 @@ public class UserServiceImpl implements UserService {
 
         if(user.getLogin() != null || user.getPassword() != null) {
             logger.info("User authorization start: " + user.getLogin());
-            DB database = new MongoDbUtill().getDataBase();
-            DBCollection collection = database.getCollection("Accounts");
-            BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
-            searchForAuthorizationCheck.put("login", user.getLogin());
-            searchForAuthorizationCheck.put("password", user.getPassword());
-            DBCursor cursor = collection.find(searchForAuthorizationCheck);
-            if (cursor.size() > 0) {
-                if (cursor.hasNext()) {
-                    DBObject dbObject = cursor.next();
-                    logger.info("Autorization user:" + dbObject);
-                    return new Response(true, dbObject);
-                }
-                return new Response(false, "Неверно указан логин или пароль");
+            MongoDatabase database = new MongoDbUtill().getDataBase();
+            MongoCollection<Document> collection =  database.getCollection("Accounts");
+            FindIterable<Document> findIt = collection.find(and(eq("login", user.getLogin()),eq("password", user.getPassword())));
+            Iterator iterator = findIt.iterator();
+            //BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
+            //searchForAuthorizationCheck.put("login", user.getLogin());
+            //searchForAuthorizationCheck.put("password", user.getPassword());
+            //FindIterable<Document> findIt =  collection.find(searchForAuthorizationCheck);
+            if (iterator.hasNext()) {
+                Object dbObject = iterator.next();
+                logger.info("Autorization user:" + dbObject);
+                return new Response(true, dbObject);
             }
         }
         return new Response(false, "Неверно указан логин или пароль");
@@ -72,19 +79,19 @@ public class UserServiceImpl implements UserService {
         if(user.getLastName() == null || user.getLastName() == "") return new Response(false, "Фамилия недопустима");
 
         String login = user.getLogin();
-        DB database = new MongoDbUtill().getDataBase();
-        DBCollection collection = database.getCollection("Accounts");
-        BasicDBObject searchForDublicate = new BasicDBObject();
-        searchForDublicate.put("login", login);
-        DBCursor cursor = collection.find(searchForDublicate);
-        if(cursor.size()==0){
+        MongoDatabase database = new MongoDbUtill().getDataBase();
+        MongoCollection<Document> collection =  database.getCollection("Accounts");
+        FindIterable<Document> findIt = collection.find(eq("login", user.getLogin()));
+        Iterator iterator = findIt.iterator();
+        if(!iterator.hasNext()) {
             logger.info("registration user:" + login);
-           // BasicDBObject document = new BasicDBObject();
+            // BasicDBObject document = new BasicDBObject();
             //document.put("name", "Shubham");
             //document.put("company", "Baeldung");
             //.insert(document);
             return new Response(true, (Object) "Пользователь успешно зарегистрирован");
         }
+
         return new Response(false, "Указанный логин уже существует");
     }
 

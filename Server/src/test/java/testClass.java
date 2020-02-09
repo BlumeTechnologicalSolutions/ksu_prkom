@@ -1,41 +1,32 @@
-import com.mongodb.*;
+import com.mongodb.BasicDBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+import org.bson.types.*;
+
+import java.util.Iterator;
+
+import static com.mongodb.client.model.Filters.eq;
 
 public class testClass {
 
     public static void main(String[] args ){
-        System.out.println("Start mongodb:");
+        //{"_id":{"$oid":"5e3fd6ff63c2db07d87b7172"},"abiturients":[{"login":"test"},{"login":"test1"}],"employees":{}}
         MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase database = mongoClient.getDatabase("prkom");
+        MongoCollection<Document> collection =  database.getCollection("Accounts");
 
-        //MongoClient mongoClient = new MongoClient();
-
-
-        for(String db: mongoClient.getDatabaseNames() ){
-            System.out.println("DB mongodb:"+db);
+        FindIterable<Document> findIt = collection.find(new Document ());
+        for (Document doc : findIt) {
+            System.out.println(doc.toJson());
         }
-        DB database = mongoClient.getDB("testDb");
-
-        DBCollection collection = database.getCollection("testCol");
-
-        BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("", "");
-        DBCursor cursor = collection.find();
-
-        while (cursor.hasNext()) {
-            System.out.println(cursor.next());
+        Iterator iterator = findIt.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
         }
-        BasicDBObject document = new BasicDBObject();
-        document.put("name", "Shubham");
-        document.put("company", "Baeldung");
-        collection.insert(document);
 
-        cursor = collection.find();
-        while (cursor.hasNext()) {
-            DBObject dbObject = cursor.next();
-
-            System.out.println( dbObject);
-        }
     }
 
 }
