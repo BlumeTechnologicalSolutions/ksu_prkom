@@ -235,6 +235,11 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>3.4.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.liferay.org.apache.commons.fileupload</groupId>
+            <artifactId>com.liferay.org.apache.commons.fileupload</artifactId>
+            <version>6.2.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
