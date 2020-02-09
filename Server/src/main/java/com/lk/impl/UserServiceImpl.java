@@ -41,13 +41,13 @@ public class UserServiceImpl implements UserService {
     }
 
     public Response authorization (User user){
-        logger.info("Start function authorization");
+        logger.info("User authorization start:"+ user.getLogin());
         DB database = new MongoDbUtill().getDataBase();
         DBCollection collection = database.getCollection("Accounts");
-        BasicDBObject seaarchUserForAuthorization = new BasicDBObject();
-        seaarchUserForAuthorization.put("login", user.getLogin());
-        seaarchUserForAuthorization.put("password", user.getPassword());
-        DBCursor cursor = collection.find(seaarchUserForAuthorization);
+        BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
+        searchForAuthorizationCheck.put("login", user.getLogin());
+        searchForAuthorizationCheck.put("password", user.getPassword());
+        DBCursor cursor = collection.find(searchForAuthorizationCheck);
         if(cursor.size()>0){
             if(cursor.hasNext()) {
                 DBObject dbObject = cursor.next();

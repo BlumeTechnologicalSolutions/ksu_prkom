@@ -21,7 +21,7 @@ public class MongoDbUtill {
 
     public static DB getDataBase() {
         if(mongoClient==null) mongoClient = connection();
-        DB database = mongoClient.getDB(DATABASE_NAME);
+        database = mongoClient.getDB(DATABASE_NAME);
         return database;
     }
 
