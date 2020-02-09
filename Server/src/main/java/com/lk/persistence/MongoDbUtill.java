@@ -1,13 +1,13 @@
 package com.lk.persistence;
 
-import com.mongodb.DB;
 import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MongoDbUtill {
     private static MongoClient mongoClient;
-    private static DB database;
+    private static MongoDatabase database;
     private static Logger logger = LoggerFactory.getLogger(HibernateUtil.class);
     private static final String DATABASE_NAME = "prkom";
     private static final String CONNECTION_ADDRESS = "localhost";
@@ -19,9 +19,9 @@ public class MongoDbUtill {
         return mongoClient;
     }
 
-    public static DB getDataBase() {
+    public static MongoDatabase getDataBase() {
         if(mongoClient==null) mongoClient = connection();
-        database = mongoClient.getDB(DATABASE_NAME);
+        database = mongoClient.getDatabase(DATABASE_NAME);
         return database;
     }
 
