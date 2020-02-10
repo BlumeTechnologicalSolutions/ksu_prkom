@@ -17,4 +17,6 @@ public interface UserService {
 
     public Response registration(UserRegistration user);
 
+    public Response remember(User user);
+
 }

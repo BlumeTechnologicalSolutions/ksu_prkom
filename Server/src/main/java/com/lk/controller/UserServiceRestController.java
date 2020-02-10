@@ -44,5 +44,10 @@ public class UserServiceRestController {
         return userService.registration(user);
     }
 
+    @RequestMapping(value = "/remember", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public Response remember (@RequestBody User user) {
+        return userService.remember(user);
+    }
 
 }

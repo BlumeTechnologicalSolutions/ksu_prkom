@@ -49,21 +49,16 @@ public class UserServiceImpl implements UserService {
     }
 
     public Response authorization (User user){
-
         if(user.getLogin() != null || user.getPassword() != null) {
             logger.info("User authorization start: " + user.getLogin());
+            String login = user.getLogin();
             MongoDatabase database = new MongoDbUtill().getDataBase();
             MongoCollection<Document> collection =  database.getCollection("Accounts");
-            FindIterable<Document> findIt = collection.find(and(eq("login", user.getLogin()),eq("password", user.getPassword())));
-            Iterator iterator = findIt.iterator();
-            //BasicDBObject searchForAuthorizationCheck = new BasicDBObject();
-            //searchForAuthorizationCheck.put("login", user.getLogin());
-            //searchForAuthorizationCheck.put("password", user.getPassword());
-            //FindIterable<Document> findIt =  collection.find(searchForAuthorizationCheck);
-            if (iterator.hasNext()) {
-                Object dbObject = iterator.next();
-                logger.info("Autorization user:" + dbObject);
-                return new Response(true, dbObject);
+            FindIterable<Document> userList = collection.find(eq("accounts.abiturients."+login+".accountinf.login", login));
+            for(Document doc: userList){
+                if(doc.get("password") == user.getPassword()){
+                    return new Response(true, doc.toJson());
+                }
             }
         }
         return new Response(false, "Неверно указан логин или пароль");
@@ -81,7 +76,7 @@ public class UserServiceImpl implements UserService {
         String login = user.getLogin();
         MongoDatabase database = new MongoDbUtill().getDataBase();
         MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> findIt = collection.find(eq("abiturientInfo.login", user.getLogin()));
+        FindIterable<Document> findIt = collection.find(eq("accounts.abiturients."+login+".accountinf.login", login));
         Iterator iterator = findIt.iterator();
         if(!iterator.hasNext()) {
             logger.info("registration user:" + login);
@@ -93,6 +88,24 @@ public class UserServiceImpl implements UserService {
         }
 
         return new Response(false, "Указанный логин уже существует");
+    }
+
+
+    public Response remember(User user){
+        logger.info("Start user registration with login:"+user.getLogin());
+        if(user.getLogin() == null || user.getLogin() == "") return new Response(false, "Логин не может быть пустым");
+        if(user.getControlAnswer() == null || user.getControlAnswer() == "") return new Response(false, "Ответ на контрольный вопрос не может быть пустым");
+        String login = user.getLogin();
+        MongoDatabase database = new MongoDbUtill().getDataBase();
+        MongoCollection<Document> collection =  database.getCollection("Accounts");
+        FindIterable<Document> userList = collection.find(eq("accounts.abiturients."+login+".accountinf.login", login));
+        for(Document doc: userList){
+            if(doc.get("secretanswer") == user.getControlAnswer()){
+                //to do token of restore pass
+                return new Response(true, (Object) "OK");
+            }
+        }
+        return new Response((false, "Логин не существует или контрольный ответ неверный");
     }
 
     public User getUserById(Integer userId) {
