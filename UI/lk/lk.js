@@ -21,7 +21,9 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
                 } else {
                     alert(response.message);
                 }
-            });
+            }).catch(function (response) {
+                userService.logOut();
+            });;
         } else {
             $rootScope.user = userService.User;
             tryDigest();

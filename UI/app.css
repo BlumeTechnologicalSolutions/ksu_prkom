@@ -125,10 +125,6 @@ input[type="checkbox"]:disabled:after {
     display: none;
 }
 
-.navbar-nav-new-year {
-    margin: 0 0 0 150px;
-}
-
 
 @media (min-width: 1200px)
 {

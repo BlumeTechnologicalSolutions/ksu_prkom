@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
         logger.info("Start function getUserByToken, by token info: " + httpServletRequest);
         String token = httpServletRequest.getHeader("Authorization");
         try{
-            MongoDatabase database = new MongoDbUtill().getDataBase();
+            MongoDatabase database = MongoDbUtill.getDataBase();
             MongoCollection<Document> collection =  database.getCollection("Tokens");
             FindIterable<Document> tokens = collection.find(eq("token", token));
             if(tokens.iterator().hasNext()){
@@ -62,10 +62,7 @@ public class UserServiceImpl implements UserService {
             String password = user.getPassword();
             MongoDatabase database = new MongoDbUtill().getDataBase();
             MongoCollection<Document> collection =  database.getCollection("Accounts");
-            FindIterable<Document> userList =
-                    collection.find(and(
-                            eq("login", login),
-                            eq("password", password)));
+            FindIterable<Document> userList = collection.find(and(eq("login", login), eq("password", password)));
             if(userList.iterator().hasNext()) {
                 String json = userList.iterator().next().toJson();
                 Date date = new Date();
@@ -107,12 +104,12 @@ public class UserServiceImpl implements UserService {
         FindIterable<Document> findIt = collection.find(eq(login+".login", login));
         Iterator iterator = findIt.iterator();
         if(!iterator.hasNext()) {
-            BasicDBObject accountInfo = new BasicDBObject();
+            Document accountInfo = new Document();
             accountInfo.put("login", login);
             accountInfo.put("password", password);
             accountInfo.put("secretquestion", controlQuestion);
             accountInfo.put("secretanswer", controlAnswer);
-            //UpdateResult result = collection.insertOne(set(login,new BasicDBObject(login,accountInfo)));
+            collection.insertOne(accountInfo);
             //logger.info("Registration user with info:" + result.toString());
             return new Response(true, (Object) "Пользователь успешно зарегистрирован");
         }
