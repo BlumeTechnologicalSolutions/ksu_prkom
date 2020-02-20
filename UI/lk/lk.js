@@ -2,12 +2,12 @@
 
 var lk = angular.module('myApp.lk', ['ngRoute']);
 
-lk.controller('AbiturientCtrl', function($scope, userService) {
+lk.controller('AbiturientCtrl', function($scope, userService, $location) {
 
 
-    //if (localStorage.token || sessionStorage.token) {
-    //    getUserByToken();
-    //};
+    if (userService.checkToken()) {
+        getUserByToken();
+    };
 
     function getUserByToken() {
         userService.GetUserByToken().then(function (data) {
@@ -32,9 +32,13 @@ lk.controller('AbiturientCtrl', function($scope, userService) {
                 $("#inputPassword").css({"border": ""});
             },2000);
         } else {
-            userService.Authorize(loginUser, $scope.rememberMe).then(function(response) {
+            userService.Authorize(loginUser).then(function(response) {
                 if (response.isSuccess) {
-                    console.log(response.object)
+                    userService.User = JSON.parse(response.object);
+                    if(userService.User && userService.User.token) {
+                        userService.setCookie("token", userService.User.token, 14);
+                        $location.path("/apply");
+                    }
                 } else {
                     alert(response.message);
                 };

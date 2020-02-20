@@ -32,10 +32,10 @@ public class UserServiceRestController {
         return userService.authorization(user);
     }
 
-    @RequestMapping(value = "/getUserByToken/{token}", method = RequestMethod.GET)
+    @RequestMapping(value = "/getUserByToken", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public User getUserByToken (@PathVariable("token") String tokenInfo, final HttpServletRequest request) {
-        return userService.getUserByToken(tokenInfo);
+    public Response getUserByToken (final HttpServletRequest request) {
+        return userService.getUserByToken(request);
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)

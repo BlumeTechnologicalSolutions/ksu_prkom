@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.LichnoeDelo" table="LichnoeDelo" catalog="prkom">
+        <id name="IDLichnogoDela" type="java.lang.Integer">
+            <column name="IDLichnogoDela" />
+            <generator class="identity" />
+        </id>
+        <property name="Familiya" type="java.lang.String">
+            <column name="Familiya" not-null="true"/>
+        </property>
+        <property name="DataRozhdeniya" type="timestamp">
+            <column name="DataRozhdeniya" not-null="true"/>
+        </property>
+        <property name="Obschezhitie" type="boolean">
+            <column name="Obschezhitie"  not-null="true" />
+        </property>
+        <property name="Imya" type="java.lang.String">
+            <column name="Imya" not-null="true"/>
+        </property>
+        <property name="Otchestvo" type="java.lang.String">
+            <column name="Otchestvo" not-null="true"/>
+        </property>
+        <property name="Pol" type="java.lang.String">
+            <column name="Pol" not-null="true"/>
+        </property>
+        <property name="InostranniyYazyk" type="java.lang.String">
+            <column name="InostranniyYazyk" not-null="true"/>
+        </property>
+        <property name="SNILS" type="java.lang.String">
+            <column name="SNILS" not-null="true"/>
+        </property>
+        <property name="KodPodrazdeleniya" type="java.lang.Integer">
+            <column name="KodPodrazdeleniya" not-null="true"/>
+        </property>
+
+        <property name="Nomer" type="java.lang.Integer">
+            <column name="Nomer" not-null="true"/>
+        </property>
+        <property name="Seriya" type="java.lang.Integer">
+            <column name="Seriya" not-null="true"/>
+        </property>
+        <property name="TipDokumenta" type="java.lang.String">
+            <column name="TipDokumenta" not-null="true"/>
+        </property>
+        <property name="Grazhdanstvo" type="java.lang.String">
+            <column name="Grazhdanstvo" not-null="true"/>
+        </property>
+        <property name="OsobieUsloviya" type="java.lang.String">
+            <column name="OsobieUsloviya" not-null="true"/>
+        </property>
+        <property name="DataVidachi" type="timestamp">
+            <column name="DataVidachi" not-null="true"/>
+        </property>
+        <property name="Medicine" type="java.lang.Integer">
+            <column name="Medicine" not-null="true"/>
+        </property>
+        <property name="KemVdan" type="java.lang.String">
+            <column name="KemVdan" not-null="true"/>
+        </property>
+        <property name="MestoRozhdenia" type="java.lang.String">
+            <column name="MestoRozhdenia" not-null="true"/>
+        </property>
+        <property name="PredObrTip" type="java.lang.String">
+            <column name="PredObrTip" not-null="true"/>
+        </property>
+        <property name="PredObrNostr" type="java.lang.String">
+            <column name="PredObrNostr" not-null="true"/>
+        </property>
+        <property name="Strana" type="java.lang.String">
+            <column name="Strana" not-null="true"/>
+        </property>
+        <property name="Region" type="java.lang.String">
+            <column name="Region" not-null="true"/>
+        </property>
+        <property name="TipNP" type="java.lang.String">
+            <column name="TipNP" not-null="true"/>
+        </property>
+        <property name="NazvanieNP" type="java.lang.String">
+            <column name="NazvanieNP" not-null="true"/>
+        </property>
+        <property name="Ulitsa" type="java.lang.String">
+            <column name="Ulitsa" not-null="true"/>
+        </property>
+        <property name="Dom" type="java.lang.String">
+            <column name="Dom" not-null="true"/>
+        </property>
+        <property name="Kvartira" type="java.lang.String">
+            <column name="Kvartira" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

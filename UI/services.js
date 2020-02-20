@@ -238,11 +238,6 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         service = { User: undefined };
     };
 
-    service.getTokenFromCookie = function(){
-        //to do parse token from cookie
-        service.conf.headers.Authorization = getCookie('token');
-    }
-
     function getCookie(name) {
         //to do check for getting token
         var value = "; " + document.cookie;
@@ -250,21 +245,33 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         if (parts.length == 2)
             return parts.pop().split(";").shift();
         else
-            return {};
+            return null;
+    }
+    service.checkToken = function(){
+        var token = getCookie("token");
+        if(token){
+            service.conf.headers.Authorization = token;
+            return true;
+        }
+    }
+
+    service.setCookie = function(name,value,days){
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
     }
 
     service.GetUserByToken = function() {
         var deferred = $q.defer();
         $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken', service.conf).success(function(user){
-            if (!user) {
-                //$location.path('/lk');
-            } else {
-                service.User = user;
-                deferred.resolve(user);
-            }
+            deferred.resolve(user);
         }).error(function(){
             service.User = undefined;
-            $location.path('/loginPage');
+            $location.path('/lk');
         });
         return deferred.promise;
     };
@@ -272,8 +279,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
     service.Authorize = function(user) {
         var deferred = $q.defer();
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/authorization', user).success(function (autorizedUser) {
-            defered.resolve(autorizedUser);
-            //to do save token
+            deferred.resolve(autorizedUser);
         }).error(function (data) {
             service.User = undefined;
             $location.path('/lk');

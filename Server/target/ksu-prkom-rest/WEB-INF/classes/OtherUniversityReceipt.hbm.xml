@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.OtherUniversityReceipt" table="other_university_receipt_status" catalog="ksudb">
+        <id name="Id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="UserId" type="java.lang.Integer">
+            <column name="UserId" not-null="false"/>
+        </property>
+        <property name="UniversityName" type="java.lang.String">
+            <column name="UniversityName" not-null="false"/>
+        </property>
+        <property name="InformationAboutReceipt" type="java.lang.String">
+            <column name="InformationAboutReceipt" not-null="false"/>
+        </property>
+        <property name="Url" type="java.lang.String">
+            <column name="Url" not-null="false"/>
+        </property>
+        <property name="CreationDate" type="timestamp">
+            <column name="CreationDate" not-null="false"/>
+        </property>
+        <property name="IsDeleted" type="boolean">
+            <column name="IsDeleted"  not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

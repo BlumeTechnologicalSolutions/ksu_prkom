@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.User" table="Users" catalog="ksudb">
+        <id name="Id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="FirstName" type="java.lang.String">
+            <column name="FirstName" not-null="true"/>
+        </property>
+        <property name="LastName" type="java.lang.String">
+            <column name="LastName" not-null="true"/>
+        </property>
+        <property name="Patronymic" type="java.lang.String">
+            <column name="Patronymic" not-null="false"/>
+        </property>
+        <property name="Gender" type="java.lang.String">
+            <column name="Gender" not-null="true"/>
+        </property>
+        <property name="Email" type="java.lang.String">
+            <column name="Email" not-null="true"/>
+        </property>
+        <property name="Login" type="java.lang.String">
+            <column name="Login" not-null="true"/>
+        </property>
+        <property name="Password" type="java.lang.String">
+            <column name="Password" not-null="true"/>
+        </property>
+        <property name="PlaceOfBirth" type="java.lang.String">
+            <column name="PlaceOfBirth" not-null="true"/>
+        </property>
+        <property name="BirthdayDate" type="java.util.Date">
+            <column name="BirthdayDate" not-null="true"/>
+        </property>
+        <property name="AccountCreationDate" type="java.util.Date">
+            <column name="AccountCreationDate" not-null="true"/>
+        </property>
+        <property name="IsOperator" type="boolean">
+            <column name="IsOperator"  not-null="true" />
+        </property>
+        <property name="IsDeleted" type="boolean">
+            <column name="IsDeleted"  not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

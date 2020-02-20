@@ -1,6 +1,7 @@
 package com.lk.impl;
 
 import com.lk.entity.Response;
+import com.lk.entity.Token;
 import com.lk.entity.User;
 import com.lk.entity.UserRegistration;
 import com.lk.persistence.HibernateUtil;
@@ -9,18 +10,16 @@ import com.lk.service.UserService;
 import com.mongodb.*;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.result.UpdateResult;
+import java.util.Date;
 import org.bson.Document;
-import org.bson.conversions.Bson;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Named;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Iterator;
 import java.util.List;
 
@@ -34,23 +33,24 @@ public class UserServiceImpl implements UserService {
     private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Override
-    public User getUserByToken(String tokenInfo) {
-        logger.info("Start function getUserByToken, by token info: " + tokenInfo);
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = null;
+    public Response getUserByToken(HttpServletRequest httpServletRequest) {
+        logger.info("Start function getUserByToken, by token info: " + httpServletRequest);
+        String token = httpServletRequest.getHeader("Authorization");
         try{
-            transaction = session.beginTransaction();
-            List<User> user = session.createSQLQuery("Select * from Users as usr where usr.Token = (:TokenInfo)")
-                    .addEntity(User.class)
-                    .setParameter("TokenInfo",tokenInfo)
-                    .list();
-            transaction.commit();
-            return user.get(0);
+            MongoDatabase database = new MongoDbUtill().getDataBase();
+            MongoCollection<Document> collection =  database.getCollection("Tokens");
+            FindIterable<Document> tokens = collection.find(eq("token", token));
+            if(tokens.iterator().hasNext()){
+                String login = (String) tokens.iterator().next().get("login");
+                collection =  database.getCollection("Accounts");
+                FindIterable<Document> user = collection.find(eq("login", login));
+                return new Response(true, (Object) user.iterator().next().toJson() );
+            }
         } catch (Exception ex){
             logger.error("Exception in getUserByToken with:",ex.getLocalizedMessage(),ex);
-            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка:"+ex.getLocalizedMessage());
         }
-        return null;
+        return new Response(false, "Токен не существует");
     }
 
     public Response authorization (User user){
@@ -64,10 +64,22 @@ public class UserServiceImpl implements UserService {
             MongoCollection<Document> collection =  database.getCollection("Accounts");
             FindIterable<Document> userList =
                     collection.find(and(
-                            eq("accounts.abiturients."+login+".accountinf.login", login),
-                            eq("accounts.abiturients."+login+".accountinf.password", password)));
+                            eq("login", login),
+                            eq("password", password)));
             if(userList.iterator().hasNext()) {
                 String json = userList.iterator().next().toJson();
+                Date date = new Date();
+                date.setDate(date.getDate()+14);
+                String tokenHash = Token.md5Custom(String.valueOf(date.getTime()));
+                //Token token = new Token(login,tokenHash, date);
+                Document tokenDb = new Document();
+                tokenDb.put("login", login);
+                tokenDb.put("token", tokenHash);
+                tokenDb.put("expiration", date);
+                collection = database.getCollection("Tokens");
+                collection.insertOne(tokenDb);
+                json = json.substring(0,json.length()-1);
+                json += ", \"token\":\""+tokenHash+"\"}";
                 return new Response(true, (Object) json);
             }
         }
@@ -92,7 +104,7 @@ public class UserServiceImpl implements UserService {
 
         MongoDatabase database = new MongoDbUtill().getDataBase();
         MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> findIt = collection.find(eq(login+".accountinf.login", login));
+        FindIterable<Document> findIt = collection.find(eq(login+".login", login));
         Iterator iterator = findIt.iterator();
         if(!iterator.hasNext()) {
             BasicDBObject accountInfo = new BasicDBObject();
@@ -100,9 +112,8 @@ public class UserServiceImpl implements UserService {
             accountInfo.put("password", password);
             accountInfo.put("secretquestion", controlQuestion);
             accountInfo.put("secretanswer", controlAnswer);
-            UpdateResult result = collection.updateOne(new BasicDBObject(), set(login,new BasicDBObject("accountinf",accountInfo)));
-            logger.info("Registration user with info:" + result.toString());
-
+            //UpdateResult result = collection.insertOne(set(login,new BasicDBObject(login,accountInfo)));
+            //logger.info("Registration user with info:" + result.toString());
             return new Response(true, (Object) "Пользователь успешно зарегистрирован");
         }
         logger.info("User is already exist with login: " + login);
