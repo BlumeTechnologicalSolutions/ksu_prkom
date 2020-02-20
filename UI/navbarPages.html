@@ -22,3 +22,15 @@
     </li>
 
 </ul>
+<ul class="nav navbar-nav navbar-right" ng-if="user">
+    <li id="userProfileLi" class="dropdown" ng-click="openDD();" ng-mouseleave="closeDropDown('userProfile')" ng-mouseenter="selectedTab = 'userProfile'; showDropDown('userProfile')">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>{{user.lastName+' '+user.firstName}}</span>
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-navbar">
+            <li ng-class="{'active':selectedTabInTab === 'editProfile'}" ng-click="setSelectedTabInTab('editProfile'); openProfile()"><a href="">Редактировать профиль</a></li>
+            <li role="presentation" class="divider"></li>
+            <li ng-class="{'active':selectedTabInTab === 'exit'}" ng-click="logOut()"><a href="">Выйти</a></li>
+        </ul>
+    </li>
+</ul>

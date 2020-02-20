@@ -2,20 +2,37 @@
 
 var lk = angular.module('myApp.lk', ['ngRoute']);
 
-lk.controller('AbiturientCtrl', function($scope, userService, $location) {
-
+lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootScope) {
 
     if (userService.checkToken()) {
         getUserByToken();
     };
 
+    $rootScope.user = userService.User;
     function getUserByToken() {
-        userService.GetUserByToken().then(function (data) {
-            if (userService.User) {
-                console.log("ok")
-            };
-        });
+        if(!userService.User) {
+            userService.GetUserByToken().then(function (response) {
+                if (response.isSuccess) {
+                    userService.User = JSON.parse(response.object);
+                    if (userService.User) {
+                        $rootScope.user = userService.User;
+                        tryDigest();
+                    }
+                } else {
+                    alert(response.message);
+                }
+            });
+        } else {
+            $rootScope.user = userService.User;
+            tryDigest();
+        }
     };
+
+    function tryDigest() {
+        if(!$rootScope.$$phase) {
+            $rootScope.$digest();
+        };
+    }
 
     $scope.authorization = function () {
         var loginUser = $scope.loginUser;
@@ -32,24 +49,26 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location) {
                 $("#inputPassword").css({"border": ""});
             },2000);
         } else {
-            userService.Authorize(loginUser).then(function(response) {
-                if (response.isSuccess) {
-                    userService.User = JSON.parse(response.object);
-                    if(userService.User && userService.User.token) {
-                        userService.setCookie("token", userService.User.token, 14);
-                        $location.path("/apply");
+            if(!userService.User) {
+                userService.Authorize(loginUser).then(function (response) {
+                    if (response.isSuccess) {
+                        userService.User = JSON.parse(response.object);
+                        if (userService.User && userService.User.token) {
+                            $rootScope.user = userService.User;
+                            userService.setCookie("token", userService.User.token, 14);
+                            tryDigest();
+                        }
+
+                    } else {
+                        alert(response.message);
                     }
-                } else {
-                    alert(response.message);
-                };
-            }).catch(function (response) {
-                alert("Сервер авторизации не доступен. Обратитесь к администратору. With message:"+response);
-            });
-        }
+                }).catch(function (response) {
+                    alert("Сервер авторизации не доступен. Обратитесь к администратору. With message:" + response);
+                });
+            } else {
+                $rootScope.user = userService.User;
+            }
+        };
     };
-
-    $scope.createAccount = function(){
-
-    }
 
 });

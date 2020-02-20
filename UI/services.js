@@ -228,7 +228,7 @@ services.filter('orderObjectBy', function() {
 });
 
 
-myApp.factory('userService', function($http, $window, $q, $location, $timeout, $rootScope) {
+myApp.factory('userService', function($http, $window, $q, $location) {
 
     var service = {};
     service.conf={headers: {}};
@@ -256,6 +256,10 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
     }
 
     service.setCookie = function(name,value,days){
+        setCookie(name,value,days);
+    };
+
+    function setCookie(name,value,days){
         var expires = "";
         if (days) {
             var date = new Date();
@@ -308,9 +312,10 @@ myApp.factory('userService', function($http, $window, $q, $location, $timeout, $
         return deferred.promise;
     };
 
-    service.LogOut = function() {
+    service.logOut = function() {
         service.User = undefined;
-        //to do
+        setCookie("token", "", -1);
+        $location.path("/lk");
     };
 
     return service;

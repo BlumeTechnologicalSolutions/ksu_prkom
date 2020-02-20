@@ -22,9 +22,33 @@ function loadXML(url) {
     };
 };
 
+
+
 var myApp = angular.module('myApp',
     ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply', 'myApp.direction',
         'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember']);
+
+myApp.directive('htmlCompile', ['$compile', function ($compile) {
+    return function(scope, element, attrs) {
+        scope.$watch(
+            function(scope) {
+                // watch the 'compile' expression for changes
+                return scope.$eval(attrs.htmlCompile);
+            },
+            function(value) {
+                // when the 'compile' expression changes
+                // assign it into the current DOM
+                element.html(value);
+
+                // compile the new DOM and link it to the current
+                // scope.
+                // NOTE: we only compile .childNodes so that
+                // we don't get into infinite loop compiling ourselves
+                $compile(element.contents())(scope);
+            }
+        );
+    };
+}]);
 
 myApp.config(function($routeProvider) {
 
@@ -59,7 +83,8 @@ myApp.config(function($routeProvider) {
         .when('/registration', {
             templateUrl: 'registration/registration.html',
             controller: 'RegistrationCtrl'
-        }).when('/remember', {
+        })
+        .when('/remember', {
             templateUrl: 'remember/remember.html',
             controller: 'RememberCtrl'
         })
@@ -74,25 +99,40 @@ myApp.controller('CopyrightDateCtrl',function ($scope, dateFilter) {
     });
 });
 
+/*$(document).mouseup(function (e){ // событие клика по веб-документу
+    if (location.hash.indexOf('lk')<0) {
+        if (!localStorage.token && !sessionStorage.token) {
+            if (location.hash.indexOf('clientNps')<0) {
+                logOut();
+                $window.location.hash = "#/loginPage";
+            }
+        } else {
+            // webSocketCheckVersionService.knockToWebSocket();
+            // if (!webSocketCheckVersionService.websocketCheckConnect()) {
+            //     webSocketCheckVersionService.webSocketCheckVersion();
+            // };
+            systemService.systemVersion();
+        };
+    };
+});*/
 
+myApp.controller('UserCtrl', function($scope, userService, $rootScope) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
+    if(!$rootScope.$$phase) {
+        $rootScope.$digest();
+    };
+    var userInterval = setInterval(function(){
+        if (userService.User) {
+            clearInterval(userInterval);
+            $scope.$apply(function () {
+                $rootScope.user = userService.User;
+            })
+        };
+    }, 100);
 
-myApp.controller('UserCtrl', function($scope) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
-
-    //$scope видимость контекста внутри контроллера
-    $scope.helloWorld = "hello world";
-
-    function getText(){ //функция js
-        var text = 1;
-        text = text + 1;
-        return text;
-    }
-
-    $scope.getText = function(){ //функция ангуляра она может быть вызвана например событиями ng-click="getText()" или ng-mouseenter и другие
-        var text = 1;
-        text = text + 1;
-        return text;
-    }
-
+    $scope.logOut = function() {
+        userService.logOut();
+        $rootScope.user = null;
+    };
 });
 
 
