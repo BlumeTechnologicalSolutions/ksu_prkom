@@ -101,7 +101,7 @@ public class UserServiceImpl implements UserService {
 
         MongoDatabase database = new MongoDbUtill().getDataBase();
         MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> findIt = collection.find(eq(login+".login", login));
+        FindIterable<Document> findIt = collection.find(eq("login", login));
         Iterator iterator = findIt.iterator();
         if(!iterator.hasNext()) {
             Document accountInfo = new Document();
@@ -125,7 +125,7 @@ public class UserServiceImpl implements UserService {
         String login = user.getLogin();
         MongoDatabase database = new MongoDbUtill().getDataBase();
         MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> userList = collection.find(eq("accounts.abiturients."+login+".accountinf.login", login));
+        FindIterable<Document> userList = collection.find(eq("login", login));
         for(Document doc: userList){
             if(doc.get("secretanswer") == user.getControlAnswer()){
                 //to do token of restore pass

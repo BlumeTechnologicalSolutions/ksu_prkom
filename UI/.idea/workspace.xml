@@ -4,11 +4,6 @@
     <list default="true" id="74c9a43a-d90a-4a09-a92f-4f977e24cf11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adaptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/adaptive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbarPages.html" beforeDir="false" afterPath="$PROJECT_DIR$/navbarPages.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,12 +259,12 @@
       <workItem from="1581075602694" duration="2389000" />
       <workItem from="1581082707286" duration="834000" />
       <workItem from="1582184950896" duration="5089000" />
-      <workItem from="1582201491800" duration="5821000" />
+      <workItem from="1582201491800" duration="6272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26385000" />
+    <option name="totallyTimeSpent" value="26836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />

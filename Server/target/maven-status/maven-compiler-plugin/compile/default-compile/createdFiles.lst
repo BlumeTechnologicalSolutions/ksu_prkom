@@ -1,0 +1,12 @@
+com\lk\entity\User.class
+com\lk\impl\UserServiceImpl.class
+com\lk\entity\UserRegistration.class
+com\lk\entity\LichnoeDelo.class
+com\lk\service\UserService.class
+com\lk\entity\OtherUniversityReceipt.class
+com\lk\entity\Token.class
+com\lk\entity\UniversityReceiptFilter.class
+com\lk\persistence\HibernateUtil.class
+com\lk\persistence\MongoDbUtill.class
+com\lk\controller\UserServiceRestController.class
+com\lk\entity\Response.class
