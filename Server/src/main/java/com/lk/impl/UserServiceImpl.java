@@ -26,11 +26,28 @@ public class UserServiceImpl implements UserService {
     public Response getUserByToken(HttpServletRequest httpServletRequest) {
         logger.info("Start function getUserByToken, by token info: " + httpServletRequest);
         String token = httpServletRequest.getHeader("Authorization");
-        try{
-
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            List<User> users = session.createSQLQuery("select usr.* from public.users as usr \n" +
+                    "join public.tokens as tok on tok.user_id = usr.id\n" +
+                    "where tok.token =(:token)")
+                    .addEntity(User.class)
+                    .setParameter("token", token)
+                    .list();
+            transaction.commit();
+            if(users.size()>0) {
+                User user = users.get(0);
+                user = setUserToClient(user);
+                return new Response(true, user);
+            }
         } catch (Exception ex){
-            logger.error("Exception in getUserByToken with:",ex.getLocalizedMessage(),ex);
-            return new Response(false, "Ошибка:"+ex.getLocalizedMessage());
+            if(transaction!=null) transaction.rollback();
+            logger.error("Exception in getUserByToken: " ,ex.getLocalizedMessage(),ex);
+            return new Response(false, "Ошибка при регистарции пользователя: "+ex.getLocalizedMessage());
+        } finally {
+            session.close();
         }
         return new Response(false, "Токен не существует");
     }
@@ -55,8 +72,11 @@ public class UserServiceImpl implements UserService {
                 transaction.commit();
                 if(users !=null && users.size()>0) {
                     User user = users.get(0);
+                    Integer userId = user.getId();
                     String tokenHash = Token.md5Custom(String.valueOf(new Date().getTime()));
-
+                    saveToken(tokenHash,userId);
+                    user.setToken(tokenHash);
+                    user = setUserToClient(user);
                     return new Response(true, user);
                 }
             } catch (Exception ex){
@@ -108,6 +128,7 @@ public class UserServiceImpl implements UserService {
                     .setParameter("controlQuestion", controlQuestion)
                     .setParameter("controlAnswer", controlAnswer)
                     .executeUpdate();
+
             transaction.commit();
             return new Response(true, (Object) "Пользователь успешно зарегистрирован");
         } catch (Exception ex){
@@ -117,6 +138,12 @@ public class UserServiceImpl implements UserService {
         } finally {
             session.close();
         }
+    }
+
+    public User setUserToClient(User user){
+        user.setPassword(null);
+        user.setControlAnswer(null);
+        return user;
     }
 
     public List<User> getUserByLogin(String login){
@@ -132,11 +159,34 @@ public class UserServiceImpl implements UserService {
             transaction.commit();
         } catch (Exception ex){
             if(transaction!=null) transaction.rollback();
-            logger.info("Exception in getUserByLogin: " ,ex.getLocalizedMessage(),ex);
+            logger.error("Exception in getUserByLogin: " ,ex.getLocalizedMessage(),ex);
         } finally {
             session.close();
         }
         return users;
+    }
+
+    public void saveToken(String token, Integer UserId){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Date date = new Date();
+            date.setDate(date.getDate()+14);
+            session.createSQLQuery("INSERT INTO public.tokens(token, user_id, expiration)\n" +
+                    "VALUES ((:token),(:userId),(:timestamp))")
+                    .setParameter("token", token)
+                    .setParameter("userId", UserId)
+                    .setParameter("timestamp", new Timestamp(date.getTime()))
+                    .executeUpdate();
+            transaction.commit();
+        } catch (Exception ex){
+            if(transaction!=null) transaction.rollback();
+            logger.error("Exception in saveToken: " ,ex.getLocalizedMessage(),ex);
+        } finally {
+            session.close();
+        }
+
     }
 
     public Response remember(User user){
