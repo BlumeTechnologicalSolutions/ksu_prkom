@@ -13,7 +13,7 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
         if(!userService.User) {
             userService.GetUserByToken().then(function (response) {
                 if (response.isSuccess) {
-                    userService.User = JSON.parse(response.object);
+                    userService.User = response.object
                     if (userService.User) {
                         $rootScope.user = userService.User;
                         tryDigest();
@@ -54,7 +54,7 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
             if(!userService.User) {
                 userService.Authorize(loginUser).then(function (response) {
                     if (response.isSuccess) {
-                        userService.User = JSON.parse(response.object);
+                        userService.User = response.object;
                         if (userService.User && userService.User.token) {
                             $rootScope.user = userService.User;
                             userService.setCookie("token", userService.User.token, 14);

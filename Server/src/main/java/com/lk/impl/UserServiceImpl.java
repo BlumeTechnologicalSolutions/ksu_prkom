@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
             try {
                 transaction = session.beginTransaction();
                 List<User> users = session.createSQLQuery("select * from public.users as usr " +
-                        "where 'usr.Login' = :userLogin and 'usr.Password' = :userPass ")
+                        "where login = :userLogin and password = :userPass ")
                         .addEntity(User.class)
                         .setParameter("userLogin", login)
                         .setParameter("userPass", password)

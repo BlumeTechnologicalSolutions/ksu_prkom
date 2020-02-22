@@ -5,44 +5,44 @@
 <hibernate-mapping>
     <class name="com.lk.entity.User" table="Users" catalog="prkom">
         <id name="Id" type="java.lang.Integer">
-            <column name="Id" />
+            <column name="id" />
             <generator class="identity" />
         </id>
         <property name="FirstName" type="java.lang.String">
-            <column name="FirstName" not-null="true"/>
+            <column name="fist_name" not-null="true"/>
         </property>
         <property name="LastName" type="java.lang.String">
-            <column name="LastName" not-null="true"/>
+            <column name="last_name" not-null="true"/>
         </property>
         <property name="Patronymic" type="java.lang.String">
-            <column name="Patronymic" not-null="false"/>
+            <column name="patronymic" not-null="false"/>
         </property>
         <property name="Email" type="java.lang.String">
-            <column name="Email" not-null="false"/>
+            <column name="email" not-null="false"/>
         </property>
         <property name="Login" type="java.lang.String">
-            <column name="Login" not-null="true"/>
+            <column name="login" not-null="true"/>
         </property>
         <property name="Password" type="java.lang.String">
-            <column name="Password" not-null="true"/>
+            <column name="password" not-null="true"/>
         </property>
         <property name="IsAdmin" type="boolean">
-            <column name="IsAdmin"  not-null="false" />
+            <column name="is_admin"  not-null="false" />
         </property>
         <property name="IsOperator" type="boolean">
-            <column name="IsOperator"  not-null="false" />
+            <column name="is_operator"  not-null="false" />
         </property>
         <property name="IsDeleted" type="boolean">
-            <column name="IsDeleted"  not-null="false" />
+            <column name="is_deleted"  not-null="false" />
         </property>
-        <property name="CreationDate" type="java.util.Date">
+        <property name="CreationDate" type="java.sql.Timestamp">
             <column name="CreationDate"  not-null="true" />
         </property>
         <property name="ControlAnswer" type="java.lang.String">
-            <column name="ControlAnswer" not-null="true"/>
+            <column name="control_answer" not-null="true"/>
         </property>
         <property name="ControlQuestion" type="java.lang.String">
-            <column name="ControlQuestion" not-null="true"/>
+            <column name="control_question" not-null="true"/>
         </property>
 
     </class>
