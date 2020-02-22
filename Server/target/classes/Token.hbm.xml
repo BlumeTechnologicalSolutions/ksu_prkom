@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.Token" table="Users" catalog="prkom">
+        <id name="Id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="UserId" type="java.lang.Integer">
+            <column name="user_id" not-null="true"/>
+        </property>
+        <property name="Token" type="java.lang.String">
+            <column name="token" not-null="true"/>
+        </property>
+        <property name="Expiration" type="timestamp">
+            <column name="expiration" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

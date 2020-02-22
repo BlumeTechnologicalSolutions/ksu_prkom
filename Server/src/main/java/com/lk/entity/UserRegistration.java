@@ -7,6 +7,7 @@ public class UserRegistration {
     private String Patronymic;
     private String Login;
     private String Password;
+    private String Email;
     private String ControlQuestion;
     private String ControlAnswer;
 
@@ -24,5 +25,6 @@ public class UserRegistration {
     public void setControlQuestion(String controlQuestion) { ControlQuestion = controlQuestion; }
     public String getControlAnswer() { return ControlAnswer; }
     public void setControlAnswer(String controlAnswer) { ControlAnswer = controlAnswer; }
-
+    public String getEmail() { return Email; }
+    public void setEmail(String email) { Email = email; }
 }

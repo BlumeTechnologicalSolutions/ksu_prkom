@@ -26,7 +26,7 @@ registration.controller('RegistrationCtrl', function($scope, userService) {
                 newUser.passwordReply  = undefined;
                 userService.registration(newUser).then(function(response) {
                     if (response.isSuccess) {
-                        userService.User = JSON.parse(response.object);
+                        alert(response.object);
                     } else {
                         alert(response.message)
                     };

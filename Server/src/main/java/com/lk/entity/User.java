@@ -19,6 +19,25 @@ public class User {
     private Boolean IsDeleted;
     private String Token;
 
+    public User(){}
+
+    public User(Integer Id, String FirstName, String LastName, String Patronymic, String Email, Timestamp CreationDate, String Login, String Password,
+                String ControlQuestion, String ControlAnswer, Boolean IsAdmin, Boolean IsOperator, Boolean IsDeleted){
+        this.Id = Id;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Patronymic = Patronymic;
+        this.Email = Email;
+        this.CreationDate = CreationDate;
+        this.Login = Login;
+        this.Password = Password;
+        this.ControlQuestion = ControlQuestion;
+        this.ControlAnswer = ControlAnswer;
+        this.IsAdmin = IsAdmin;
+        this.IsOperator = IsOperator;
+        this.IsDeleted = IsDeleted;
+    }
+
     public Integer getId() { return Id; }
     public void setId(Integer id) { Id = id; }
     public String getFirstName() { return FirstName; }

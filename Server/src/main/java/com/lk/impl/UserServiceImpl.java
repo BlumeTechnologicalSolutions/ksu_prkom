@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
 import java.util.*;
 
 
@@ -55,12 +56,13 @@ public class UserServiceImpl implements UserService {
                 if(users !=null && users.size()>0) {
                     User user = users.get(0);
                     String tokenHash = Token.md5Custom(String.valueOf(new Date().getTime()));
-                    user.setToken(tokenHash);
+
                     return new Response(true, user);
                 }
             } catch (Exception ex){
                 if(transaction!=null) transaction.rollback();
                 logger.info("Exception in authorization: " ,ex.getLocalizedMessage(),ex);
+                return new Response(false, "Ошибка при авторизации пользователя: "+ex.getLocalizedMessage());
             } finally {
                 session.close();
             }
@@ -68,40 +70,74 @@ public class UserServiceImpl implements UserService {
         return new Response(false, "Неверно указан логин или пароль");
     }
 
-    public Response registration(UserRegistration user){
-        logger.info("Start user registration with login:"+user.getLogin());
-        String login = user.getLogin();
-        String password = user.getPassword();
-        String controlAnswer = user.getControlAnswer();
-        String controlQuestion = user.getControlQuestion();
-        String firstName = user.getFirstName();
-        String lastName = user.getLastName();
-        String petronimic = user.getPatronymic();
+    public Response registration(UserRegistration userToRegistration){
+        logger.info("Start user registration with login:"+userToRegistration.getLogin());
+        String login = userToRegistration.getLogin();
+        String password = userToRegistration.getPassword();
+        String controlAnswer = userToRegistration.getControlAnswer();
+        String controlQuestion = userToRegistration.getControlQuestion();
+        String firstName = userToRegistration.getFirstName();
+        String lastName = userToRegistration.getLastName();
+        String petronimic = userToRegistration.getPatronymic();
+        String email = userToRegistration.getEmail();
         if(login == null || login == "") return new Response(false, "Логин недопустим");
         if(password == null || password == "") return new Response(false, "Пароль недопустим");
-        if(user.getControlAnswer() == null || user.getControlAnswer() == "") return new Response(false, "Контрольный ответ недопустим");
-        if(user.getControlQuestion() == null || user.getControlQuestion() == "") return new Response(false, "Контрольный вопрос недопустим");
-        if(user.getFirstName() == null || user.getFirstName() == "") return new Response(false, "Имя недопустимо");
-        if(user.getLastName() == null || user.getLastName() == "") return new Response(false, "Фамилия недопустима");
-
-        /*MongoDatabase database = new MongoDbUtill().getDataBase();
-        MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> findIt = collection.find(eq("login", login));
-        Iterator iterator = findIt.iterator();
-        if(!iterator.hasNext()) {
-            Document accountInfo = new Document();
-            accountInfo.put("login", login);
-            accountInfo.put("password", password);
-            accountInfo.put("secretquestion", controlQuestion);
-            accountInfo.put("secretanswer", controlAnswer);
-            collection.insertOne(accountInfo);
-            //logger.info("Registration user with info:" + result.toString());
+        if(controlAnswer == null || controlAnswer == "") return new Response(false, "Контрольный ответ недопустим");
+        if(controlQuestion == null || controlQuestion == "") return new Response(false, "Контрольный вопрос недопустим");
+        if(firstName == null || firstName == "") return new Response(false, "Имя недопустимо");
+        if(lastName == null || lastName == "") return new Response(false, "Фамилия недопустима");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            if(getUserByLogin(login).size()>0){
+                logger.info("User is already exist with login: " + login);
+                return new Response(false, "Указанный логин уже существует");
+            }
+            Timestamp timestamp =  new Timestamp(System.currentTimeMillis());
+            /*User newUser = new User(null, firstName, lastName, petronimic,email,timestamp,login,password,controlQuestion, controlAnswer,false,false,false);*/
+            transaction = session.beginTransaction();
+            session.createSQLQuery("INSERT INTO public.users(login, password, creation_date, fist_name, last_name, patronymic, email, control_question, control_answer, is_admin, is_operator, is_deleted)\n" +
+                    "VALUES ((:login),(:password),(:timestamp),(:firstName),(:lastName),(:petronimic),(:email),(:controlQuestion),(:controlAnswer),b'0',b'0',b'0')")
+                    .setParameter("firstName", firstName)
+                    .setParameter("lastName", lastName)
+                    .setParameter("petronimic", petronimic)
+                    .setParameter("email", email)
+                    .setParameter("timestamp", timestamp)
+                    .setParameter("login", login)
+                    .setParameter("password", password)
+                    .setParameter("controlQuestion", controlQuestion)
+                    .setParameter("controlAnswer", controlAnswer)
+                    .executeUpdate();
+            transaction.commit();
             return new Response(true, (Object) "Пользователь успешно зарегистрирован");
-        }*/
-        logger.info("User is already exist with login: " + login);
-        return new Response(false, "Указанный логин уже существует");
+        } catch (Exception ex){
+            if(transaction!=null) transaction.rollback();
+            logger.info("Exception in registration: " ,ex.getLocalizedMessage(),ex);
+            return new Response(false, "Ошибка при регистарции пользователя: "+ex.getLocalizedMessage());
+        } finally {
+            session.close();
+        }
     }
 
+    public List<User> getUserByLogin(String login){
+        List<User> users = new ArrayList<>();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            users = session.createSQLQuery("select * from users where login = :thisLogin")
+                    .addEntity(User.class)
+                    .setParameter("thisLogin", login)
+                    .list();
+            transaction.commit();
+        } catch (Exception ex){
+            if(transaction!=null) transaction.rollback();
+            logger.info("Exception in getUserByLogin: " ,ex.getLocalizedMessage(),ex);
+        } finally {
+            session.close();
+        }
+        return users;
+    }
 
     public Response remember(User user){
         logger.info("Start user registration with login:"+user.getLogin());
