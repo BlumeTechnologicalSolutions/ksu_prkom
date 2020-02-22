@@ -36,7 +36,7 @@
             <column name="is_deleted"  not-null="false" />
         </property>
         <property name="CreationDate" type="java.sql.Timestamp">
-            <column name="CreationDate"  not-null="true" />
+            <column name="creation_date"  not-null="true" />
         </property>
         <property name="ControlAnswer" type="java.lang.String">
             <column name="control_answer" not-null="true"/>
