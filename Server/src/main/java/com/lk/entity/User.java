@@ -8,11 +8,16 @@ public class User {
     private String FirstName;
     private String LastName;
     private String Patronymic;
-
-    private String Password;
+    private String Email;
+    private Date CreationDate;
     private String Login;
+    private String Password;
     private String ControlQuestion;
     private String ControlAnswer;
+    private Boolean IsAdmin;
+    private Boolean IsOperator;
+    private Boolean IsDeleted;
+    private String Token;
 
     public Integer getId() { return Id; }
     public void setId(Integer id) { Id = id; }
@@ -30,4 +35,22 @@ public class User {
     public void setControlQuestion(String controlQuestion) { ControlQuestion = controlQuestion; }
     public String getControlAnswer() { return ControlAnswer; }
     public void setControlAnswer(String controlAnswer) { ControlAnswer = controlAnswer; }
+    public Date getCreationDate() { return CreationDate; }
+    public void setCreationDate(Date creationDate) { CreationDate = creationDate; }
+    public Boolean getIsAdmin() { return IsAdmin; }
+    public void setIsAdmin(Boolean admin) { IsAdmin = admin; }
+    public Boolean getIsOperator() { return IsOperator; }
+    public void setIsOperator(Boolean operator) { IsOperator = operator; }
+    public String getEmail() { return Email; }
+    public void setEmail(String email) { Email = email; }
+    public Boolean getIsDeleted() { return IsDeleted; }
+    public void setIsDeleted(Boolean deleted) { IsDeleted = deleted; }
+
+    public String getToken() {
+        return Token;
+    }
+
+    public void setToken(String token) {
+        Token = token;
+    }
 }

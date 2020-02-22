@@ -13,7 +13,6 @@
     <properties>
         <spring.framework.version>4.2.3.RELEASE</spring.framework.version>
         <hibernate.version>4.1.11.Final</hibernate.version>
-        <mysql.version>5.1.24</mysql.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
@@ -231,17 +230,16 @@
             <version>4.2.4.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.11.1</version>
-        </dependency>
-        <dependency>
             <groupId>com.liferay.org.apache.commons.fileupload</groupId>
             <artifactId>com.liferay.org.apache.commons.fileupload</artifactId>
             <version>6.2.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.1-901.jdbc4</version>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>

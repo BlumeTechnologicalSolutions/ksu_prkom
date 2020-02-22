@@ -3,7 +3,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.lk.entity.User" table="Users" catalog="ksudb">
+    <class name="com.lk.entity.User" table="Users" catalog="prkom">
         <id name="Id" type="java.lang.Integer">
             <column name="Id" />
             <generator class="identity" />
@@ -17,11 +17,8 @@
         <property name="Patronymic" type="java.lang.String">
             <column name="Patronymic" not-null="false"/>
         </property>
-        <property name="Gender" type="java.lang.String">
-            <column name="Gender" not-null="true"/>
-        </property>
         <property name="Email" type="java.lang.String">
-            <column name="Email" not-null="true"/>
+            <column name="Email" not-null="false"/>
         </property>
         <property name="Login" type="java.lang.String">
             <column name="Login" not-null="true"/>
@@ -29,20 +26,24 @@
         <property name="Password" type="java.lang.String">
             <column name="Password" not-null="true"/>
         </property>
-        <property name="PlaceOfBirth" type="java.lang.String">
-            <column name="PlaceOfBirth" not-null="true"/>
-        </property>
-        <property name="BirthdayDate" type="java.util.Date">
-            <column name="BirthdayDate" not-null="true"/>
-        </property>
-        <property name="AccountCreationDate" type="java.util.Date">
-            <column name="AccountCreationDate" not-null="true"/>
+        <property name="IsAdmin" type="boolean">
+            <column name="IsAdmin"  not-null="false" />
         </property>
         <property name="IsOperator" type="boolean">
-            <column name="IsOperator"  not-null="true" />
+            <column name="IsOperator"  not-null="false" />
         </property>
         <property name="IsDeleted" type="boolean">
-            <column name="IsDeleted"  not-null="true" />
+            <column name="IsDeleted"  not-null="false" />
         </property>
+        <property name="CreationDate" type="java.util.Date">
+            <column name="CreationDate"  not-null="true" />
+        </property>
+        <property name="ControlAnswer" type="java.lang.String">
+            <column name="ControlAnswer" not-null="true"/>
+        </property>
+        <property name="ControlQuestion" type="java.lang.String">
+            <column name="ControlQuestion" not-null="true"/>
+        </property>
+
     </class>
 </hibernate-mapping>

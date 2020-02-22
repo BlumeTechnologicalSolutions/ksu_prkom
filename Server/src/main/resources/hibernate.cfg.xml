@@ -6,13 +6,14 @@
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
-        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:31889;databaseName=prkom</property>
-        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/prkom</property>
+        <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">7417</property>
-        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
 
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
         <property name="hibernate.connection.useUnicode">true</property>
         <property name="hibernate.connection.characterEncoding">UTF-8</property>
         <property name="hibernate.connection.charSet">UTF-8</property>
@@ -20,7 +21,6 @@
         <property name="connection.autoReconnectForPools">true</property>
         <property name="connection.is-connection-validation-required">true</property>
 
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <property name="connection.pool_size">1000</property>
         <property name="hibernate.c3p0.max_size">1000</property>
