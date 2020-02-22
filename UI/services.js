@@ -1,6 +1,48 @@
 
 var services = angular.module('myApp.services', ['ngRoute']);
 
+services.factory('infoService', function ($uibModal) {
+    var service = {};
+
+    service.infoFunction = function(text, title) {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'modalWindows/InfoModal/infoModal.html',
+            controller: 'InfoModalWindowCtrl',
+            size: 'size',
+            resolve: {
+                element: function () {
+                    return text;
+                },
+                title: function () {
+                    return title;
+                }
+            }
+        });
+    };
+
+    service.openConfirmationModal = function(title, text) {
+        var props = {
+            animation: true,
+            backdrop: 'static',
+            keyboard: false,
+            templateUrl: 'modalWindows/ConfirmationModal/confirmationModal.html',
+            controller: 'ConfirmationModalCtrl',
+            resolve: {
+                title: function () {
+                    return title;
+                },
+                text: function () {
+                    return text;
+                }
+            }
+        };
+
+        return $uibModal.open(props);
+    };
+
+    return service;
+});
+
 services.factory('datesService', function () {
     var service = {};
 
@@ -247,6 +289,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
         else
             return null;
     }
+
     service.checkToken = function(){
         var token = getCookie("token");
         if(token){
@@ -290,6 +333,31 @@ myApp.factory('userService', function($http, $window, $q, $location) {
             deferred.reject('Error in authtorize user function');
         });
         return deferred.promise;
+    };
+
+    service.resolveCheck = function() {
+        var defered = $q.defer();
+        var count = 0;
+        var userInterval = setInterval(function () {
+            count++;
+            if (count == 4) {
+                clearInterval(userInterval);
+                defered.resolve(service.GetUserByToken());
+            } else {
+                if (service.User) {
+                    clearInterval(userInterval);
+                    defered.resolve(service.User);
+                    var currentUser = service.User;
+                    if (!currentUser.isDeleted) {
+                        defered.resolve(service.User);
+                    } else {
+                        $location.path('/lk');
+                    };
+                };
+            };
+        }, 50);
+
+        return defered.promise;
     };
 
     service.registration = function(newUser) {

@@ -2,7 +2,7 @@
 
 var lk = angular.module('myApp.lk', ['ngRoute']);
 
-lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootScope) {
+lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootScope, infoService) {
 
     if (userService.checkToken()) {
         getUserByToken();
@@ -62,10 +62,10 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
                         }
 
                     } else {
-                        alert(response.message);
+                        infoService.infoFunction(response.message, "Ошибка!");
                     }
-                }).catch(function (response) {
-                    alert("Сервер авторизации не доступен. Обратитесь к администратору. With message:" + response);
+                }).catch(function () {
+                    infoService.infoFunction("Сервер авторизации не доступен. Обратитесь к администратору.", "Ошибка!");
                 });
             } else {
                 $rootScope.user = userService.User;

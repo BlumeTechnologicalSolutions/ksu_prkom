@@ -26,7 +26,9 @@ function loadXML(url) {
 
 var myApp = angular.module('myApp',
     ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply', 'myApp.direction',
-        'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember']);
+        'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember', 'myApp.confirmationModal',
+        'myApp.infoModal'
+    ]);
 
 myApp.directive('htmlCompile', ['$compile', function ($compile) {
     return function(scope, element, attrs) {
@@ -52,9 +54,9 @@ myApp.directive('htmlCompile', ['$compile', function ($compile) {
 
 myApp.config(function($routeProvider) {
 
-    var Auth={
-        authorize: function(userService) {
-            // return userService.getNewUser();
+    var AuthResolve = {
+        authorizeCheck: function(userService) {
+             return userService.resolveCheck();
         }
     };
 
