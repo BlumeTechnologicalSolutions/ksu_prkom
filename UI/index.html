@@ -11,31 +11,41 @@
     <meta name="keywords" content="ksu, abiturient">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="adaptive.css">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
 </head>
 <body ng-cloak>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button id="TTSNav" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#KsuNav" aria-expanded="false">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="logo" href="" title="Костромской Государственный Университет">
-                <img class="marginTop7" data-placeholder="no" src="images/kgynewlogo.png" alt="Костромской Государственный Университет"  >
-            </a>
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark navbar--apple">
+    <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#menu"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"><i class="la la-navicon"></i></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+                <li class="nav-item d-none d-xs-block d-md-block" role="presentation"><a class="nav-link" href="#">
+                    <img src="images/ksulogo.png" style="width: 28.5px;margin-top: -6px;">
+                </a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ГЛАВНАЯ</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ЗАЯВЛЕНИЯ</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">НАПРАВЛЕНИЯ</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ПРИЕМНАЯ КОМИССИЯ</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ПОДДЕРЖКА</a></li>
+                <li class="nav-item" role="presentation" ng-if="!user">
+                    <a class="nav-link montserrat" href="#/lk">ВОЙТИ</a>
+                </li>
+                <li class="nav-item" role="presentation" ng-if="user">
+                    <div class="nav-item dropdown" style="margin-top: 4px;"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#" style="font-size: 13px;font-family: Montserrat, sans-serif;">АККАУНТ</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Мои данные</a><a class="dropdown-item" role="presentation" href="#">Выйти</a></div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="collapse navbar-collapse" id="KsuNav"  ng-controller="UserCtrl" ng-cloak>
-            <div ng-include src="'navbarPages.html'"></div>
-        </div>
+
     </div>
 </nav>
+
 <div ng-view class="theme-showcase" role="main"></div>
 <div class="container">
     <div class="footer">
@@ -48,7 +58,7 @@
 <script src="bower_components/jquery/1.12.1/jquery-ui.js"></script>
 <script src="bower_components/jquery/jquery.blockUI.js"></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
