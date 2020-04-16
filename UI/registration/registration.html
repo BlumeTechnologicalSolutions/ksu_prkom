@@ -1,46 +1,104 @@
-<div class="container">
+<!--<div class="container">
     <div class="login-form">
         <p class="text-center black main-text">Создание аккаунта</p>
         <br>
         <div class="form-group row">
-            <div class="col-xs-12">
+            <div class="col-12">
                 <input type="firstName" ng-model="newUser.firstName" class="form-control"  id="firstName" placeholder="Фамилия">
             </div>
-            <div class="col-xs-12 marginTop5">
+            <div class="col-12 marginTop5">
                 <input type="lastName" ng-model="newUser.lastName" class="form-control"  id="lastName" placeholder="Имя">
             </div>
-            <div class="col-xs-12 marginTop5">
+            <div class="col-12 marginTop5">
                 <input type="patronymic" ng-model="newUser.patronymic" class="form-control"  id="patronymic" placeholder="Отчество">
             </div>
         </div>
         <hr>
         <div class="form-group row">
-            <div class="col-xs-12">
+            <div class="col-12">
                 <input type="login" ng-model="newUser.login" class="form-control"   id="login" placeholder="Логин">
             </div>
-            <div class="col-xs-12 marginTop5">
+            <div class="col-12 marginTop5">
                 <input type="email" ng-model="newUser.email" class="form-control"  id="email" placeholder="Email">
             </div>
-            <div class="col-xs-12 marginTop5">
+            <div class="col-12 marginTop5">
                 <input type="password" ng-model="newUser.password" class="form-control"   id="password" placeholder="Пароль">
             </div>
-            <div class="col-xs-12 marginTop5">
+            <div class="col-12 marginTop5">
                 <input type="password" ng-model="newUser.passwordReply" class="form-control"   id="passwordReply" placeholder="Подтверждение пароля">
             </div>
         </div>
         <hr>
         <div class="form-group row ">
-            <div class="col-xs-12 ">
-                <input type="controlQuestion" ng-model="newUser.controlQuestion" class="form-control"   id="controlQuestion" placeholder="Контрольный вопрос">
+            <div class="col-12 ">
+                <input type="controlQuestion" ng-model="newUser.controlQuestion"   id="controlQuestion" placeholder="Контрольный вопрос">
             </div>
-            <div class="col-xs-12 marginTop5 ">
-                <input type="controlAnswer" ng-model="newUser.controlAnswer" class="form-control"   id="controlAnswer" placeholder="Ответ">
+            <div class="col-12 marginTop5 ">
+                <input type="controlAnswer" ng-model="newUser.controlAnswer"    id="controlAnswer" placeholder="Ответ">
             </div>
-            <div class="col-xs-12 marginTop10">
+            <div class="col-12 marginTop10">
                 <button type="submit" class="btn btn-primary" ng-click="continueRegistration()">Продолжить</button>
             </div>
         </div>
 
+    </div>
+</div>-->
+<div class="container">
+    <div class="row" style="margin-top: 150px">
+        <div class="col-12">
+            <p class="text-center margin0">СОЗДАНИЕ АККАУНТА</p>
+            <p class="text-center small margin0">СОЗДАВАЙ. ОТСЛЕЖИВАЙ. ПОСТУПАЙ</p>
+        </div>
+    </div>
+    <div class="row marginTop10">
+        <div class="col-12 text-center">
+            <div class="marginBottom10">
+                <input class="border rounded form-control-sm main_input" ng-model="newUser.firstName"  id="firstName" type="text"  placeholder="Фамилия">
+            </div>
+            <div class="marginBottom10">
+                <input class="border rounded form-control-sm main_input" ng-model="newUser.lastName"  id="lastName"  type="text"  placeholder="Имя">
+            </div>
+            <div>
+                <input class="border rounded form-control-sm main_input" ng-model="newUser.patronymic"  id="patronymic"  type="text"  placeholder="Отчество">
+            </div>
+        </div>
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center" >
+            <div class="marginBottom10">
+                <input class="border rounded form-control-sm main_input" ng-model="newUser.email" id="email" type="email" placeholder="E-MAIL">
+            </div>
+            <input class="border rounded form-control-sm main_input" ng-model="newUser.login"  id="login" type="text"  placeholder="Логин">
+            <p ng-show="newUser.login.length>0" class="text-center small margin0" style="color: rgb(150,150,150)">Это Ваш логин для входа в Личный кабинет.</p>
+            <br>
+            <input class="border rounded form-control-sm main_input marginTop10" ng-model="newUser.password" type="password"  id="password"  placeholder="Пароль">
+            <br>
+            <input class="border rounded form-control-sm main_input marginTop10" ng-model="newUser.passwordReply" type="password" id="passwordReply" placeholder="Подтверждение пароля">
+
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="marginBottom10">
+                <select class="border rounded form-control-sm main_input" >
+                    <option value="1">Вопрос 1</option>
+                    <option value="2">Вопрос 2</option>
+                    <option value="3">Вопрос 3</option>
+                </select>
+            </div>
+            <input class="border rounded form-control-sm main_input" ng-model="newUser.controlAnswer"  id="controlAnswer" type="text"  placeholder="Ответ">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <p  class="small" style="color: rgb(126,126,126);">Нажимая на кнопку Продолжить, я принимаю&nbsp;<a href="#">эти правила</a>&nbsp;и&nbsp;<a href="#">эти правила</a>.</p>
+            <button class="btn btn-primary" ng-click="continueRegistration()" type="button">Продолжить</button>
+        </div>
     </div>
 </div>
 

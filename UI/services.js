@@ -273,8 +273,6 @@ services.filter('orderObjectBy', function() {
 myApp.factory('userService', function($http, $window, $q, $location) {
 
     var service = {};
-    service.conf={headers: {}};
-    service.conf.headers.Authorization = {};
 
     if (!document.cookie) {
         service = { User: undefined };
@@ -290,13 +288,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
             return null;
     }
 
-    service.checkToken = function(){
-        var token = getCookie("token");
-        if(token){
-            service.conf.headers.Authorization = token;
-            return true;
-        }
-    }
+
 
     service.setCookie = function(name,value,days){
         setCookie(name,value,days);
@@ -314,7 +306,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
 
     service.GetUserByToken = function() {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken', service.conf).success(function(user){
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken',{withCredentials: true}).success(function(user){
             deferred.resolve(user);
         }).error(function(){
             service.User = undefined;
@@ -351,7 +343,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
                     if (!currentUser.isDeleted) {
                         defered.resolve(service.User);
                     } else {
-                        $location.path('/lk');
+                        //$location.path('/login');
                     };
                 };
             };

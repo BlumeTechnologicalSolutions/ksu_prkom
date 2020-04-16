@@ -27,7 +27,7 @@ function loadXML(url) {
 var myApp = angular.module('myApp',
     ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply', 'myApp.direction',
         'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember', 'myApp.confirmationModal',
-        'myApp.infoModal'
+        'myApp.infoModal', 'myApp.mainPage'
     ]);
 
 myApp.directive('htmlCompile', ['$compile', function ($compile) {
@@ -61,8 +61,13 @@ myApp.config(function($routeProvider) {
     };
 
     $routeProvider
-        .otherwise({redirectTo: '/lk'})
-        .when('/lk', {
+        .otherwise({redirectTo: '/main'})
+        .when('/main', {
+            templateUrl: 'mainPage/mainPage.html',
+            controller: 'MainPageCtrl',
+            resolve: AuthResolve
+        })
+        .when('/login', {
             templateUrl: 'lk/lk.html',
             controller: 'AbiturientCtrl'
         })
@@ -93,15 +98,7 @@ myApp.config(function($routeProvider) {
 
 });
 
-myApp.controller('CopyrightDateCtrl',function ($scope, dateFilter) {
-    $scope.date = new Date();
-    $scope.$watch('date', function (date)
-    {
-        $scope.dateString = dateFilter(date, 'yyyy');
-    });
-});
-
-/*$(document).mouseup(function (e){ // событие клика по веб-документу
+ /*$(document).mouseup(function (e){ // событие клика по веб-документу
     if (location.hash.indexOf('lk')<0) {
         if (!localStorage.token && !sessionStorage.token) {
             if (location.hash.indexOf('clientNps')<0) {

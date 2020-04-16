@@ -15,29 +15,48 @@
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="adaptive.css">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
 </head>
 <body ng-cloak>
-<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark navbar--apple">
-    <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#menu"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"><i class="la la-navicon"></i></span></button>
-        <div class="collapse navbar-collapse" id="menu">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
+    <div class="container-fluid">
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#menu">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon">
+            <i class="la la-navicon"></i></span>
+        </button>
+        <div class="collapse navbar-collapse " id="menu">
             <ul class="nav navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item d-none d-xs-block d-md-block" role="presentation"><a class="nav-link" href="#">
-                    <img src="images/ksulogo.png" style="width: 28.5px;margin-top: -6px;">
-                </a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ГЛАВНАЯ</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ЗАЯВЛЕНИЯ</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">НАПРАВЛЕНИЯ</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ПРИЕМНАЯ КОМИССИЯ</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link montserrat" href="#">ПОДДЕРЖКА</a></li>
+                <li class="nav-item d-none d-xs-block d-md-block" role="presentation" style="display: contents">
+                    <a class="nav-link" href="#">
+                        <img src="images/ksulogo.png" style="width: 28.5px;margin-top: -6px;">
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link montserrat" href="#/main">ГЛАВНАЯ</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link montserrat" href="#/apply">ЗАЯВЛЕНИЯ</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link montserrat" href="#/direction">НАПРАВЛЕНИЯ</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link montserrat" href="#/priemnaya-komissiya">ПРИЕМНАЯ КОМИССИЯ</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link montserrat" href="#/support">ПОДДЕРЖКА</a>
+                </li>
                 <li class="nav-item" role="presentation" ng-if="!user">
-                    <a class="nav-link montserrat" href="#/lk">ВОЙТИ</a>
+                    <a class="nav-link montserrat0" href="#/login">ВОЙТИ</a>
                 </li>
                 <li class="nav-item" role="presentation" ng-if="user">
-                    <div class="nav-item dropdown" style="margin-top: 4px;"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#" style="font-size: 13px;font-family: Montserrat, sans-serif;">АККАУНТ</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Мои данные</a><a class="dropdown-item" role="presentation" href="#">Выйти</a></div>
+                    <div class="nav-item dropdown">
+                        <a class="dropdown-toggle pointer nav-link montserrat0" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
+                        <div class="dropdown-menu" style="margin-left: -45px" role="menu">
+                            <a class="dropdown-item pointer" role="presentation" >Мои данные</a>
+                            <a class="dropdown-item pointer" role="presentation" ng-click="logOut()" >Выйти</a>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -49,10 +68,12 @@
 <div ng-view class="theme-showcase" role="main"></div>
 <div class="container">
     <div class="footer">
+        <p> footer</p>
         <!--<p class="main-text" ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>-->
     </div>
 </div>
 
+<!--Plugins and other components-->
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/jquery/jquery.maskedinput.min.js"></script>
 <script src="bower_components/jquery/1.12.1/jquery-ui.js"></script>
@@ -65,6 +86,7 @@
 <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
 <script src="bower_components/angular-ui-select/select.js"></script>
 
+<!--Angular JS files-->
 <script src="app.js"></script>
 <script src="services.js"></script>
 <script src="lk/lk.js"></script>
@@ -72,10 +94,11 @@
 <script src="direction/direction.js"></script>
 <script src="prkom/prkom.js"></script>
 <script src="support/support.js"></script>
+<script src="mainPage/mainPage.js"></script>
 <script src="registration/registration.js"></script>
 <script src="remember/remember.js"></script>
 <script src="modalWindows/ConfirmationModal/confirmationModal.js"></script>
 <script src="modalWindows/InfoModal/infoModal.js"></script>
-
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
                     if (userService.User) {
                         $rootScope.user = userService.User;
                         tryDigest();
+                        $location.path('/main')
                     }
                 } else {
                     alert(response.message);
@@ -39,16 +40,16 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
     $scope.authorization = function () {
         var loginUser = $scope.loginUser;
         if(!loginUser || !loginUser.login || !loginUser.password) {
-            if(!loginUser || !loginUser.login) { $("#inputLogin").focus();$("#inputLogin").css({"border": "1px solid red"});}
+            if(!loginUser || !loginUser.login) { $("#inputLogin").focus();$("#inputLogin").addClass('ng-invalids')};
             if(!loginUser || !loginUser.password) {
-                $("#inputPassword").css({"border": "1px solid red"});
+                $("#inputPassword").addClass('ng-invalids');
                 if(loginUser && loginUser.login) {
                     $("#inputPassword").focus();
                 };
             };
             setTimeout(function(){
-                $("#inputLogin").css({"border": ""});
-                $("#inputPassword").css({"border": ""});
+                $("#inputLogin").removeClass('ng-invalids');
+                $("#inputPassword").removeClass('ng-invalids');
             },2000);
         } else {
             if(!userService.User) {
@@ -57,7 +58,8 @@ lk.controller('AbiturientCtrl', function($scope, userService, $location, $rootSc
                         userService.User = response.object;
                         if (userService.User && userService.User.token) {
                             $rootScope.user = userService.User;
-                            userService.setCookie("token", userService.User.token, 14);
+                            userService.setCookie("token", userService.User.token);
+                            $location.path('/main')
                             tryDigest();
                         }
 

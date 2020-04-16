@@ -9,14 +9,14 @@ We are excited to have you working on the project and cordially request that you
  
  Firstly, please go over our FAQ: https://github.com/angular-ui/ui-select/wiki/FAQs
  
- Please, do not open issues for the general support questions as we want to keep GitHub issues for bug reports and feature requests. You've got much better chances of getting your question answered on [StackOverflow](http://stackoverflow.com/questions/tagged/angular-ui-select) where maintainers are looking at questions tagged with `angular-ui-select`.
+ Please, do not open issues for the general mainPage questions as we want to keep GitHub issues for bug reports and feature requests. You've got much better chances of getting your question answered on [StackOverflow](http://stackoverflow.com/questions/tagged/angular-ui-select) where maintainers are looking at questions tagged with `angular-ui-select`.
  
  StackOverflow is a much better place to ask questions since:
  * there are hundreds of people willing to help on StackOverflow
  * questions and answers stay available for public viewing so your question / answer might help someone else
  * SO voting system assures that the best answers are prominently visible.
  
- To save your and our time we will be systematically closing all the issues that are requests for general support and redirecting people to StackOverflow.
+ To save your and our time we will be systematically closing all the issues that are requests for general mainPage and redirecting people to StackOverflow.
  
 ## <a name="bug"></a> You think you've found a bug?
  
@@ -39,7 +39,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 * All features or bug fixes **must pass all tests** (run `gulp` to jshint, build and test).
 * All public API methods **must be documented** with ngdoc, an extended version of jsdoc (we added
-  support for markdown and templating via @ngdoc tag). To see how we document our APIs, please check
+  mainPage for markdown and templating via @ngdoc tag). To see how we document our APIs, please check
   out the existing ngdocs and see [this wiki page][ngDocs].
 
 **Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)

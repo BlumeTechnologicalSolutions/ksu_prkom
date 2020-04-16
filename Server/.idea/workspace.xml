@@ -7,133 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../UI/bower_components/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UI/images/ksulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/images/continueImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/adaptive.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/dist/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/.jshintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/bs-commonjs-generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/bs-raw-files-generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/configBridge.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/grunt/sauce_browsers.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/.jscsrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/.jshintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/affix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/alert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/collapse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/dropdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/popover.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/scrollspy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/tab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/js/transition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/.csscomb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/.csslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/alerts.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/badges.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/bootstrap.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/breadcrumbs.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/button-groups.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/buttons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/carousel.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/close.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/code.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/component-animations.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/dropdowns.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/forms.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/glyphicons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/grid.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/input-groups.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/jumbotron.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/labels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/list-group.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/media.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/alerts.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/background-variant.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/border-radius.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/buttons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/center-block.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/clearfix.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/forms.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/gradients.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/grid-framework.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/grid.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/hide-text.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/image.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/labels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/list-group.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/nav-divider.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/nav-vertical-align.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/opacity.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/pagination.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/panels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/progress-bar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/reset-filter.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/reset-text.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/resize.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/responsive-visibility.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/size.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/tab-focus.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/table-row.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/text-emphasis.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/text-overflow.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/mixins/vendor-prefixes.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/modals.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/navbar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/navs.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/normalize.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/pager.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/pagination.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/panels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/popovers.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/print.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/progress-bars.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/responsive-embed.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/responsive-utilities.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/scaffolding.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/tables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/theme.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/thumbnails.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/tooltip.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/type.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/utilities.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/less/wells.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/package.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/.github/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/bower_components/jquery/jqueryjs" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/jquery/jqueryjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/navbarPages.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/navbarPages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/prkom/prkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/prkom/prkom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="204">
+              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,10 +59,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Token.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,17 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/UserRegistration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="595">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -192,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/User.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            <state relative-caret-position="374">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -273,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java" />
       </list>
     </option>
   </component>
@@ -292,10 +206,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1380" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -304,8 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -408,12 +320,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582383368808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587024962501" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../UI" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -423,6 +337,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lk.persistence" />
       <recent name="com.lk.entity" />
       <recent name="com.lk.service" />
       <recent name="com.lk.impl" />
@@ -550,17 +465,19 @@
       <workItem from="1582184938273" duration="4969000" />
       <workItem from="1582201361729" duration="20264000" />
       <workItem from="1586252846957" duration="599000" />
+      <workItem from="1587020802190" duration="3139000" />
+      <workItem from="1587030911340" duration="1223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79199000" />
+    <option name="totallyTimeSpent" value="83561000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="122" width="1936" height="1096" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.19722815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.28290468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -571,7 +488,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.43336946" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3997833" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -580,7 +497,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3997833" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.33333334" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -822,28 +739,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testClass.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.1.11.Final/hibernate-core-4.1.11.Final-sources.jar!/org/hibernate/internal/SQLQueryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -865,29 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#3882#3883#0" expanded="true" />
-            <element signature="e#3910#3911#0" expanded="true" />
-            <element signature="e#3952#3953#0" expanded="true" />
-            <element signature="e#3981#3982#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -898,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/UserRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -912,10 +778,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/User.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        <state relative-caret-position="374">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

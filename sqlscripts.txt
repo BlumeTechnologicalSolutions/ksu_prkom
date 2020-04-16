@@ -1,0 +1,58 @@
+--postgres scripts
+
+--create database  with name 'prkom'
+
+--check to autocreated schema db with name 'public'
+ 
+--execute following sql code
+--autoincrement sequence
+CREATE SEQUENCE public.user_seq;
+
+ALTER SEQUENCE public.user_seq
+    OWNER TO postgres;
+
+CREATE SEQUENCE public.tokensseq;
+
+ALTER SEQUENCE public.tokensseq
+    OWNER TO postgres;
+
+--tables
+
+
+CREATE TABLE public.users(
+    id bigint NOT NULL DEFAULT nextval('user_seq'::regclass),
+    login character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    creation_date date NOT NULL,
+    fist_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    patronymic character varying(255) COLLATE pg_catalog."default",
+    email character varying(255) COLLATE pg_catalog."default",
+    control_question character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    control_answer character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    is_admin bit(1) NOT NULL,
+    is_operator bit(1) NOT NULL,
+    is_deleted bit(1) NOT NULL,
+    CONSTRAINT "Users_pkey" PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.users
+    OWNER to postgres;
+
+CREATE TABLE public.tokens(
+    id bigint NOT NULL DEFAULT nextval('tokensseq'::regclass),
+    token character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    user_id integer NOT NULL,
+    expiration date NOT NULL,
+    CONSTRAINT tokens_pkey PRIMARY KEY (id))
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tokens
+    OWNER to postgres;

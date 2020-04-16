@@ -4,6 +4,7 @@ import com.lk.entity.Response;
 import com.lk.entity.Token;
 import com.lk.entity.User;
 import com.lk.entity.UserRegistration;
+import com.lk.persistence.Authentification;
 import com.lk.persistence.HibernateUtil;
 import com.lk.service.UserService;
 import org.hibernate.Session;
@@ -25,31 +26,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response getUserByToken(HttpServletRequest httpServletRequest) {
         logger.info("Start function getUserByToken, by token info: " + httpServletRequest);
-        String token = httpServletRequest.getHeader("Authorization");
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            List<User> users = session.createSQLQuery("select usr.* from public.users as usr \n" +
-                    "join public.tokens as tok on tok.user_id = usr.id\n" +
-                    "where tok.token =(:token)")
-                    .addEntity(User.class)
-                    .setParameter("token", token)
-                    .list();
-            transaction.commit();
-            if(users.size()>0) {
-                User user = users.get(0);
-                user = setUserToClient(user);
-                return new Response(true, user);
-            }
-        } catch (Exception ex){
-            if(transaction!=null) transaction.rollback();
-            logger.error("Exception in getUserByToken: " ,ex.getLocalizedMessage(),ex);
-            return new Response(false, "Ошибка при регистарции пользователя: "+ex.getLocalizedMessage());
-        } finally {
-            session.close();
-        }
-        return new Response(false, "Токен не существует");
+        Authentification authentification = new Authentification();
+        User user = authentification.getUserByCookie(httpServletRequest);
+        if(user!=null) return new Response(true, user);
+        else return new Response(false, "Токен не существует");
     }
 
     public Response authorization (User userToAuthorize){

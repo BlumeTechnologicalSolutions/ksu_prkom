@@ -45,7 +45,7 @@
 
 ### Features
 
-* **selectize:** add support for multiple selection  ([ff8071d](https://github.com/angular-ui/ui-select/commit/ff8071d)), closes [#295](https://github.com/angular-ui/ui-select/issues/295) [#1787](https://github.com/angular-ui/ui-select/issues/1787)
+* **selectize:** add mainPage for multiple selection  ([ff8071d](https://github.com/angular-ui/ui-select/commit/ff8071d)), closes [#295](https://github.com/angular-ui/ui-select/issues/295) [#1787](https://github.com/angular-ui/ui-select/issues/1787)
 
 <a name="0.19.3"></a>
 ## [0.19.3](https://github.com/angular-ui/ui-select/compare/v0.19.3...v0.19.3) (2016-08-17)
@@ -107,8 +107,8 @@
 * **uiSelectMultiple:** $select.refreshItems is not a function  ([a41a7fc](https://github.com/angular-ui/ui-select/commit/a41a7fc))
 * **uiSelectMultiple:** Allow duplicates in $select.selected ([9f5d6ec](https://github.com/angular-ui/ui-select/commit/9f5d6ec)), closes [#1688](https://github.com/angular-ui/ui-select/issues/1688)
 * **uiSelectMultiple:** tolerate null/undefined view value ([0c29b64](https://github.com/angular-ui/ui-select/commit/0c29b64))
-* **uiSelectNoChoice:** support Select2 theme  ([e59e008](https://github.com/angular-ui/ui-select/commit/e59e008)), closes [#1608](https://github.com/angular-ui/ui-select/issues/1608)
-* **uiSelectNoChoice:** support Selectize theme  ([a7210c4](https://github.com/angular-ui/ui-select/commit/a7210c4)), closes [#1692](https://github.com/angular-ui/ui-select/issues/1692)
+* **uiSelectNoChoice:** mainPage Select2 theme  ([e59e008](https://github.com/angular-ui/ui-select/commit/e59e008)), closes [#1608](https://github.com/angular-ui/ui-select/issues/1608)
+* **uiSelectNoChoice:** mainPage Selectize theme  ([a7210c4](https://github.com/angular-ui/ui-select/commit/a7210c4)), closes [#1692](https://github.com/angular-ui/ui-select/issues/1692)
 
 <a name="0.18.0"></a>
 ## [0.18.0](https://github.com/angular-ui/ui-select/compare/v0.17.1...v0.18.0) (2016-06-09)
@@ -120,7 +120,7 @@
 * search input width resizing ([5c8cf86](https://github.com/angular-ui/ui-select/commit/5c8cf86)), closes [#1575](https://github.com/angular-ui/ui-select/issues/1575)
 * **uiSelectCtrl:** Prevent error when using ngAnimate < v1.4 ([8becac3](https://github.com/angular-ui/ui-select/commit/8becac3)), closes [#1626](https://github.com/angular-ui/ui-select/issues/1626)
 * **uiSelectNoChoice:** make compatible with Angular 1.5 ([c944307](https://github.com/angular-ui/ui-select/commit/c944307)), closes [#1609](https://github.com/angular-ui/ui-select/issues/1609)
-* **uiSelectNoChoice:** support bootstrap-multiple ([9d29307](https://github.com/angular-ui/ui-select/commit/9d29307)), closes [#1614](https://github.com/angular-ui/ui-select/issues/1614) [#1615](https://github.com/angular-ui/ui-select/issues/1615)
+* **uiSelectNoChoice:** mainPage bootstrap-multiple ([9d29307](https://github.com/angular-ui/ui-select/commit/9d29307)), closes [#1614](https://github.com/angular-ui/ui-select/issues/1614) [#1615](https://github.com/angular-ui/ui-select/issues/1615)
 
 ### Features
 
@@ -217,7 +217,7 @@
 
 ### Bug Fixes
 
-* **paste:** add paste support ([1ad6f60](https://github.com/angular-ui/ui-select/commit/1ad6f60)), closes [#910](https://github.com/angular-ui/ui-select/issues/910) [#704](https://github.com/angular-ui/ui-select/issues/704) [#789](https://github.com/angular-ui/ui-select/issues/789) [#848](https://github.com/angular-ui/ui-select/issues/848) [#429](https://github.com/angular-ui/ui-select/issues/429)
+* **paste:** add paste mainPage ([1ad6f60](https://github.com/angular-ui/ui-select/commit/1ad6f60)), closes [#910](https://github.com/angular-ui/ui-select/issues/910) [#704](https://github.com/angular-ui/ui-select/issues/704) [#789](https://github.com/angular-ui/ui-select/issues/789) [#848](https://github.com/angular-ui/ui-select/issues/848) [#429](https://github.com/angular-ui/ui-select/issues/429)
 * **uiSelectSort:** fix dependency not found error ([a5a6554](https://github.com/angular-ui/ui-select/commit/a5a6554))
 
 <a name="0.14.5"></a>
@@ -254,14 +254,14 @@
 
 ### Features
 
-* **ngAnimate:** add support for ngAnimate ([8da8a6d](https://github.com/angular-ui/ui-select/commit/8da8a6d))
+* **ngAnimate:** add mainPage for ngAnimate ([8da8a6d](https://github.com/angular-ui/ui-select/commit/8da8a6d))
 
 <a name="0.13.3"></a>
 ## 0.13.3 (2016-01-25)
 
 ### Added
 
-- Add support for commonjs and npm
+- Add mainPage for commonjs and npm
 
 <a name="0.13.2"></a>
 ## [0.13.2](https://github.com/angular-ui/ui-select/compare/v0.13.1...v0.13.2) (2016-01-25)

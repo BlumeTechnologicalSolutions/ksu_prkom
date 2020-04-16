@@ -1,26 +1,26 @@
-<div class="container">
+<!--<div class="container">
     <div ng-show="!user">
         <div class="login-form">
             <p class="text-center black main-text">Личный кабинет</p>
             <br>
             <div class="form-group row">
-                <!--<label for="inputLogin" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">ТЕЛЕФОН ИЛИ EMAIL</label>-->
+                &lt;!&ndash;<label for="inputLogin" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">ТЕЛЕФОН ИЛИ EMAIL</label>&ndash;&gt;
                 <div class="col-xs-12">
                     <input type="login" ng-model="loginUser.login" class="form-control"  id="inputLogin" placeholder="Логин или Email">
                 </div>
             </div>
             <div class="form-group row">
-                <!--<label for="inputPassword" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">Пароль</label>-->
+                &lt;!&ndash;<label for="inputPassword" class="col-xs-offset-1 col-xs-2 col-form-label topPosition">Пароль</label>&ndash;&gt;
                 <div class="col-xs-12">
                     <input type="password" ng-model="loginUser.password" class="form-control"   id="inputPassword" placeholder="Пароль">
                 </div>
             </div>
             <div class="form-group row">
-                <!--<div class="col-xs-12">
+                &lt;!&ndash;<div class="col-xs-12">
                     <label><input type="checkbox" value="remember-me" ng-model="rememberMe">
                         <span style="vertical-align: text-bottom;" class="text-nowrap">Запомнить меня</span>
                     </label>
-                </div>-->
+                </div>&ndash;&gt;
                 <div class="col-xs-12 marginTop10">
                     <button type="submit" class="btn btn-primary" ng-click="authorization()">Войти</button>
                 </div>
@@ -33,10 +33,35 @@
             </div>
         </div>
     </div>
-    <div ng-show="user">
-        <p class="text-center black main-text">Здравствуйте, {{user.firstName}}!</p>
-        <div></div>
+</div>-->
 
+<div class="container ">
+    <div class="row " style="margin-top: 150px">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div>
+                <p class="text-center margin0" >ЛИЧНЫЙ КАБИНЕТ</p>
+                <p class="text-center small margin0">ПОДАЙ ЗАЯВЛЕНИЕ. ОТСЛЕЖИВАЙ СПИСКИ.</p>
+            </div>
+            <div class="text-center">
+                <input class="border rounded form-control-sm main_input" type="login" ng-model="loginUser.login" id="inputLogin" class="login_input" placeholder="ЛОГИН">
+            </div>
+            <div class="text-center" class="marginBottom10">
+                <input class="border rounded form-control-sm main_input" type="password" ng-model="loginUser.password" id="inputPassword"   placeholder="ПАРОЛЬ">
+                <button ng-click="authorization()" class="btn" type="button" style="opacity: 1;background-color: rgba(255,255,255,0);background-image: url('images/continueImage.png');padding: 14px;padding-top: 15px;padding-left: 13px;padding-right: 13px;margin-top: -1px;margin-left: -33px;">
+                </button>
+            </div>
+            <!-- <div style="height: 78px;">
+                 <div class="custom-control custom-switch" style="margin-bottom: 5px;"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1" style="color: rgb(126,126,126);font-size: 12px;font-family: Montserrat, sans-serif;padding-top: 3px;margin-bottom: 7px;">ЗАПОМНИТЬ МЕНЯ</label></div>
+                 <a href="#" style="color: rgb(0,0,0);">Забыли email или пароль?</a>
+                 <div style="margin-top: 6px;"><a href="#" style="color: rgb(0,0,0);">Создать аккаунт</a></div>
+             </div>-->
+            <div class="text-center">
+                <a href="#/remember" class="pointer text-nowrap">Забыли логин или пароль?</a>
+                <br>
+                <a href="#/registration" class="pointer text-nowrap">Создать аккаунт</a>
+            </div>
+        </div>
     </div>
 </div>
+
 

@@ -60,7 +60,7 @@
 
     var hasOwn = class2type.hasOwnProperty;
 
-    var support = {};
+    var mainPage = {};
 
 
 
@@ -315,7 +315,7 @@
 
             // Support: IE<9
             // Handle iteration over inherited properties before own properties.
-            if ( !support.ownFirst ) {
+            if ( !mainPage.ownFirst ) {
                 for ( key in obj ) {
                     return hasOwn.call( obj, key );
                 }
@@ -539,9 +539,9 @@
             return +( new Date() );
         },
 
-        // jQuery.support is not used in Core but other projects attach their
+        // jQuery.mainPage is not used in Core but other projects attach their
         // properties to it so it needs to exist.
-        support: support
+        mainPage: mainPage
     } );
 
 // JSHint would error on this code due to the Symbol not being defined in ES5.
@@ -590,7 +590,7 @@
         (function( window ) {
 
             var i,
-                support,
+                mainPage,
                 Expr,
                 getText,
                 isXML,
@@ -838,7 +838,7 @@
                                 return results;
 
                                 // Class selector
-                            } else if ( (m = match[3]) && support.getElementsByClassName &&
+                            } else if ( (m = match[3]) && mainPage.getElementsByClassName &&
                                 context.getElementsByClassName ) {
 
                                 push.apply( results, context.getElementsByClassName( m ) );
@@ -847,7 +847,7 @@
                         }
 
                         // Take advantage of querySelectorAll
-                        if ( support.qsa &&
+                        if ( mainPage.qsa &&
                             !compilerCache[ selector + " " ] &&
                             (!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
 
@@ -1049,8 +1049,8 @@
                 return context && typeof context.getElementsByTagName !== "undefined" && context;
             }
 
-// Expose support vars for convenience
-            support = Sizzle.support = {};
+// Expose mainPage vars for convenience
+            mainPage = Sizzle.mainPage = {};
 
             /**
              * Detects XML nodes
@@ -1102,7 +1102,7 @@
                 // Support: IE<8
                 // Verify that getAttribute really returns attributes and not properties
                 // (excepting IE8 booleans)
-                support.attributes = assert(function( div ) {
+                mainPage.attributes = assert(function( div ) {
                     div.className = "i";
                     return !div.getAttribute("className");
                 });
@@ -1111,25 +1111,25 @@
                  ---------------------------------------------------------------------- */
 
                 // Check if getElementsByTagName("*") returns only elements
-                support.getElementsByTagName = assert(function( div ) {
+                mainPage.getElementsByTagName = assert(function( div ) {
                     div.appendChild( document.createComment("") );
                     return !div.getElementsByTagName("*").length;
                 });
 
                 // Support: IE<9
-                support.getElementsByClassName = rnative.test( document.getElementsByClassName );
+                mainPage.getElementsByClassName = rnative.test( document.getElementsByClassName );
 
                 // Support: IE<10
                 // Check if getElementById returns elements by name
                 // The broken getElementById methods don't pick up programatically-set names,
                 // so use a roundabout getElementsByName test
-                support.getById = assert(function( div ) {
+                mainPage.getById = assert(function( div ) {
                     docElem.appendChild( div ).id = expando;
                     return !document.getElementsByName || !document.getElementsByName( expando ).length;
                 });
 
                 // ID find and filter
-                if ( support.getById ) {
+                if ( mainPage.getById ) {
                     Expr.find["ID"] = function( id, context ) {
                         if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
                             var m = context.getElementById( id );
@@ -1158,13 +1158,13 @@
                 }
 
                 // Tag
-                Expr.find["TAG"] = support.getElementsByTagName ?
+                Expr.find["TAG"] = mainPage.getElementsByTagName ?
                     function( tag, context ) {
                         if ( typeof context.getElementsByTagName !== "undefined" ) {
                             return context.getElementsByTagName( tag );
 
                             // DocumentFragment nodes don't have gEBTN
-                        } else if ( support.qsa ) {
+                        } else if ( mainPage.qsa ) {
                             return context.querySelectorAll( tag );
                         }
                     } :
@@ -1190,7 +1190,7 @@
                     };
 
                 // Class
-                Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
+                Expr.find["CLASS"] = mainPage.getElementsByClassName && function( className, context ) {
                         if ( typeof context.getElementsByClassName !== "undefined" && documentIsHTML ) {
                             return context.getElementsByClassName( className );
                         }
@@ -1199,7 +1199,7 @@
                 /* QSA/matchesSelector
                  ---------------------------------------------------------------------- */
 
-                // QSA and matchesSelector support
+                // QSA and matchesSelector mainPage
 
                 // matchesSelector(:active) reports false when true (IE9/Opera 11.5)
                 rbuggyMatches = [];
@@ -1211,7 +1211,7 @@
                 // See http://bugs.jquery.com/ticket/13378
                 rbuggyQSA = [];
 
-                if ( (support.qsa = rnative.test( document.querySelectorAll )) ) {
+                if ( (mainPage.qsa = rnative.test( document.querySelectorAll )) ) {
                     // Build QSA regex
                     // Regex strategy adopted from Diego Perini
                     assert(function( div ) {
@@ -1283,7 +1283,7 @@
                     });
                 }
 
-                if ( (support.matchesSelector = rnative.test( (matches = docElem.matches ||
+                if ( (mainPage.matchesSelector = rnative.test( (matches = docElem.matches ||
                         docElem.webkitMatchesSelector ||
                         docElem.mozMatchesSelector ||
                         docElem.oMatchesSelector ||
@@ -1292,7 +1292,7 @@
                     assert(function( div ) {
                         // Check to see if it's possible to do matchesSelector
                         // on a disconnected node (IE 9)
-                        support.disconnectedMatch = matches.call( div, "div" );
+                        mainPage.disconnectedMatch = matches.call( div, "div" );
 
                         // This should fail with an exception
                         // Gecko does not error, returns false instead
@@ -1360,7 +1360,7 @@
 
                         // Disconnected nodes
                         if ( compare & 1 ||
-                            (!support.sortDetached && b.compareDocumentPosition( a ) === compare) ) {
+                            (!mainPage.sortDetached && b.compareDocumentPosition( a ) === compare) ) {
 
                             // Choose the first element that is related to our preferred document
                             if ( a === document || a.ownerDocument === preferredDoc && contains(preferredDoc, a) ) {
@@ -1448,7 +1448,7 @@
                 // Make sure that attribute selectors are quoted
                 expr = expr.replace( rattributeQuotes, "='$1']" );
 
-                if ( support.matchesSelector && documentIsHTML &&
+                if ( mainPage.matchesSelector && documentIsHTML &&
                     !compilerCache[ expr + " " ] &&
                     ( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
                     ( !rbuggyQSA     || !rbuggyQSA.test( expr ) ) ) {
@@ -1457,7 +1457,7 @@
                         var ret = matches.call( elem, expr );
 
                         // IE 9's matchesSelector returns false on disconnected nodes
-                        if ( ret || support.disconnectedMatch ||
+                        if ( ret || mainPage.disconnectedMatch ||
                             // As well, disconnected nodes are said to be in a document
                             // fragment in IE 9
                             elem.document && elem.document.nodeType !== 11 ) {
@@ -1491,7 +1491,7 @@
 
                 return val !== undefined ?
                     val :
-                    support.attributes || !documentIsHTML ?
+                    mainPage.attributes || !documentIsHTML ?
                         elem.getAttribute( name ) :
                         (val = elem.getAttributeNode(name)) && val.specified ?
                             val.value :
@@ -1513,8 +1513,8 @@
                     i = 0;
 
                 // Unless we *know* we can detect duplicates, assume their presence
-                hasDuplicate = !support.detectDuplicates;
-                sortInput = !support.sortStable && results.slice( 0 );
+                hasDuplicate = !mainPage.detectDuplicates;
+                sortInput = !mainPage.sortStable && results.slice( 0 );
                 results.sort( sortOrder );
 
                 if ( hasDuplicate ) {
@@ -1855,7 +1855,7 @@
                             return fn( argument );
                         }
 
-                        // But maintain support for old signatures
+                        // But maintain mainPage for old signatures
                         if ( fn.length > 1 ) {
                             args = [ pseudo, pseudo, "", argument ];
                             return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
@@ -2588,7 +2588,7 @@
                     // Reduce context if the leading compound selector is an ID
                     tokens = match[0] = match[0].slice( 0 );
                     if ( tokens.length > 2 && (token = tokens[0]).type === "ID" &&
-                        support.getById && context.nodeType === 9 && documentIsHTML &&
+                        mainPage.getById && context.nodeType === 9 && documentIsHTML &&
                         Expr.relative[ tokens[1].type ] ) {
 
                         context = ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0];
@@ -2648,18 +2648,18 @@
 // One-time assignments
 
 // Sort stability
-            support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
+            mainPage.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
 
 // Support: Chrome 14-35+
 // Always assume duplicates if they aren't passed to the comparison function
-            support.detectDuplicates = !!hasDuplicate;
+            mainPage.detectDuplicates = !!hasDuplicate;
 
 // Initialize against the default document
             setDocument();
 
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
 // Detached nodes confoundingly follow *each other*
-            support.sortDetached = assert(function( div1 ) {
+            mainPage.sortDetached = assert(function( div1 ) {
                 // Should return 1, but returns 4 (following)
                 return div1.compareDocumentPosition( document.createElement("div") ) & 1;
             });
@@ -2680,7 +2680,7 @@
 
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
-            if ( !support.attributes || !assert(function( div ) {
+            if ( !mainPage.attributes || !assert(function( div ) {
                     div.innerHTML = "<input/>";
                     div.firstChild.setAttribute( "value", "" );
                     return div.firstChild.getAttribute( "value" ) === "";
@@ -2872,7 +2872,7 @@
             }
 
             // init accepts an alternate rootjQuery
-            // so migrate can support jQuery.sub (gh-2101)
+            // so migrate can mainPage jQuery.sub (gh-2101)
             root = root || rootjQuery;
 
             // Handle HTML strings
@@ -3633,7 +3633,7 @@
                 // Handle it asynchronously to allow scripts the opportunity to delay ready
                 window.setTimeout( jQuery.ready );
 
-                // Standards-based browsers support DOMContentLoaded
+                // Standards-based browsers mainPage DOMContentLoaded
             } else if ( document.addEventListener ) {
 
                 // Use the handy event callback
@@ -3694,14 +3694,14 @@
 // Support: IE<9
 // Iteration over object's inherited properties before its own
     var i;
-    for ( i in jQuery( support ) ) {
+    for ( i in jQuery( mainPage ) ) {
         break;
     }
-    support.ownFirst = i === "0";
+    mainPage.ownFirst = i === "0";
 
-// Note: most support tests are defined in their respective modules.
+// Note: most mainPage tests are defined in their respective modules.
 // false until the test is run
-    support.inlineBlockNeedsLayout = false;
+    mainPage.inlineBlockNeedsLayout = false;
 
 // Execute ASAP in case we need to set body.style.zoom
     jQuery( function() {
@@ -3730,7 +3730,7 @@
             // them layout
             div.style.cssText = "display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1";
 
-            support.inlineBlockNeedsLayout = val = div.offsetWidth === 3;
+            mainPage.inlineBlockNeedsLayout = val = div.offsetWidth === 3;
             if ( val ) {
 
                 // Prevent IE 6 from affecting layout for positioned elements #11048
@@ -3748,11 +3748,11 @@
         var div = document.createElement( "div" );
 
         // Support: IE<9
-        support.deleteExpando = true;
+        mainPage.deleteExpando = true;
         try {
             delete div.test;
         } catch ( e ) {
-            support.deleteExpando = false;
+            mainPage.deleteExpando = false;
         }
 
         // Null elements to avoid leaks in IE.
@@ -3999,7 +3999,7 @@
 
             // Use delete when supported for expandos or `cache` is not a window per isWindow (#10080)
             /* jshint eqeqeq: false */
-        } else if ( support.deleteExpando || cache != cache.window ) {
+        } else if ( mainPage.deleteExpando || cache != cache.window ) {
             /* jshint eqeqeq: true */
             delete cache[ id ];
 
@@ -4247,7 +4247,7 @@
     ( function() {
         var shrinkWrapBlocksVal;
 
-        support.shrinkWrapBlocks = function() {
+        mainPage.shrinkWrapBlocks = function() {
             if ( shrinkWrapBlocksVal != null ) {
                 return shrinkWrapBlocksVal;
             }
@@ -4465,19 +4465,19 @@
         div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
 
         // IE strips leading whitespace when .innerHTML is used
-        support.leadingWhitespace = div.firstChild.nodeType === 3;
+        mainPage.leadingWhitespace = div.firstChild.nodeType === 3;
 
         // Make sure that tbody elements aren't automatically inserted
         // IE will insert them into empty tables
-        support.tbody = !div.getElementsByTagName( "tbody" ).length;
+        mainPage.tbody = !div.getElementsByTagName( "tbody" ).length;
 
         // Make sure that link elements get serialized correctly by innerHTML
         // This requires a wrapper element in IE
-        support.htmlSerialize = !!div.getElementsByTagName( "link" ).length;
+        mainPage.htmlSerialize = !!div.getElementsByTagName( "link" ).length;
 
         // Makes sure cloning an html5 element does not cause problems
         // Where outerHTML is undefined, this still works
-        support.html5Clone =
+        mainPage.html5Clone =
             document.createElement( "nav" ).cloneNode( true ).outerHTML !== "<:nav></:nav>";
 
         // Check if a disconnected checkbox will retain its checked
@@ -4485,12 +4485,12 @@
         input.type = "checkbox";
         input.checked = true;
         fragment.appendChild( input );
-        support.appendChecked = input.checked;
+        mainPage.appendChecked = input.checked;
 
         // Make sure textarea (and checkbox) defaultValue is properly cloned
         // Support: IE6-IE11+
         div.innerHTML = "<textarea>x</textarea>";
-        support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
+        mainPage.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
 
         // #11217 - WebKit loses check when the name is after the checked attribute
         fragment.appendChild( div );
@@ -4506,21 +4506,21 @@
 
         // Support: Safari 5.1, iOS 5.1, Android 4.x, Android 2.3
         // old WebKit doesn't clone checked state correctly in fragments
-        support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
+        mainPage.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
 
         // Support: IE<9
         // Cloned elements keep attachEvent handlers, we use addEventListener on IE9+
-        support.noCloneEvent = !!div.addEventListener;
+        mainPage.noCloneEvent = !!div.addEventListener;
 
         // Support: IE<9
         // Since attributes and properties are the same in IE,
         // cleanData must set properties to undefined rather than use removeAttribute
         div[ jQuery.expando ] = 1;
-        support.attributes = !div.getAttribute( jQuery.expando );
+        mainPage.attributes = !div.getAttribute( jQuery.expando );
     } )();
 
 
-// We have to close these tags to support XHTML (#13200)
+// We have to close these tags to mainPage XHTML (#13200)
     var wrapMap = {
         option: [ 1, "<select multiple='multiple'>", "</select>" ],
         legend: [ 1, "<fieldset>", "</fieldset>" ],
@@ -4535,7 +4535,7 @@
 
         // IE6-8 can't serialize link, script, style, or any html5 (NoScope) tags,
         // unless wrapped in a div with non-breaking characters in front of it.
-        _default: support.htmlSerialize ? [ 0, "", "" ] : [ 1, "X<div>", "</div>" ]
+        _default: mainPage.htmlSerialize ? [ 0, "", "" ] : [ 1, "X<div>", "</div>" ]
     };
 
 // Support: IE8-IE9
@@ -4637,12 +4637,12 @@
                     }
 
                     // Manually add leading whitespace removed by IE
-                    if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
+                    if ( !mainPage.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
                         nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[ 0 ] ) );
                     }
 
                     // Remove IE's autoinserted <tbody> from table fragments
-                    if ( !support.tbody ) {
+                    if ( !mainPage.tbody ) {
 
                         // String was a <table>, *may* have spurious <tbody>
                         elem = tag === "table" && !rtbody.test( elem ) ?
@@ -4686,7 +4686,7 @@
 
         // Reset defaultChecked for any radios and checkboxes
         // about to be appended to the DOM in IE 6/7 (#8060)
-        if ( !support.appendChecked ) {
+        if ( !mainPage.appendChecked ) {
             jQuery.grep( getAll( nodes, "input" ), fixDefaultChecked );
         }
 
@@ -4737,11 +4737,11 @@
         for ( i in { submit: true, change: true, focusin: true } ) {
             eventName = "on" + i;
 
-            if ( !( support[ i ] = eventName in window ) ) {
+            if ( !( mainPage[ i ] = eventName in window ) ) {
 
                 // Beware of CSP restrictions (https://developer.mozilla.org/en/Security/CSP)
                 div.setAttribute( eventName, "t" );
-                support[ i ] = div.attributes[ eventName ].expando === false;
+                mainPage[ i ] = div.attributes[ eventName ].expando === false;
             }
         }
 
@@ -5646,7 +5646,7 @@
     } );
 
 // IE submit delegation
-    if ( !support.submit ) {
+    if ( !mainPage.submit ) {
 
         jQuery.event.special.submit = {
             setup: function() {
@@ -5706,7 +5706,7 @@
     }
 
 // IE change delegation and checkbox/radio fix
-    if ( !support.change ) {
+    if ( !mainPage.change ) {
 
         jQuery.event.special.change = {
 
@@ -5777,7 +5777,7 @@
 // focus(in | out) events fire after focus & blur events,
 // which is spec violation - http://www.w3.org/TR/DOM-Level-3-Events/#events-focusevent-event-order
 // Related ticket - https://code.google.com/p/chromium/issues/detail?id=449857
-    if ( !support.focusin ) {
+    if ( !mainPage.focusin ) {
         jQuery.each( { focus: "focusin", blur: "focusout" }, function( orig, fix ) {
 
             // Attach a single capturing handler on the document while someone wants focusin/focusout
@@ -5949,7 +5949,7 @@
         nodeName = dest.nodeName.toLowerCase();
 
         // IE6-8 copies events bound via attachEvent when using cloneNode.
-        if ( !support.noCloneEvent && dest[ jQuery.expando ] ) {
+        if ( !mainPage.noCloneEvent && dest[ jQuery.expando ] ) {
             data = jQuery._data( dest );
 
             for ( e in data.events ) {
@@ -5976,7 +5976,7 @@
             // element in IE9, the outerHTML strategy above is not sufficient.
             // If the src has innerHTML and the destination does not,
             // copy the src.innerHTML into the dest.innerHTML. #10324
-            if ( support.html5Clone && ( src.innerHTML && !jQuery.trim( dest.innerHTML ) ) ) {
+            if ( mainPage.html5Clone && ( src.innerHTML && !jQuery.trim( dest.innerHTML ) ) ) {
                 dest.innerHTML = src.innerHTML;
             }
 
@@ -6022,7 +6022,7 @@
         // We can't cloneNode fragments that contain checked, in WebKit
         if ( isFunction ||
             ( l > 1 && typeof value === "string" &&
-            !support.checkClone && rchecked.test( value ) ) ) {
+            !mainPage.checkClone && rchecked.test( value ) ) ) {
             return collection.each( function( index ) {
                 var self = collection.eq( index );
                 if ( isFunction ) {
@@ -6134,7 +6134,7 @@
             var destElements, node, clone, i, srcElements,
                 inPage = jQuery.contains( elem.ownerDocument, elem );
 
-            if ( support.html5Clone || jQuery.isXMLDoc( elem ) ||
+            if ( mainPage.html5Clone || jQuery.isXMLDoc( elem ) ||
                 !rnoshimcache.test( "<" + elem.nodeName + ">" ) ) {
 
                 clone = elem.cloneNode( true );
@@ -6145,7 +6145,7 @@
                 fragmentDiv.removeChild( clone = fragmentDiv.firstChild );
             }
 
-            if ( ( !support.noCloneEvent || !support.noCloneChecked ) &&
+            if ( ( !mainPage.noCloneEvent || !mainPage.noCloneChecked ) &&
                 ( elem.nodeType === 1 || elem.nodeType === 11 ) && !jQuery.isXMLDoc( elem ) ) {
 
                 // We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2
@@ -6193,7 +6193,7 @@
                 i = 0,
                 internalKey = jQuery.expando,
                 cache = jQuery.cache,
-                attributes = support.attributes,
+                attributes = mainPage.attributes,
                 special = jQuery.event.special;
 
             for ( ; ( elem = elems[ i ] ) != null; i++ ) {
@@ -6348,8 +6348,8 @@
 
                 // See if we can take a shortcut and just use innerHTML
                 if ( typeof value === "string" && !rnoInnerhtml.test( value ) &&
-                    ( support.htmlSerialize || !rnoshimcache.test( value )  ) &&
-                    ( support.leadingWhitespace || !rleadingWhitespace.test( value ) ) &&
+                    ( mainPage.htmlSerialize || !rnoshimcache.test( value )  ) &&
+                    ( mainPage.leadingWhitespace || !rleadingWhitespace.test( value ) ) &&
                     !wrapMap[ ( rtagName.exec( value ) || [ "", "" ] )[ 1 ].toLowerCase() ] ) {
 
                     value = jQuery.htmlPrefilter( value );
@@ -6530,15 +6530,15 @@
 
         // Support: IE<9
         // Make sure that element opacity exists (as opposed to filter)
-        support.opacity = div.style.opacity === "0.5";
+        mainPage.opacity = div.style.opacity === "0.5";
 
         // Verify style float existence
         // (IE uses styleFloat instead of cssFloat)
-        support.cssFloat = !!div.style.cssFloat;
+        mainPage.cssFloat = !!div.style.cssFloat;
 
         div.style.backgroundClip = "content-box";
         div.cloneNode( true ).style.backgroundClip = "";
-        support.clearCloneStyle = div.style.backgroundClip === "content-box";
+        mainPage.clearCloneStyle = div.style.backgroundClip === "content-box";
 
         container = document.createElement( "div" );
         container.style.cssText = "border:0;width:8px;height:0;top:0;left:-9999px;" +
@@ -6548,10 +6548,10 @@
 
         // Support: Firefox<29, Android 2.3
         // Vendor-prefix box-sizing
-        support.boxSizing = div.style.boxSizing === "" || div.style.MozBoxSizing === "" ||
+        mainPage.boxSizing = div.style.boxSizing === "" || div.style.MozBoxSizing === "" ||
             div.style.WebkitBoxSizing === "";
 
-        jQuery.extend( support, {
+        jQuery.extend( mainPage, {
             reliableHiddenOffsets: function() {
                 if ( pixelPositionVal == null ) {
                     computeStyleTests();
@@ -6733,7 +6733,7 @@
                 // but width seems to be reliably pixels
                 // this is against the CSSOM draft spec:
                 // http://dev.w3.org/csswg/cssom/#resolved-values
-                if ( !support.pixelMarginRight() && rnumnonpx.test( ret ) && rmargin.test( name ) ) {
+                if ( !mainPage.pixelMarginRight() && rnumnonpx.test( ret ) && rmargin.test( name ) ) {
 
                     // Remember the original values
                     width = style.width;
@@ -6829,7 +6829,7 @@
                     return;
                 }
 
-                // Hook needed; redefine it so that the support test is not executed again.
+                // Hook needed; redefine it so that the mainPage test is not executed again.
                 return ( this.get = hookFn ).apply( this, arguments );
             }
         };
@@ -6994,7 +6994,7 @@
         var valueIsBorderBox = true,
             val = name === "width" ? elem.offsetWidth : elem.offsetHeight,
             styles = getStyles( elem ),
-            isBorderBox = support.boxSizing &&
+            isBorderBox = mainPage.boxSizing &&
                 jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
 
         // some non-html elements return undefined for offsetWidth, so check for null/undefined
@@ -7016,7 +7016,7 @@
             // we need the check for style in case a browser which returns unreliable values
             // for getComputedStyle silently falls back to the reliable elem.style
             valueIsBorderBox = isBorderBox &&
-                ( support.boxSizingReliable() || val === elem.style[ name ] );
+                ( mainPage.boxSizingReliable() || val === elem.style[ name ] );
 
             // Normalize "", auto, and prepare for extra
             val = parseFloat( val ) || 0;
@@ -7073,7 +7073,7 @@
         cssProps: {
 
             // normalize float css property
-            "float": support.cssFloat ? "cssFloat" : "styleFloat"
+            "float": mainPage.cssFloat ? "cssFloat" : "styleFloat"
         },
 
         // Get and set the style property on a DOM Node
@@ -7121,7 +7121,7 @@
                 // Fixes #8908, it can be done more correctly by specifing setters in cssHooks,
                 // but it would mean to define eight
                 // (for every problematic property) identical functions
-                if ( !support.clearCloneStyle && value === "" && name.indexOf( "background" ) === 0 ) {
+                if ( !mainPage.clearCloneStyle && value === "" && name.indexOf( "background" ) === 0 ) {
                     style[ name ] = "inherit";
                 }
 
@@ -7209,7 +7209,7 @@
                         elem,
                         name,
                         extra,
-                        support.boxSizing &&
+                        mainPage.boxSizing &&
                         jQuery.css( elem, "boxSizing", false, styles ) === "border-box",
                         styles
                     ) : 0
@@ -7218,7 +7218,7 @@
         };
     } );
 
-    if ( !support.opacity ) {
+    if ( !mainPage.opacity ) {
         jQuery.cssHooks.opacity = {
             get: function( elem, computed ) {
 
@@ -7267,7 +7267,7 @@
         };
     }
 
-    jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
+    jQuery.cssHooks.marginRight = addGetHookIf( mainPage.reliableMarginRight,
         function( elem, computed ) {
             if ( computed ) {
                 return swap( elem, { "display": "inline-block" },
@@ -7276,7 +7276,7 @@
         }
     );
 
-    jQuery.cssHooks.marginLeft = addGetHookIf( support.reliableMarginLeft,
+    jQuery.cssHooks.marginLeft = addGetHookIf( mainPage.reliableMarginLeft,
         function( elem, computed ) {
             if ( computed ) {
                 return (
@@ -7594,7 +7594,7 @@
 
                 // inline-level elements accept inline-block;
                 // block-level elements need to be inline with layout
-                if ( !support.inlineBlockNeedsLayout || defaultDisplay( elem.nodeName ) === "inline" ) {
+                if ( !mainPage.inlineBlockNeedsLayout || defaultDisplay( elem.nodeName ) === "inline" ) {
                     style.display = "inline-block";
                 } else {
                     style.zoom = 1;
@@ -7604,7 +7604,7 @@
 
         if ( opts.overflow ) {
             style.overflow = "hidden";
-            if ( !support.shrinkWrapBlocks() ) {
+            if ( !mainPage.shrinkWrapBlocks() ) {
                 anim.always( function() {
                     style.overflow = opts.overflow[ 0 ];
                     style.overflowX = opts.overflow[ 1 ];
@@ -8148,41 +8148,41 @@
 
         // Test setAttribute on camelCase class.
         // If it works, we need attrFixes when doing get/setAttribute (ie6/7)
-        support.getSetAttribute = div.className !== "t";
+        mainPage.getSetAttribute = div.className !== "t";
 
         // Get the style information from getAttribute
         // (IE uses .cssText instead)
-        support.style = /top/.test( a.getAttribute( "style" ) );
+        mainPage.style = /top/.test( a.getAttribute( "style" ) );
 
         // Make sure that URLs aren't manipulated
         // (IE normalizes it by default)
-        support.hrefNormalized = a.getAttribute( "href" ) === "/a";
+        mainPage.hrefNormalized = a.getAttribute( "href" ) === "/a";
 
         // Check the default checkbox/radio value ("" on WebKit; "on" elsewhere)
-        support.checkOn = !!input.value;
+        mainPage.checkOn = !!input.value;
 
         // Make sure that a selected-by-default option has a working selected property.
         // (WebKit defaults to false instead of true, IE too, if it's in an optgroup)
-        support.optSelected = opt.selected;
+        mainPage.optSelected = opt.selected;
 
-        // Tests for enctype support on a form (#6743)
-        support.enctype = !!document.createElement( "form" ).enctype;
+        // Tests for enctype mainPage on a form (#6743)
+        mainPage.enctype = !!document.createElement( "form" ).enctype;
 
         // Make sure that the options inside disabled selects aren't marked as disabled
         // (WebKit marks them as disabled)
         select.disabled = true;
-        support.optDisabled = !opt.disabled;
+        mainPage.optDisabled = !opt.disabled;
 
         // Support: IE8 only
         // Check if we can trust getAttribute("value")
         input = document.createElement( "input" );
         input.setAttribute( "value", "" );
-        support.input = input.getAttribute( "value" ) === "";
+        mainPage.input = input.getAttribute( "value" ) === "";
 
         // Check if an input maintains its value after becoming a radio
         input.value = "t";
         input.setAttribute( "type", "radio" );
-        support.radioValue = input.value === "t";
+        mainPage.radioValue = input.value === "t";
     } )();
 
 
@@ -8292,7 +8292,7 @@
                         if ( ( option.selected || i === index ) &&
 
                             // Don't return options that are disabled or in a disabled optgroup
-                            ( support.optDisabled ?
+                            ( mainPage.optDisabled ?
                                 !option.disabled :
                                 option.getAttribute( "disabled" ) === null ) &&
                             ( !option.parentNode.disabled ||
@@ -8363,7 +8363,7 @@
                 }
             }
         };
-        if ( !support.checkOn ) {
+        if ( !mainPage.checkOn ) {
             jQuery.valHooks[ this ].get = function( elem ) {
                 return elem.getAttribute( "value" ) === null ? "on" : elem.value;
             };
@@ -8376,8 +8376,8 @@
     var nodeHook, boolHook,
         attrHandle = jQuery.expr.attrHandle,
         ruseDefault = /^(?:checked|selected)$/i,
-        getSetAttribute = support.getSetAttribute,
-        getSetInput = support.input;
+        getSetAttribute = mainPage.getSetAttribute,
+        getSetInput = mainPage.input;
 
     jQuery.fn.extend( {
         attr: function( name, value ) {
@@ -8442,7 +8442,7 @@
         attrHooks: {
             type: {
                 set: function( elem, value ) {
-                    if ( !support.radioValue && value === "radio" &&
+                    if ( !mainPage.radioValue && value === "radio" &&
                         jQuery.nodeName( elem, "input" ) ) {
 
                         // Setting the type on a radio button after the value resets the value in IE8-9
@@ -8560,7 +8560,7 @@
         };
     }
 
-// IE6/7 do not support getting/setting some attributes with get/setAttribute
+// IE6/7 do not mainPage getting/setting some attributes with get/setAttribute
     if ( !getSetAttribute ) {
 
         // Use this for any attribute in IE6/7
@@ -8629,7 +8629,7 @@
         } );
     }
 
-    if ( !support.style ) {
+    if ( !mainPage.style ) {
         jQuery.attrHooks.style = {
             get: function( elem ) {
 
@@ -8729,7 +8729,7 @@
 
 // Some attributes require a special call on IE
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
-    if ( !support.hrefNormalized ) {
+    if ( !mainPage.hrefNormalized ) {
 
         // href/src property should get the full normalized URL (#10299/#12915)
         jQuery.each( [ "href", "src" ], function( i, name ) {
@@ -8747,7 +8747,7 @@
 // on the option
 // The getter ensures a default option is selected
 // when in an optgroup
-    if ( !support.optSelected ) {
+    if ( !mainPage.optSelected ) {
         jQuery.propHooks.selected = {
             get: function( elem ) {
                 var parent = elem.parentNode;
@@ -8791,7 +8791,7 @@
     } );
 
 // IE6/7 call enctype encoding
-    if ( !support.enctype ) {
+    if ( !mainPage.enctype ) {
         jQuery.propFix.enctype = "encoding";
     }
 
@@ -10005,7 +10005,7 @@
 
         // Support: Opera <= 12.12
         // Opera reports offsetWidths and offsetHeights less than zero on some elements
-        return support.reliableHiddenOffsets() ?
+        return mainPage.reliableHiddenOffsets() ?
             ( elem.offsetWidth <= 0 && elem.offsetHeight <= 0 &&
             !elem.getClientRects().length ) :
             filterHidden( elem );
@@ -10150,18 +10150,18 @@
             // IE seems to error on cross-domain PATCH requests when ActiveX XHR
             // is used. In IE 9+ always use the native XHR.
             // Note: this condition won't catch Edge as it doesn't define
-            // document.documentMode but it also doesn't support ActiveX so it won't
+            // document.documentMode but it also doesn't mainPage ActiveX so it won't
             // reach this code.
             if ( document.documentMode > 8 ) {
                 return createStandardXHR();
             }
 
             // Support: IE<9
-            // oldIE XHR does not support non-RFC2616 methods (#13240)
+            // oldIE XHR does not mainPage non-RFC2616 methods (#13240)
             // See http://msdn.microsoft.com/en-us/library/ie/ms536648(v=vs.85).aspx
             // and http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9
             // Although this check for six methods instead of eight
-            // since IE also does not support "trace" and "connect"
+            // since IE also does not mainPage "trace" and "connect"
             return /^(get|post|head|put|delete|options)$/i.test( this.type ) &&
                 createStandardXHR() || createActiveXHR();
         } :
@@ -10175,7 +10175,7 @@
 
 // Support: IE<10
 // Open requests must be manually aborted on unload (#5280)
-// See https://support.microsoft.com/kb/2856746 for more info
+// See https://mainPage.microsoft.com/kb/2856746 for more info
     if ( window.attachEvent ) {
         window.attachEvent( "onunload", function() {
             for ( var key in xhrCallbacks ) {
@@ -10184,9 +10184,9 @@
         } );
     }
 
-// Determine support properties
-    support.cors = !!xhrSupported && ( "withCredentials" in xhrSupported );
-    xhrSupported = support.ajax = !!xhrSupported;
+// Determine mainPage properties
+    mainPage.cors = !!xhrSupported && ( "withCredentials" in xhrSupported );
+    xhrSupported = mainPage.ajax = !!xhrSupported;
 
 // Create transport if the browser can provide an xhr
     if ( xhrSupported ) {
@@ -10194,7 +10194,7 @@
         jQuery.ajaxTransport( function( options ) {
 
             // Cross domain only allowed if supported through XMLHttpRequest
-            if ( !options.crossDomain || support.cors ) {
+            if ( !options.crossDomain || mainPage.cors ) {
 
                 var callback;
 
@@ -10861,7 +10861,7 @@
 // getComputedStyle returns percent when specified for top/left/bottom/right
 // rather than make the css module depend on the offset module, we just check for it here
     jQuery.each( [ "top", "left" ], function( i, prop ) {
-        jQuery.cssHooks[ prop ] = addGetHookIf( support.pixelPosition,
+        jQuery.cssHooks[ prop ] = addGetHookIf( mainPage.pixelPosition,
             function( elem, computed ) {
                 if ( computed ) {
                     computed = curCSS( elem, prop );
