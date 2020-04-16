@@ -1,8 +1,8 @@
 'use strict';
 
-var lk = angular.module('myApp.lk', ['ngRoute']);
+var login = angular.module('myApp.login', ['ngRoute']);
 
-lk.controller('LkCtrl', function($scope, userService, $location, $rootScope, infoService) {
+login.controller('LoginCtrl', function($scope, userService, $location, $rootScope, infoService) {
 
     if (userService.checkToken()) {
         getUserByToken();

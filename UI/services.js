@@ -288,7 +288,12 @@ myApp.factory('userService', function($http, $window, $q, $location) {
             return null;
     }
 
-
+    service.checkToken = function(){
+        var token = getCookie("token");
+        if(token){
+            return true;
+        }
+    }
 
     service.setCookie = function(name,value,days){
         setCookie(name,value,days);
@@ -306,11 +311,11 @@ myApp.factory('userService', function($http, $window, $q, $location) {
 
     service.GetUserByToken = function() {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken',{withCredentials: true}).success(function(user){
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getUserByToken' ).success(function(user){
             deferred.resolve(user);
         }).error(function(){
             service.User = undefined;
-            $location.path('/lk');
+            $location.path('/main');
         });
         return deferred.promise;
     };
@@ -321,7 +326,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
             deferred.resolve(autorizedUser);
         }).error(function (data) {
             service.User = undefined;
-            $location.path('/lk');
+            $location.path('/main');
             deferred.reject('Error in authtorize user function');
         });
         return deferred.promise;
@@ -375,7 +380,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
     service.logOut = function() {
         service.User = undefined;
         setCookie("token", "", -1);
-        $location.path("/lk");
+        $location.path("/main");
     };
 
     return service;

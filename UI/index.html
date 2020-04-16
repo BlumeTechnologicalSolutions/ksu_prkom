@@ -13,14 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css?1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
 </head>
 <body ng-cloak>
 <nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
-    <div class="container-fluid">
+    <div class="container-fluid" ng-controller="UserCtrl">
         <button data-toggle="collapse" class="navbar-toggler" data-target="#menu">
             <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon">
             <i class="la la-navicon"></i></span>
@@ -54,7 +54,7 @@
                     <div class="nav-item dropdown">
                         <a class="dropdown-toggle pointer nav-link montserrat0" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
                         <div class="dropdown-menu" style="margin-left: -45px" role="menu">
-                            <a class="dropdown-item pointer" role="presentation" >Мои данные</a>
+                            <a class="dropdown-item pointer" role="presentation" href="#/lk" >Мои данные</a>
                             <a class="dropdown-item pointer" role="presentation" ng-click="logOut()" >Выйти</a>
                         </div>
                     </div>
@@ -87,18 +87,19 @@
 <script src="bower_components/angular-ui-select/select.js"></script>
 
 <!--Angular JS files-->
-<script src="app.js"></script>
-<script src="services.js"></script>
-<script src="lk/lk.js"></script>
-<script src="apply/applyDocuments.js"></script>
-<script src="direction/direction.js"></script>
-<script src="prkom/prkom.js"></script>
-<script src="support/support.js"></script>
-<script src="mainPage/mainPage.js"></script>
-<script src="registration/registration.js"></script>
-<script src="remember/remember.js"></script>
-<script src="modalWindows/ConfirmationModal/confirmationModal.js"></script>
-<script src="modalWindows/InfoModal/infoModal.js"></script>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js"></script>
+<script src="app.js?1.0"></script>
+<script src="services.js?1.0"></script>
+<script src="login/login.js?1.0"></script>
+<script src="lk/lk.js?1.0"></script>
+<script src="apply/applyDocuments.js?1.0"></script>
+<script src="direction/direction.js?1.0"></script>
+<script src="prkom/prkom.js?1.0"></script>
+<script src="support/support.js?1.0"></script>
+<script src="mainPage/mainPage.js?1.0"></script>
+<script src="registration/registration.js?1.0"></script>
+<script src="remember/remember.js?1.0"></script>
+<script src="modalWindows/ConfirmationModal/confirmationModal.js?1.0"></script>
+<script src="modalWindows/InfoModal/infoModal.js?1.0"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?1.0"></script>
 </body>
 </html>

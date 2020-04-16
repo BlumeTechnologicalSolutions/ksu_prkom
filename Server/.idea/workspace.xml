@@ -7,32 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../UI/images/continueImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/login/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lk/persistence/Authentification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lk/persistence/Authentification.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/adaptive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/.github/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-ui-select2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/jquery/jqueryjs" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/jquery/jqueryjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/navbarPages.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/navbarPages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/prkom/prkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/prkom/prkom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/navbarPages.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="118">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>time</find>
       <find>springframework</find>
       <find>dele</find>
       <find>tinyint	Checked</find>
@@ -152,6 +138,7 @@
       <find>$scope.$apply</find>
       <find>mysq</find>
       <find>;</find>
+      <find>autho</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -466,18 +453,17 @@
       <workItem from="1582201361729" duration="20264000" />
       <workItem from="1586252846957" duration="599000" />
       <workItem from="1587020802190" duration="3139000" />
-      <workItem from="1587030911340" duration="1223000" />
+      <workItem from="1587030911340" duration="2551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83561000" />
+    <option name="totallyTimeSpent" value="84889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.28290468" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.28290468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -488,7 +474,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.43336946" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.39934534" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.4222586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -809,6 +795,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -823,18 +819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+        <state relative-caret-position="118">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

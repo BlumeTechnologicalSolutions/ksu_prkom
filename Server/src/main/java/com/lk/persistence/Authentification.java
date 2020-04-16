@@ -28,6 +28,7 @@ public class Authentification {
         }
         if(tokenInfo!=null){
             user = getUserByTokenInfo(tokenInfo);
+            user.setPassword(null);
         }
         return user;
     }
@@ -39,9 +40,9 @@ public class Authentification {
         try {
             if (tokenInfo != null) {
                 transaction = session.beginTransaction();
-                List<User> users = session.createSQLQuery("SELECT user.* FROM public.tokens as t \n" +
-                        "join public.users as user on t.user_id = t.id\n" +
-                        "join WHERE t.tokenInfo = :tokenINFO and !t.IsDeleted")
+                List<User> users = session.createSQLQuery("SELECT usr.* FROM public.users as usr \n" +
+                        "join public.tokens as t on t.user_id = usr.id \n" +
+                        "where t.token = (:tokenINFO) ")
                         .addEntity(User.class)
                         .setParameter("tokenINFO", tokenInfo)
                         .list();

@@ -2,11 +2,11 @@
 
 var mainPage = angular.module('myApp.mainPage', ['ngRoute']);
 
-mainPage.controller('MainPageCtrl', function($scope, userService, $rootScope) {
+mainPage.controller('MainPageCtrl', function($scope, userService) {
 
     var userInterval = setInterval(function () {
-        if ($rootScope.user) {
-            $scope.user = $rootScope.user;
+        if (userService.User) {
+            $scope.user = userService.User;
             clearInterval(userInterval);
 
         }

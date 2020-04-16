@@ -27,7 +27,7 @@ function loadXML(url) {
 var myApp = angular.module('myApp',
     ['ngRoute', 'myApp.services', 'myApp.lk', 'myApp.apply', 'myApp.direction',
         'myApp.prkom', 'myApp.support', 'myApp.registration', 'myApp.remember', 'myApp.confirmationModal',
-        'myApp.infoModal', 'myApp.mainPage'
+        'myApp.infoModal', 'myApp.mainPage', 'myApp.login'
     ]);
 
 myApp.directive('htmlCompile', ['$compile', function ($compile) {
@@ -52,7 +52,8 @@ myApp.directive('htmlCompile', ['$compile', function ($compile) {
     };
 }]);
 
-myApp.config(function($routeProvider) {
+myApp.config(function($routeProvider, $httpProvider) {
+    $httpProvider.defaults.withCredentials = true;
 
     var AuthResolve = {
         authorizeCheck: function(userService) {
@@ -67,9 +68,13 @@ myApp.config(function($routeProvider) {
             controller: 'MainPageCtrl',
             resolve: AuthResolve
         })
-        .when('/login', {
+        .when('/lk', {
             templateUrl: 'lk/lk.html',
-            controller: 'AbiturientCtrl'
+            controller: 'LkCtrl'
+        })
+        .when('/login', {
+            templateUrl: 'login/login.html',
+            controller: 'LoginCtrl'
         })
         .when('/apply', {
             templateUrl: 'apply/applyDocuments.html',
