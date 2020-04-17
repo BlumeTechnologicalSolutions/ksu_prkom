@@ -26,7 +26,7 @@ login.controller('LoginCtrl', function($scope, userService, $location, $rootScop
                 userService.logOut();
             });;
         } else {
-            $rootScope.user = userService.User;
+            $location.path('/main')
             tryDigest();
         }
     };
@@ -57,7 +57,6 @@ login.controller('LoginCtrl', function($scope, userService, $location, $rootScop
                     if (response.isSuccess) {
                         userService.User = response.object;
                         if (userService.User && userService.User.token) {
-                            $rootScope.user = userService.User;
                             userService.setCookie("token", userService.User.token);
                             $location.path('/main')
                             tryDigest();

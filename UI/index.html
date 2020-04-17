@@ -54,13 +54,16 @@
                 </li>
                 <li class="nav-item" role="presentation" ng-if="user">
                     <div class="nav-item dropdown">
-                        <a class="dropdown-toggle pointer nav-link montserrat0" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
-                        <div class="dropdown-menu" style="margin-left: -45px" role="menu">
+                        <a class="dropdown-toggle pointer nav-link" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
+                        <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item pointer" role="presentation" href="#/lk" >Мои данные</a>
+                            <a class="dropdown-item divider" role="presentation"  ></a>
                             <a class="dropdown-item pointer" role="presentation" ng-click="logOut()" >Выйти</a>
+
                         </div>
                     </div>
                 </li>
+                <li ng-repeat-end="" ng-if="item.type == 3 &amp;&amp; item.bookmarkParent==null" role="presentation" class="divider ng-scope"></li>
             </ul>
         </div>
 

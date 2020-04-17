@@ -4,25 +4,23 @@ var mainPage = angular.module('myApp.mainPage', ['ngRoute']);
 
 mainPage.controller('MainPageCtrl', function($scope, userService) {
 
+    var count = 0;
     var userInterval = setInterval(function () {
-        if (userService.User) {
-            //$scope.user = userService.User;
+        count++;
+        if (count == 4 || $scope.user) {
             clearInterval(userInterval);
-
+        } else {
+            $scope.user = userService.User;
+            tryDigest();
         }
-    }, 150);
+    }, 100);
 
+    function tryDigest() {
+        if(!$scope.$$phase) {
+            $scope.$digest();
+        };
+    }
 
-  /*  "months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-        "monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
-        "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
-        "weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
-        "Пятница","Суббота" ],
-        "weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
-        "Пт","Сб" ],
-        "weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
-        "Пт","Сб" ]*/
     $("#eventCalendar").simpleCalendar({
         //Defaults options below
         //string of months starting from january

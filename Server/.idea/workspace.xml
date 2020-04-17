@@ -7,32 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestions.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lk/controller/UserServiceRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lk/controller/UserServiceRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lk/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lk/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/controller/UserServiceRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/controller/UserServiceRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/com/lk/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/modalWindows/ConfirmationModal/confirmationModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/modalWindows/ConfirmationModal/confirmationModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/modalWindows/InfoModal/infoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/modalWindows/InfoModal/infoModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sqlscripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlscripts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            <state relative-caret-position="50">
+              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="54" />
+            <state relative-caret-position="183">
+              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -230,10 +217,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1380" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -291,25 +278,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lk" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ksu-prkom-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lk" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ksu-prkom-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lk" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ksu-prkom-rest" type="b2602c69:ProjectViewProjectNode" />
@@ -490,18 +459,18 @@
       <workItem from="1582201361729" duration="20264000" />
       <workItem from="1586252846957" duration="599000" />
       <workItem from="1587020802190" duration="3139000" />
-      <workItem from="1587030911340" duration="8057000" />
+      <workItem from="1587030911340" duration="10381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90395000" />
+    <option name="totallyTimeSpent" value="92719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.28290468" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.33888048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -512,7 +481,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.43336946" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.43207857" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.35188216" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -823,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -880,11 +842,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="50">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>

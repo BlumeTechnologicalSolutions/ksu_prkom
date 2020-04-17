@@ -270,7 +270,7 @@ services.filter('orderObjectBy', function() {
 });
 
 
-myApp.factory('userService', function($http, $window, $q, $location) {
+myApp.factory('userService', function($http, $window, $q, $location, $rootScope) {
 
     var service = {};
 
@@ -339,23 +339,36 @@ myApp.factory('userService', function($http, $window, $q, $location) {
             count++;
             if (count == 4) {
                 clearInterval(userInterval);
-                defered.resolve(service.GetUserByToken());
+                service.GetUserByToken().then(function (response) {
+                    defered.resolve(true);
+                    if(response.isSuccess){
+                        var user = response.object;
+                        service.User = user;
+                    }
+                });
             } else {
                 if (service.User) {
                     clearInterval(userInterval);
                     defered.resolve(service.User);
                     var currentUser = service.User;
                     if (!currentUser.isDeleted) {
-                        defered.resolve(service.User);
+                        defered.resolve(true);
                     } else {
                         //$location.path('/login');
                     };
+                    tryDigest();
                 };
             };
         }, 50);
 
         return defered.promise;
     };
+
+    function tryDigest() {
+        if(!$rootScope.$$phase) {
+            $rootScope.$apply();
+        };
+    }
 
     service.registration = function(newUser) {
         var deferred = $q.defer();

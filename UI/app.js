@@ -75,31 +75,38 @@ myApp.config(function($routeProvider, $httpProvider) {
         })
         .when('/login', {
             templateUrl: 'login/login.html',
-            controller: 'LoginCtrl'
+            controller: 'LoginCtrl',
+            resolve: AuthResolve
         })
         .when('/apply', {
             templateUrl: 'apply/applyDocuments.html',
-            controller: 'ApplyDocumentCtrl'
+            controller: 'ApplyDocumentCtrl',
+            resolve: AuthResolve
         })
         .when('/direction', {
             templateUrl: 'direction/direction.html',
-            controller: 'DirectionCtrl'
+            controller: 'DirectionCtrl',
+            resolve: AuthResolve
         })
         .when('/priemnaya-komissiya', {
             templateUrl: 'prkom/prkom.html',
-            controller: 'PriemCtrl'
+            controller: 'PriemCtrl',
+            resolve: AuthResolve
         })
         .when('/support', {
             templateUrl: 'support/support.html',
-            controller: 'SupportCtrl'
+            controller: 'SupportCtrl',
+            resolve: AuthResolve
         })
         .when('/registration', {
             templateUrl: 'registration/registration.html',
-            controller: 'RegistrationCtrl'
+            controller: 'RegistrationCtrl',
+            resolve: AuthResolve
         })
         .when('/remember', {
             templateUrl: 'remember/remember.html',
-            controller: 'RememberCtrl'
+            controller: 'RememberCtrl',
+            resolve: AuthResolve
         })
 
 });
@@ -121,22 +128,26 @@ myApp.config(function($routeProvider, $httpProvider) {
     };
 });*/
 
-myApp.controller('UserCtrl', function($scope, userService, $rootScope) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
-    if(!$rootScope.$$phase) {
-        $rootScope.$digest();
-    };
+myApp.controller('UserCtrl', function($scope, userService, $rootScope, $window) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
+
     var userInterval = setInterval(function(){
         if (userService.User) {
+            $scope.user = userService.User;
+            tryDigest();
             clearInterval(userInterval);
-            $scope.$apply(function () {
-                $rootScope.user = userService.User;
-            })
         };
     }, 100);
 
+    function tryDigest() {
+        if(!$scope.$$phase) {
+            $scope.$digest();
+        };
+    }
+
     $scope.logOut = function() {
         userService.logOut();
-        $rootScope.user = null;
+        $scope.user = null;
+        $window.location.reload();
     };
 });
 
