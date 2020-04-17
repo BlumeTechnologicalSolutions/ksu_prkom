@@ -2,7 +2,7 @@ var confirmationModal = angular.module('myApp.confirmationModal', ['ngRoute', 'u
 confirmationModal.controller('ConfirmationModalCtrl', function ($scope, $modalInstance, $sce, title, text) {
 
     $scope.confirmationModalTitle = title;
-    $scope.confirmationModalText = $sce.trustAsHtml(findAndReplaceLink(text.replace(/\r\n|\r|\n/g, " <br /> ")));
+    $scope.confirmationModalText = $sce.trustAsHtml(text.replace(/\r\n|\r|\n/g, " <br /> "));
 
     $scope.ok = function () {
         $modalInstance.close();

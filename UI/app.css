@@ -8,6 +8,13 @@ p{
 .small{
     font-size: 14px;
 }
+html{
+    background-color: rgb(0,0,0,0.75);
+}
+.loginMargin{
+    margin-top:300px;
+    margin-bottom: 300px;
+}
 .margin0{
     margin: 0px;
 }

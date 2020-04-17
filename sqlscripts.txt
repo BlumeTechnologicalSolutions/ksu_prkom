@@ -18,7 +18,7 @@ ALTER SEQUENCE public.tokensseq
 
 --tables
 
-
+--users
 CREATE TABLE public.users(
     id bigint NOT NULL DEFAULT nextval('user_seq'::regclass),
     login character varying(255) COLLATE pg_catalog."default" NOT NULL,
@@ -43,6 +43,7 @@ TABLESPACE pg_default;
 ALTER TABLE public.users
     OWNER to postgres;
 
+--tokens
 CREATE TABLE public.tokens(
     id bigint NOT NULL DEFAULT nextval('tokensseq'::regclass),
     token character varying(255) COLLATE pg_catalog."default" NOT NULL,
@@ -56,3 +57,30 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.tokens
     OWNER to postgres;
+    
+--registration_secret_questions
+
+CREATE TABLE public.registration_secret_questions
+(
+    id bigint NOT NULL,
+    question character varying(255) NOT NULL,
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.registration_secret_questions
+    OWNER to postgres;
+--registration_secret_questions example data 
+INSERT INTO public.registration_secret_questions(
+id, question)
+VALUES (1, 'Какая кличка домашнего животного?');
+INSERT INTO public.registration_secret_questions(
+id, question)
+VALUES (2, 'Какая девичья фамилия матери?');
+INSERT INTO public.registration_secret_questions(
+id, question)
+VALUES (3, 'Какой цвет глаз вашего отца?');
+    
+

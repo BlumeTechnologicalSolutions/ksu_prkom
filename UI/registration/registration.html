@@ -43,8 +43,8 @@
 
     </div>
 </div>-->
-<div class="container">
-    <div class="row" style="margin-top: 150px">
+<div class="container" style="margin-bottom: 200px">
+    <div class="row " style="margin-top: 150px">
         <div class="col-12">
             <p class="text-center margin0">СОЗДАНИЕ АККАУНТА</p>
             <p class="text-center small margin0">СОЗДАВАЙ. ОТСЛЕЖИВАЙ. ПОСТУПАЙ</p>
@@ -84,10 +84,11 @@
     <div class="row">
         <div class="col-12 text-center">
             <div class="marginBottom10">
-                <select class="border rounded form-control-sm main_input" >
-                    <option value="1">Вопрос 1</option>
-                    <option value="2">Вопрос 2</option>
-                    <option value="3">Вопрос 3</option>
+                <select class="border rounded form-control-sm main_input" ng-style="{'color': (!newUser.controlQuestionSelected?'#757575':'')}"
+                        id="controlQuestion"
+                        ng-options="sq.question for sq in secretQuestions"
+                        ng-model="newUser.controlQuestionSelected">
+                    <option  value="">Выберите вопрос</option>
                 </select>
             </div>
             <input class="border rounded form-control-sm main_input" ng-model="newUser.controlAnswer"  id="controlAnswer" type="text"  placeholder="Ответ">

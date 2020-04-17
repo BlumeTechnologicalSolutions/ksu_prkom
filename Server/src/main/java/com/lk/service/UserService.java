@@ -20,4 +20,6 @@ public interface UserService {
 
     public Response remember(User user);
 
+    public Response getRegistrationSecretQuestions();
+
 }

@@ -33,6 +33,7 @@
         <mapping resource="User.hbm.xml"></mapping>
         <mapping resource="OtherUniversityReceipt.hbm.xml"></mapping>
         <mapping resource="Token.hbm.xml"></mapping>
+        <mapping resource="RegistrationSecretQuestions.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

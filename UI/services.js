@@ -327,7 +327,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
         }).error(function (data) {
             service.User = undefined;
             $location.path('/main');
-            deferred.reject('Error in authtorize user function');
+            deferred.reject('Error in authtorize user service function');
         });
         return deferred.promise;
     };
@@ -362,7 +362,7 @@ myApp.factory('userService', function($http, $window, $q, $location) {
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/registration',newUser).success(function(response){
             deferred.resolve(response);
         }).error(function(){
-            deferred.reject('Error in registration user');
+            deferred.reject('Error in registration user service function');
         });
         return deferred.promise;
     };
@@ -372,7 +372,17 @@ myApp.factory('userService', function($http, $window, $q, $location) {
         $http.post(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
             deferred.resolve(response);
         }).error(function(){
-            deferred.reject('Error in remember user function');
+            deferred.reject('Error in remember user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.getRegistrationSecretQuestions = function() {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/getRegistrationSecretQuestions').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in getRegistrationSecretQuestions user service function');
         });
         return deferred.promise;
     };

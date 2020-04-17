@@ -1,9 +1,6 @@
 package com.lk.impl;
 
-import com.lk.entity.Response;
-import com.lk.entity.Token;
-import com.lk.entity.User;
-import com.lk.entity.UserRegistration;
+import com.lk.entity.*;
 import com.lk.persistence.Authentification;
 import com.lk.persistence.HibernateUtil;
 import com.lk.service.UserService;
@@ -203,6 +200,27 @@ public class UserServiceImpl implements UserService {
             if (transaction!=null) { transaction.rollback(); }
         }
         return null;
+    }
+
+    @Override
+    public Response getRegistrationSecretQuestions() {
+        logger.info("Start function getRegistrationSecretQuestions");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            List<RegistrationSecretQuestions> registrationSecretQuestions =
+                    session.createSQLQuery("Select * from registration_secret_questions")
+                    .addEntity(RegistrationSecretQuestions.class)
+                    .list();
+            transaction.commit();
+            return new Response(true, registrationSecretQuestions);
+        } catch (Exception ex){
+            logger.error("Exception in getRegistrationSecretQuestions with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка получения секретных вопросов: "+ex.toString());
+        }
+
     }
 
 

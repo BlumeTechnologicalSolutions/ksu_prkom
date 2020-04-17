@@ -2,20 +2,36 @@
 
 var registration = angular.module('myApp.registration', ['ngRoute']);
 
-registration.controller('RegistrationCtrl', function($scope, userService) {
+registration.controller('RegistrationCtrl', function($scope, userService, infoService, $location) {
 
     $scope.newUser = {};
 
+    getRegistrationSecretQuestions();
+
+    function getRegistrationSecretQuestions(){
+        userService.getRegistrationSecretQuestions().then(function (response) {
+            if(response.isSuccess){
+                $scope.secretQuestions = response.object;
+            } else {
+                infoService.infoFunction(response.message, "Ошибка!");
+            }
+        })
+    }
+
+    function selectUpdate(controlQuestion,questionSelected){
+        controlQuestion = questionSelected;
+    }
+
     $scope.continueRegistration = function(){
-        $scope.newUser.controlQuestion = "test";
+
         if(!$scope.newUser || !$scope.newUser.firstName || !$scope.newUser.lastName || !$scope.newUser.login || !$scope.newUser.password
-            || !$scope.newUser.passwordReply || !$scope.newUser.controlQuestion || !$scope.newUser.controlAnswer){
+            || !$scope.newUser.passwordReply || !$scope.newUser.controlQuestionSelected || !$scope.newUser.controlAnswer){
             if(!$scope.newUser || !$scope.newUser.login)  $("#login").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.lastName) $("#lastName").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.firstName)  $("#firstName").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.password)  $("#password").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.passwordReply)  $("#passwordReply").addClass('ng-invalids');
-            if(!$scope.newUser || !$scope.newUser.controlQuestion)  $("#controlQuestion").addClass('ng-invalids');
+            if(!$scope.newUser || !$scope.newUser.controlQuestionSelected)  $("#controlQuestion").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.controlAnswer)  $("#controlAnswer").addClass('ng-invalids');
             if(!$scope.newUser || !$scope.newUser.email)  $("#email").addClass('ng-invalids');
             setTimeout(function(){
@@ -26,19 +42,22 @@ registration.controller('RegistrationCtrl', function($scope, userService) {
         } else {
             if($scope.newUser.password == $scope.newUser.passwordReply) {
                 var newUser = $scope.newUser;
-
+                newUser.controlQuestion = $scope.newUser.controlQuestionSelected.question;
                 newUser.passwordReply  = undefined;
                 userService.registration(newUser).then(function(response) {
                     if (response.isSuccess) {
-                        alert(response.object);
+                        infoService.infoFunction(response.object, "Информация");
+                        $location.path('/login')
                     } else {
-                        alert(response.message)
+                        infoService.infoFunction(response.message, "Ошибка регистарции!")
                     };
                 }).catch(function (response) {
-                    alert("Сервер временно не доступен.");
+                    infoService.infoFunction("Сервер временно не доступен.", "Ошибка регистарции!")
+
                 });
             } else {
-                alert("Пароли не совпадают!")
+                infoService.infoFunction("Пароли не совпадают!", "Ошибка регистарции!")
+
             }
         }
     }
