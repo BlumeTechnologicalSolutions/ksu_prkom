@@ -70,7 +70,8 @@ myApp.config(function($routeProvider, $httpProvider) {
         })
         .when('/lk', {
             templateUrl: 'lk/lk.html',
-            controller: 'LkCtrl'
+            controller: 'LkCtrl',
+            resolve: AuthResolve
         })
         .when('/login', {
             templateUrl: 'login/login.html',

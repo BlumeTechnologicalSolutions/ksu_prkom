@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="bower_components/calendar/css/eventCalendar.css">
+
 </head>
 <body ng-cloak>
 <nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
@@ -66,12 +68,36 @@
 </nav>
 
 <div ng-view class="theme-showcase" role="main"></div>
-<div class="container">
-    <div class="footer">
-        <p> footer</p>
-        <!--<p class="main-text" ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>-->
+<footer id="yt_footer" class="block main-color">
+    <div class="container">
+        <div class="row">
+            <div id="yt_copyright" class="col-sm-12 marginTop10">
+
+                <p class="copyright main-text-color small marginTop10">
+                    © 2017-2020
+                    Федеральное государственное бюджетное образовательное учреждение высшего образования «КОСТРОМСКОЙ  ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ»<br>
+                    Лицензия на осуществление образовательной деятельности КГУ № 2371 от 06.09.2016 года.<br>
+                    Свидетельство о государственной аккредитации № 2985 от 23.01.2019 года.<br>
+                    156005, ЦФО, Костромская область, г.Кострома, ул.Дзержинского, д.17 Тел. +7 (4942) 49-80-00 (ректорат), +7 (4942) 49-80-44 (приемная комиссия)<br>
+                    При перепечатке текстовой информации и фотографий ссылка на сайт обязательна.
+                </p>
+                <div class="footer-copyright text-center py-3">
+                    <p class="main-text-color small">© 2017-2020 Copyright:
+                    <a target="_blank" href="https://ksu.edu.ru/"> https://ksu.edu.ru/</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </div>
-</div>
+
+</footer>
+<!--<div class="container">
+    <div class="footer">
+        <p>Powered by Kostroma State University</p>
+        &lt;!&ndash;<p class="main-text" ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>&ndash;&gt;
+    </div>
+</div>-->
 
 <!--Plugins and other components-->
 <script src="bower_components/jquery/jquery.js"></script>
@@ -85,6 +111,7 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
 <script src="bower_components/angular-ui-select/select.js"></script>
+<script src="bower_components/calendar/js/jquery.eventCalendar.js"></script>
 
 <!--Angular JS files-->
 <script src="app.js?1.0"></script>
@@ -100,6 +127,8 @@
 <script src="remember/remember.js?1.0"></script>
 <script src="modalWindows/ConfirmationModal/confirmationModal.js?1.0"></script>
 <script src="modalWindows/InfoModal/infoModal.js?1.0"></script>
+
+
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?1.0"></script>
 </body>
 </html>
