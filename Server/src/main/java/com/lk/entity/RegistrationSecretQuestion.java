@@ -1,9 +1,6 @@
 package com.lk.entity;
 
-
-
-
-public class RegistrationSecretQuestions {
+public class RegistrationSecretQuestion {
 
     private Integer Id;
     private String  Question;

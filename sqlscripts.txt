@@ -1,11 +1,15 @@
 --postgres scripts
-
+----------------------------------
 --create database  with name 'prkom'
-
+----------------------------------
 --check to autocreated schema db with name 'public'
- 
+ ----------------------------------
 --execute following sql code
+----------------------------------
+
+----------------------------------
 --autoincrement sequence
+----------------------------------
 CREATE SEQUENCE public.user_seq;
 
 ALTER SEQUENCE public.user_seq
@@ -16,9 +20,16 @@ CREATE SEQUENCE public.tokensseq;
 ALTER SEQUENCE public.tokensseq
     OWNER TO postgres;
 
---tables
 
+----------------------------------
+--tables
+----------------------------------
+
+
+----------------------------------
 --users
+----------------------------------
+
 CREATE TABLE public.users(
     id bigint NOT NULL DEFAULT nextval('user_seq'::regclass),
     login character varying(255) COLLATE pg_catalog."default" NOT NULL,
@@ -42,8 +53,11 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.users
     OWNER to postgres;
-
+    
+----------------------------------
 --tokens
+----------------------------------
+
 CREATE TABLE public.tokens(
     id bigint NOT NULL DEFAULT nextval('tokensseq'::regclass),
     token character varying(255) COLLATE pg_catalog."default" NOT NULL,
@@ -58,7 +72,10 @@ TABLESPACE pg_default;
 ALTER TABLE public.tokens
     OWNER to postgres;
     
+    
+----------------------------------
 --registration_secret_questions
+-----------------------------------
 
 CREATE TABLE public.registration_secret_questions
 (
@@ -82,5 +99,228 @@ VALUES (2, 'Какая девичья фамилия матери?');
 INSERT INTO public.registration_secret_questions(
 id, question)
 VALUES (3, 'Какой цвет глаз вашего отца?');
+
+----------------------------------
+--educations
+----------------------------------
+
+CREATE TABLE public.educations
+(
+    id bigint NOT NULL,
+    education character varying(255) NOT NULL,
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.educations
+    OWNER to postgres;
+
+INSERT INTO public.educations(
+	id, education)
+	VALUES (1, 'Среднее профессиональное образование');
+INSERT INTO public.educations(
+	id, education)
+	VALUES (2, 'Бакалавриат');
+INSERT INTO public.educations(
+	id, education)
+	VALUES (3, 'Магистратура');
+INSERT INTO public.educations(
+	id, education)
+	VALUES (4, 'Аспирантура');
+    
+----------------------------------
+--institusions 
+----------------------------------
+
+CREATE TABLE public.institutions
+(
+    id bigint NOT NULL,
+    institute character varying(255) NOT NULL,
+    short_name character varying(100) NOT NULL,
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.institutions
+    OWNER to postgres;
+    
+----------------------------------
+--institusions in ksu edu
+----------------------------------
+
+
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (1, 'ИФМЕН', 'Институт физико-математических и естественных наук');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (2, 'ИАСТ', 'Институт автоматизированных систем и технологий');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (3, 'ИДТ', 'Институт дизайна и технологий');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (4, 'ИКИ', 'Институт культуры и искусств');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (5, 'ЮИН', 'Юридический институт имени Ю.П.Новицкого');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (6, 'ИГНИСТ', 'Институт гуманитарных наук и социальных технологи');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (7, 'ИПП', 'Институт педагогики и психологии');
+INSERT INTO public.institutions(id, short_name ,institute)
+	VALUES (8, 'ИУЭФ', 'Институт управления, экономики и финансов');
+    
+
+----------------------------------
+--directions
+----------------------------------
+
+CREATE SEQUENCE public.direct_seq;
+
+ALTER SEQUENCE public.direct_seq
+    OWNER TO postgres;
+ 
+CREATE TABLE public.directions
+(
+    id bigint NOT NULL DEFAULT nextval('direct_seq'::regclass),
+    code character varying(100) NOT NULL,
+    direction character varying(255) NOT NULL,
+    institute_id bigint NOT NULL,
+    education_id bigint NOT NULL
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.directions
+    OWNER to postgres;
+
+--1
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('01.03.02','Прикладная математика и информатика',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('03.03.02','Физика',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('04.03.01','Химия',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('06.03.01','Биология',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('10.03.01','Информационная безопасность',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.05','Педагогическое образование (с двумя профилями подготовки)',1,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('01.04.02','Прикладная математика и информатика',1,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('04.04.01','Химия',1,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('06.04.01','Биология',1,3);
+--2
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('09.03.02','Информационные системы и технологии',2,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('15.03.04','Автоматизация технологических процессов и производств',2,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('15.03.05','Конструкторско-технологическое обеспечение машиностроительных производств',2,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('27.03.04','Управление в технических системах',2,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('09.04.02','Информационные системы и технологии',2,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('15.04.02','Технологические машины и оборудование',2,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('27.04.04','Управление в технических системах',2,3);
+--3
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('19.03.04','Технология продукции и организация общественного питания',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('20.03.01','Техносферная безопасность',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('29.03.04','Технология художественной обработки материалов',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('29.03.04','Технология художественной обработки материалов',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('35.03.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('54.03.01','Дизайн',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('54.03.02','Декоративно-прикладное искусство и народные промыслы',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('54.03.03','Искусство костюма и текстиля',3,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('29.04.02','Технологии и проектирование текстильных изделий',3,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('29.04.04','Технологии художественной обработки материалов',3,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('35.04.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('35.04.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('54.04.01','Дизайн',3,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('54.04.01','Дизайн',3,3);
+--4
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.01','Педагогическое образование',4,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.05','Педагогическое образование (с двумя профилями подготовки)',4,2);
+--5
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('40.03.01','Юриспруденция',5,2);
+--6
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('42.03.02','Журналистика',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('43.03.02','Туризм',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.05','Педагогическое образование (с двумя профилями подготовки)',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('45.03.02','Лингвистика',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('46.03.01','История',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('43.04.02','Туризм',6,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('45.04.01','Филология',6,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('46.04.01','История',6,3);
+--7
+
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('37.03.01','Психология',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('39.03.02','Социальная работа',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.01','Педагогическое образование',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.02','Психолого-педагогическое образование',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.03','Специальное (дефектологическое) образование',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.03.05','Педагогическое образование (с двумя профилями подготовки)',7,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('37.04.01','Психология',7,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('39.04.02','Социальная работа',7,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.04.01','Педагогическое образование',7,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.04.02','Психолого-педагогическое образование',7,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('44.04.03','Специальное (дефектологическое) образование',7,3);
+--8
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('38.03.01','Экономика',8,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('38.03.02','Менеджмент',8,2);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('38.05.01','Экономическая безопасность',8,1);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('38.04.01','Экономика',8,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('38.04.02','Менеджмент',8,3);
+
+
+    
+
     
 

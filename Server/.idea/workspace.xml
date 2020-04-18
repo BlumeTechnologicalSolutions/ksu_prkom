@@ -7,19 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lk/entity/Education.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lk/entity/Institute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Education.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Institution.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestion.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/entity/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestions.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Direction.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/mainPage/mainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/registration/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sqlscripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlscripts.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,6 +67,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-527">
@@ -90,31 +99,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Direction.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestions.hbm.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Education.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -130,9 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>springframework</find>
-      <find>dele</find>
-      <find>tinyint	Checked</find>
       <find>DataRozhdeniy</find>
       <find>Inostranniy</find>
       <find>ts</find>
@@ -160,9 +154,14 @@
       <find>mysq</find>
       <find>;</find>
       <find>autho</find>
+      <find>RegistrationSecretQuestion</find>
+      <find>institutions</find>
+      <find>directions(id,</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
+      <replace>directions</replace>
+      <replace>directions(</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -191,13 +190,21 @@
         <option value="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/reg.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/reg.java" />
         <option value="$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestions.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/controller/UserServiceRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestion.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/Institute.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/Direction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestion.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Institution.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Direction.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Education.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/entity/Education.java" />
       </list>
     </option>
   </component>
@@ -217,7 +224,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -270,6 +277,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lk" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ksu-prkom-rest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lk" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ksu-prkom-rest" type="b2602c69:ProjectViewProjectNode" />
@@ -459,18 +475,18 @@
       <workItem from="1582201361729" duration="20264000" />
       <workItem from="1586252846957" duration="599000" />
       <workItem from="1587020802190" duration="3139000" />
-      <workItem from="1587030911340" duration="10381000" />
+      <workItem from="1587030911340" duration="12493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92719000" />
+    <option name="totallyTimeSpent" value="94831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.33888048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.24508321" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -481,7 +497,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.43336946" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.35188216" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.17348608" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -550,12 +566,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/testRest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/SingleSignOnRestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Employee.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/SingleSignOnImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/OtherUniversityReceipthbm.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/HibernateUtil.java">
@@ -618,13 +628,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/service/OtherUniversityReceiptService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/controller/OtherUniversityReceiptController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/impl/OtherUniversityReceiptServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/LichnoeDelo.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/OtherUniversityReceipt.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -778,20 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestions.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -840,6 +829,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/LichnoeDelo.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/RegistrationSecretQuestion.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/persistence/Authentification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -850,10 +853,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Institute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/RegistrationSecretQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="327">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Institution.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Direction.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Education.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/entity/Education.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

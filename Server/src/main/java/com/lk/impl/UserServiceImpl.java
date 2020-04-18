@@ -209,9 +209,9 @@ public class UserServiceImpl implements UserService {
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            List<RegistrationSecretQuestions> registrationSecretQuestions =
+            List<RegistrationSecretQuestion> registrationSecretQuestions =
                     session.createSQLQuery("Select * from registration_secret_questions")
-                    .addEntity(RegistrationSecretQuestions.class)
+                    .addEntity(RegistrationSecretQuestion.class)
                     .list();
             transaction.commit();
             return new Response(true, registrationSecretQuestions);
