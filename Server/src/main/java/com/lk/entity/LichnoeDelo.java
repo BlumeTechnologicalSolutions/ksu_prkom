@@ -13,6 +13,7 @@ public class LichnoeDelo {
     private String Pol;
     private Timestamp  DataRozhdeniya;
     private String  InostranniyYazyk;
+
     private String  SNILS;
     private Boolean Obschezhitie;
     private String OsobieUsloviya;

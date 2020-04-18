@@ -72,6 +72,15 @@ TABLESPACE pg_default;
 ALTER TABLE public.tokens
     OWNER to postgres;
     
+ALTER TABLE public.users
+    ADD COLUMN sex bit(1);
+
+ALTER TABLE public.users
+    ADD COLUMN date_of_birth date;
+ALTER TABLE public.users
+    ADD COLUMN foreign_language character varying(255);
+ALTER TABLE public.users
+    ADD COLUMN contact_phone character varying(255);
     
 ----------------------------------
 --registration_secret_questions
@@ -237,8 +246,6 @@ VALUES ('20.03.01','Техносферная безопасность',3,2);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('29.03.04','Технология художественной обработки материалов',3,2);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
-VALUES ('29.03.04','Технология художественной обработки материалов',3,2);
-INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('35.03.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,2);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('54.03.01','Дизайн',3,2);
@@ -249,15 +256,10 @@ VALUES ('54.03.03','Искусство костюма и текстиля',3,2);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('29.04.02','Технологии и проектирование текстильных изделий',3,3);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
-VALUES ('29.04.04','Технологии художественной обработки материалов',3,3);
-INSERT INTO public.directions( code ,direction, institute_id,education_id)
-VALUES ('35.04.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,3);
-INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('35.04.02','Технология лесозаготовительных и деревоперерабатывающих производств',3,3);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('54.04.01','Дизайн',3,3);
-INSERT INTO public.directions( code ,direction, institute_id,education_id)
-VALUES ('54.04.01','Дизайн',3,3);
+ 
 --4
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('44.03.01','Педагогическое образование',4,2);
@@ -319,8 +321,48 @@ VALUES ('38.04.01','Экономика',8,3);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('38.04.02','Менеджмент',8,3);
 
+--------------------------
+--specialty_directionality
+--------------------------
+CREATE SEQUENCE public.sd_seq;
 
-    
+ALTER SEQUENCE public.sd_seq
+    OWNER TO postgres;
 
-    
+CREATE TABLE public.specialty_directionality
+(
+    id bigint NOT NULL DEFAULT nextval('sd_seq'::regclass),
+    directionality character varying(255) NOT NULL,
+    budget_places bigint NOT NULL,
+    commercial_places bigint NOT NULL,
+    direction_id bigint NOT NULL,
+    is_deleted bit(1) DEFAULT b'0',
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.specialty_directionality
+    OWNER to postgres;
+ 
+--1 
+INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Прикладная математика и информатика (очная форма)',17,15,1);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Физика (очная форма)','21','11',2);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Химия (очная форма)','20','12',3);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Биология (очная форма)','16','16',4);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Организация и технология защиты информации (очная форма)','25','7',5);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Математика, физика (очная форма)','25','7',6);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Математическое моделирование и программирование (очная форма)','5','10',7);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Физическая химия (очная форма)','8','7',8);
+ INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
+        VALUES ('Экология (очная форма)','10','5',9);
 

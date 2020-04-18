@@ -9,5 +9,3 @@ public class Education {
     public String getEducation() { return Education; }
     public void setEducation(String education) { Education = education; }
 }
-
-

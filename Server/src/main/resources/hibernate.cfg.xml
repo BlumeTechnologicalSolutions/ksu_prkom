@@ -36,6 +36,7 @@
         <mapping resource="RegistrationSecretQuestion.hbm.xml"></mapping>
         <mapping resource="Direction.hbm.xml"></mapping>
         <mapping resource="Institution.hbm.xml"></mapping>
+        <mapping resource="SpecialtyDirectionality.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>
