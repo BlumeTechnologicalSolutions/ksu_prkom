@@ -369,25 +369,32 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope)
             if (count == 4) {
                 clearInterval(userInterval);
                 service.GetUserByToken().then(function (response) {
-                    defered.resolve(true);
                     if(response.isSuccess){
                         var user = response.object;
                         service.User = user;
+                        defered.resolve(user);
                         tryDigest();
+                    } else {
+                        defered.resolve(null);
                     }
+                }, function (reason) {
+                    infoService.infoFunction("Сайт временно недосутпен, пожалуйста, обратитесь на сервис позже", "Ошибка подключения к серверу")
+                    defered.resolve(null);
                 });
             } else {
                 if (service.User) {
                     clearInterval(userInterval);
-                    defered.resolve(service.User);
                     var currentUser = service.User;
                     if (!currentUser.isDeleted) {
-                        defered.resolve(true);
+                        defered.resolve(null);
                     } else {
                         //$location.path('/login');
                     };
+                    defered.resolve(service.User);
                     tryDigest();
-                };
+                } else {
+                    defered.resolve(null);
+                }
             };
         }, 50);
 

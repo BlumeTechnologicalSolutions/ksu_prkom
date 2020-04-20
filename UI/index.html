@@ -20,86 +20,16 @@
 
 </head>
 <body ng-cloak>
+<div ng-controller="UserCtrl">
 <nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
-    <div class="container-fluid" ng-controller="UserCtrl">
-        <button data-toggle="collapse" class="navbar-toggler" data-target="#menu">
-            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon">
-            <i class="la la-navicon"></i></span>
-        </button>
-        <div class="collapse navbar-collapse " id="menu">
-            <ul class="nav navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item d-none d-xs-block d-md-block" role="presentation" style="display: contents">
-                    <a class="nav-link" href="#">
-                        <img src="images/ksulogo.png" style="width: 28.5px;margin-top: -6px;">
-                    </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link montserrat" href="#/main">ГЛАВНАЯ</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link montserrat" href="#/apply">ЗАЯВЛЕНИЯ</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link montserrat" href="#/direction">НАПРАВЛЕНИЯ</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link montserrat" href="#/priemnaya-komissiya">ПРИЕМНАЯ КОМИССИЯ</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link montserrat" href="#/support">ПОДДЕРЖКА</a>
-                </li>
-                <li class="nav-item" role="presentation" ng-if="!user">
-                    <a class="nav-link montserrat0" href="#/login">ВОЙТИ</a>
-                </li>
-                <li class="nav-item" role="presentation" ng-if="user">
-                    <div class="nav-item dropdown">
-                        <a class="dropdown-toggle pointer nav-link" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item pointer" role="presentation" href="#/lk" >Мои данные</a>
-                            <a class="dropdown-item divider" role="presentation"  ></a>
-                            <a class="dropdown-item pointer" role="presentation" ng-click="logOut()" >Выйти</a>
-
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
+    <div class="container-fluid" >
+        <div style="display: contents;" ng-include="'navBar.html'"></div>
     </div>
 </nav>
 
 <div ng-view class="theme-showcase" role="main"></div>
-<footer id="yt_footer" class="block main-color">
-    <div class="container">
-        <div class="row">
-            <div id="yt_copyright" class="col-sm-12 marginTop10">
-
-                <p class="copyright main-text-color small marginTop10">
-                    © 2017-2020
-                    Федеральное государственное бюджетное образовательное учреждение высшего образования «КОСТРОМСКОЙ  ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ»<br>
-                    Лицензия на осуществление образовательной деятельности КГУ № 2371 от 06.09.2016 года.<br>
-                    Свидетельство о государственной аккредитации № 2985 от 23.01.2019 года.<br>
-                    156005, ЦФО, Костромская область, г.Кострома, ул.Дзержинского, д.17 Тел. +7 (4942) 49-80-00 (ректорат), +7 (4942) 49-80-44 (приемная комиссия)<br>
-                    При перепечатке текстовой информации и фотографий ссылка на сайт обязательна.
-                </p>
-                <div class="footer-copyright text-center py-3">
-                    <p class="main-text-color small">© 2017-2020 Copyright:
-                    <a target="_blank" href="https://ksu.edu.ru/"> https://ksu.edu.ru/</a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</footer>
-<!--<div class="container">
-    <div class="footer">
-        <p>Powered by Kostroma State University</p>
-        &lt;!&ndash;<p class="main-text" ng-controller="CopyrightDateCtrl">&copy; Костромской Государственный Университет, {{ dateString }} </p>&ndash;&gt;
-    </div>
-</div>-->
-
+<div style="display: contents;" ng-include="'footer.html'"></div>
+</div>
 <!--Plugins and other components-->
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/jquery/jquery.maskedinput.min.js"></script>

@@ -111,23 +111,6 @@ myApp.config(function($routeProvider, $httpProvider) {
 
 });
 
- /*$(document).mouseup(function (e){ // событие клика по веб-документу
-    if (location.hash.indexOf('lk')<0) {
-        if (!localStorage.token && !sessionStorage.token) {
-            if (location.hash.indexOf('clientNps')<0) {
-                logOut();
-                $window.location.hash = "#/loginPage";
-            }
-        } else {
-            // webSocketCheckVersionService.knockToWebSocket();
-            // if (!webSocketCheckVersionService.websocketCheckConnect()) {
-            //     webSocketCheckVersionService.webSocketCheckVersion();
-            // };
-            systemService.systemVersion();
-        };
-    };
-});*/
-
 myApp.controller('UserCtrl', function($scope, userService, $rootScope, $window) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
 
     var userInterval = setInterval(function(){
@@ -149,6 +132,11 @@ myApp.controller('UserCtrl', function($scope, userService, $rootScope, $window) 
         $scope.user = null;
         $window.location.reload();
     };
+
+    $scope.getCurrentYear = function(){
+        return new Date().getFullYear();
+    }
+
 });
 
 

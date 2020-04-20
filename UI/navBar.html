@@ -1,0 +1,44 @@
+
+<button data-toggle="collapse" class="navbar-toggler" data-target="#menu">
+    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon">
+            <i class="la la-navicon"></i></span>
+</button>
+<div class="collapse navbar-collapse " id="menu">
+    <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+        <li class="nav-item d-none d-xs-block d-md-block" role="presentation" style="display: contents">
+            <a class="nav-link" href="#">
+                <img src="images/ksulogo.png" style="width: 28.5px;margin-top: -6px;">
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link montserrat" href="#/main">ГЛАВНАЯ</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link montserrat" href="#/apply">ЗАЯВЛЕНИЯ</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link montserrat" href="#/direction">НАПРАВЛЕНИЯ</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link montserrat" href="#/priemnaya-komissiya">ПРИЕМНАЯ КОМИССИЯ</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link montserrat" href="#/support">ПОДДЕРЖКА</a>
+        </li>
+        <li class="nav-item" role="presentation" ng-if="!user">
+            <a class="nav-link montserrat0" href="#/login">ВОЙТИ</a>
+        </li>
+        <li class="nav-item" role="presentation" ng-if="user">
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle pointer nav-link" data-toggle="dropdown" aria-expanded="false" >АККАУНТ</a>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item pointer" role="presentation" href="#/lk" >Мои данные</a>
+                    <a class="dropdown-item divider" role="presentation"  ></a>
+                    <a class="dropdown-item pointer" role="presentation" ng-click="logOut()" >Выйти</a>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+

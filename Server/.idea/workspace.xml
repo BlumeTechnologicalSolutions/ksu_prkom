@@ -7,28 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ad8db6-49db-48d8-b2e1-f6473d4b8e35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../UI/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/navBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ksu-prkom-rest.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap-csp.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap-csp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/bower_components/angular-bootstrap/ui-bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/includePages/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/includePages/address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/includePages/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/includePages/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/includePages/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/includePages/education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/includePages/mainInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/includePages/mainInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/includePages/representative.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/includePages/representative.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/modalWindows/ConfirmationModal/confirmationModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/modalWindows/ConfirmationModal/confirmationModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/modalWindows/InfoModal/infoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/modalWindows/InfoModal/infoModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/prkom/prkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/prkom/prkom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UI/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/support/support.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sqlscripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlscripts.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -241,7 +227,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -507,18 +493,18 @@
       <workItem from="1586252846957" duration="599000" />
       <workItem from="1587020802190" duration="3139000" />
       <workItem from="1587030911340" duration="36484000" />
-      <workItem from="1587404182612" duration="806000" />
+      <workItem from="1587404182612" duration="1547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119628000" />
+    <option name="totallyTimeSpent" value="120369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.18835099" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.18835099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -529,7 +515,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.45662847" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.43336946" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.33387887" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.33387887" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
