@@ -40,16 +40,22 @@ public class UserServiceRestController {
         return userService.getUserByToken(request);
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "/registration/{code}", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public Response authorization (@RequestBody UserRegistration user) {
-        return userService.registration(user);
+    public Response authorization (@RequestBody UserRegistration user, @PathVariable("code") String code) {
+        return userService.registration(user, code);
     }
 
-    @RequestMapping(value = "/remember", method = RequestMethod.POST)
+    @RequestMapping(value = "/sendRegistrationCode/{toEmail}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public Response remember (@RequestBody User user) {
-        return userService.remember(user);
+    public Response sendRegistrationCode(@PathVariable("toEmail") String toEmail){
+        return userService.sendRegistrationCode(toEmail);
+    }
+
+    @RequestMapping(value = "/remember/{email}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Response remember (@PathVariable("email") String email) {
+        return userService.remember(email);
     }
 
 
@@ -58,6 +64,7 @@ public class UserServiceRestController {
     public Response getRegistrationSecretQuestions () {
         return userService.getRegistrationSecretQuestions();
     }
+
     /*@RequestMapping(value = "/get", method = RequestMethod.GET) // JUST EXAMPLE
     @ResponseStatus(HttpStatus.OK)
     public Response remember (@RequestBody User user, final HttpServletRequest request, final HttpServletResponse response) {

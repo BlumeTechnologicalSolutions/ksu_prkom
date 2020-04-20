@@ -370,9 +370,19 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope)
         };
     }
 
-    service.registration = function(newUser) {
+    service.sendRegistrationCode = function(email) {
         var deferred = $q.defer();
-        $http.post(ipAdress + '/ksu-prkom-rest/UserService/registration',newUser).success(function(response){
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/sendRegistrationCode/'+email+'/').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in sendRegistrationCode user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.registration = function(newUser, activationCode) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserService/registration/'+activationCode+'/',newUser).success(function(response){
             deferred.resolve(response);
         }).error(function(){
             deferred.reject('Error in registration user service function');
@@ -380,9 +390,9 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope)
         return deferred.promise;
     };
 
-    service.remember = function() {
+    service.remember = function(email) {
         var deferred = $q.defer();
-        $http.post(ipAdress + '/ksu-prkom-rest/UserService/remember').success(function(response){
+        $http.get(ipAdress + '/ksu-prkom-rest/UserService/remember/'+email+'/').success(function(response){
             deferred.resolve(response);
         }).error(function(){
             deferred.reject('Error in remember user service function');

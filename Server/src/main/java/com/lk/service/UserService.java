@@ -16,9 +16,11 @@ public interface UserService {
 
     public Response authorization (User user );
 
-    public Response registration(UserRegistration user);
+    public Response registration(UserRegistration user, String code);
 
-    public Response remember(User user);
+    public Response remember(String email);
+
+    public Response sendRegistrationCode(String toEmail);
 
     public Response getRegistrationSecretQuestions();
 

@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="app.css?1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="bower_components/angular-ui-select/select.css">
     <link rel="stylesheet" href="bower_components/jquery/1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="bower_components/calendar/css/eventCalendar.css">
@@ -130,7 +129,18 @@
 <script src="modalWindows/ConfirmationModal/confirmationModal.js?1.0"></script>
 <script src="modalWindows/InfoModal/infoModal.js?1.0"></script>
 
-
+            <!--<ui-select id="tlNewItemSelect"
+                       class="border rounded form-control-sm lk_input marginBottom10"
+                       ng-model="user.sex.selected"
+                       theme="selectize">
+                <ui-select-match class="text-left" style="font-size: 10pt">
+                    <span style="height: 10px">{{$select.selected.lastName+' '+$select.selected.firstName | limitTo:18}}</span>
+                </ui-select-match>
+                <ui-select-choices class="text-left new-item-select-width"
+                                   repeat="tl in teamLeaders">{{tl.lastName+' '+tl.firstName}}
+                </ui-select-choices>
+            </ui-select>-->
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?1.0"></script>
 </body>
 </html>
+

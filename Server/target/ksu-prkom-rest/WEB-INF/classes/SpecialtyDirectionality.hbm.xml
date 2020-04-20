@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.SpecialtyDirectionality" table="specialty_directionality" catalog="prkom">
+        <id name="Id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="Directionality" type="java.lang.String">
+            <column name="directionality" not-null="true"/>
+        </property>
+        <property name="BudgesPlace" type="java.lang.Integer">
+            <column name="budget_places" not-null="true"/>
+        </property>
+        <property name="CommercialPlaces" type="java.lang.Integer">
+            <column name="commercial_places" not-null="true"/>
+        </property>
+        <property name="DirectionId" type="java.lang.Integer">
+            <column name="direction_id" not-null="true"/>
+        </property>
+        <property name="IsDeleted" type="java.lang.Boolean">
+            <column name="is_deleted" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

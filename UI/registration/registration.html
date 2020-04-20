@@ -1,5 +1,5 @@
-<div class="container topMargin bottomMargin" >
-    <div class="row">
+<div class="container topMargin bottomMargin" ng-show="step == 1">
+    <div class="row" >
         <div class="col-12">
             <p class="text-center margin0">СОЗДАНИЕ АККАУНТА</p>
             <p class="text-center small margin0">СОЗДАВАЙ. ОТСЛЕЖИВАЙ. ПОСТУПАЙ</p>
@@ -53,8 +53,61 @@
     <div class="row">
         <div class="col text-center">
             <p  class="small" style="color: rgb(126,126,126);">Нажимая на кнопку Продолжить, я принимаю&nbsp;<a href="#">эти правила</a>&nbsp;и&nbsp;<a href="#">эти правила</a>.</p>
+            <button class="btn btn-primary" ng-click="sendCodeToEmail();" type="button">Продолжить</button>
+        </div>
+    </div>
+</div>
+<div class="container topMargin bottomMargin" ng-show="step == 2">
+    <div class="row">
+        <div class="col">
+            <p class="text-center margin0" >СОЗДАНИЕ АККАУНТА</p>
+            <p class="text-center small margin0">ПОДТВЕРДИТЕ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center small" >Письмо с кодом подтверждения было отправлено на следующий адрес:</p>
+            <p class="text-center" style="font-size: 18px;"><strong>{{newUser.email}}</strong></p>
+            <p class="text-center small">Введите Ваш код подтверждения ниже:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <input class="border rounded form-control-sm code_input marginTop10"
+                       ng-model="activationCode"
+                       type="text" id="code" placeholder="Ваш код">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="marginBottom10">
+                <a href="#/support">Не пришёл код подтверждения?</a>
+            </div>
             <button class="btn btn-primary" ng-click="continueRegistration()" type="button">Продолжить</button>
         </div>
     </div>
 </div>
-
+<div class="container topMargin bottomMargin" ng-show="step == 3">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="padding: 0px;">
+                <p class="text-center">СОЗДАНИЕ АККАУНТА</p>
+                <p class="text-center small" >АККАУНТ ПОДТВЕРЖДЁН</p>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col">
+            <div class="text-center">
+                <i class="glyphicon glyphicon-ok"></i>
+                <p class="text-center small" >Ваш аккаунт был успешно зарегистрирован, теперь Вы можете войти в личный кабинет.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center"><button ng-click="goToLogin()" class="btn btn-primary" type="button">Войти</button></div>
+        </div>
+    </div>
+</div>

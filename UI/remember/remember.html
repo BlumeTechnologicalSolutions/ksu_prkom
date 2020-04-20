@@ -1,18 +1,21 @@
-<div class="container">
-    <div class="login-form">
-        <p class="text-center black main-text">Вспомнить пароль</p>
-        <br>
-        <div class="form-group row marginBottom10">
-            <div class="col-xs-12">
-                <input type="login" ng-model="rememberUser.login" class="form-control"  id="inputLogin" placeholder="Телефон или Email">
-            </div>
+<div class="container topMargin bottomMargin">
+    <p class="text-center black main-text margin0">Вспомнить пароль</p>
+    <br>
+    <div class="row ">
+        <div class="col-12 text-center">
+            <input class="border rounded form-control-sm main_input" ng-model="email"
+                   id="email" type="text"
+                   placeholder="Укажите вашу почту при регистарции">
+            <hr>
         </div>
-        <div class="form-group row">
-            <div class="col-xs-12">
-                <button type="submit" class="btn btn-primary" ng-click="remember()">Продолжить</button>
+    </div>
+    <div class="row marginTop5">
+        <div class="col-12 text-center">
+            <div class="marginBottom10">
+                <a href="#/support">Не пришло письмо?</a>
             </div>
+            <button class="btn btn-primary" ng-click="remember()" type="button">Продолжить</button>
         </div>
-
     </div>
 </div>
 

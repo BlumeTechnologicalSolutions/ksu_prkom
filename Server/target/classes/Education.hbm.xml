@@ -3,13 +3,13 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.lk.entity.RegistrationSecretQuestions" table="registration_secret_questions" catalog="prkom">
+    <class name="com.lk.entity.Education" table="educations" catalog="prkom">
         <id name="Id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />
         </id>
-        <property name="Question" type="java.lang.String">
-            <column name="question" not-null="true"/>
+        <property name="Education" type="java.lang.String">
+            <column name="education" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -17,6 +17,7 @@ html{
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
+    border:1px solid #e5e5e5
 }
 
 .dropdown-menu {
@@ -41,7 +42,7 @@ html{
     background: rgb(0,0,0,0.75);
 }
 .main-text-color {
-   color:white;
+    color:white;
 }
 .pointer{
     cursor: pointer;
@@ -68,23 +69,50 @@ html{
     border-bottom: 1px solid red !important;
     border-top: 1px solid red !important;
 }
-
- .main_input{
-     width: 400px;
-     font-family: Montserrat, sans-serif;
-     height: 40px;
-     font-size: 12px;
-     margin-left: -4px;max-width: 100%;
-     max-height: 100%;
- }
-.map-responsive{
-
+.main_input{
+    width: 400px;
+    font-family: Montserrat, sans-serif;
+    height: 40px;
+    font-size: 12px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.code_input{
+    width: 150px;
+    font-family: Montserrat, sans-serif;
+    height: 40px;
+    font-size: 24px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.lk_input{
+    width: 250px;
+    font-family: Montserrat, sans-serif;
+    height: 30px;
+    font-size: 14px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.margin_lk{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
 }
 .map-responsive iframe{
     left:0;
     height:400px;
     width:100%;
-
 }
 .marginTop20{
     margin-top:20px;

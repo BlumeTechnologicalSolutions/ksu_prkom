@@ -33,7 +33,10 @@
         <mapping resource="User.hbm.xml"></mapping>
         <mapping resource="OtherUniversityReceipt.hbm.xml"></mapping>
         <mapping resource="Token.hbm.xml"></mapping>
-        <mapping resource="RegistrationSecretQuestions.hbm.xml"></mapping>
+        <mapping resource="RegistrationSecretQuestion.hbm.xml"></mapping>
+        <mapping resource="Direction.hbm.xml"></mapping>
+        <mapping resource="Institution.hbm.xml"></mapping>
+        <mapping resource="SpecialtyDirectionality.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

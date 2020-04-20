@@ -2,23 +2,24 @@
 
 var remember = angular.module('myApp.remember', ['ngRoute']);
 
-remember.controller('RememberCtrl', function($scope, userService) {
+remember.controller('RememberCtrl', function($scope, userService, infoService, $location) {
 
     $scope.rememberUser = {};
 
     $scope.remember = function () {
-        if(!$scope.rememberUser || !$scope.rememberUser.login ){
-            if(!$scope.rememberUser.login) { $("#inputLogin").focus();$("#inputLogin").css({"border": "1px solid red"});}
-            setTimeout(function(){$("#inputLogin").css({"border": ""});},2000);
+        if(!$scope.email){
+            if(!$scope.email) { $("#email").focus();$("#email").addClass('ng-invalids');}
+            setTimeout(function(){ $("#email").removeClass('ng-invalids'); },2000);
         } else {
-            userService.remember($scope.rememberUser).then(function(user) {
-                if (!user) {
-                    console.log("ok")
+            userService.remember($scope.email).then(function(response) {
+                if (response.isSuccess) {
+                    infoService.infoFunction(response.object, "Информация");
+                    $location.path('/login')
                 } else {
-                    alert("Имя пользователя или пароль не верны. Используйте для авторизации ваши имя и пароль, используемые для входа в операционную систему.");
+                    infoService.infoFunction(response.message, "Ошибка");
                 };
             }).catch(function (response) {
-                alert("Сервер авторизации не доступен. Обратитесь к администратору.");
+                infoService.infoFunction(response, "Ошибка");
             });
         }
     };

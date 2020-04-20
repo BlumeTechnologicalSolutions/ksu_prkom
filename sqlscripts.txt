@@ -41,9 +41,14 @@ CREATE TABLE public.users(
     email character varying(255) COLLATE pg_catalog."default",
     control_question character varying(255) COLLATE pg_catalog."default" NOT NULL,
     control_answer character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    is_admin bit(1) NOT NULL,
-    is_operator bit(1) NOT NULL,
+    is_admin bit(1) NOT NULL DEFAULT b'0',
+    is_operator bit(1) NOT NULL DEFAULT b'0',
+    is_pk_employee bit(1) NOT NULL DEFAULT b'0',
     is_deleted bit(1) NOT NULL,
+    foreign_language character varying(255),
+    contact_phone character varying(255),
+    date_of_birth date,	
+    sex bit(1),
     CONSTRAINT "Users_pkey" PRIMARY KEY (id)
 )
 WITH (
@@ -54,6 +59,7 @@ TABLESPACE pg_default;
 ALTER TABLE public.users
     OWNER to postgres;
     
+ 
 ----------------------------------
 --tokens
 ----------------------------------
@@ -72,16 +78,7 @@ TABLESPACE pg_default;
 ALTER TABLE public.tokens
     OWNER to postgres;
     
-ALTER TABLE public.users
-    ADD COLUMN sex bit(1);
 
-ALTER TABLE public.users
-    ADD COLUMN date_of_birth date;
-ALTER TABLE public.users
-    ADD COLUMN foreign_language character varying(255);
-ALTER TABLE public.users
-    ADD COLUMN contact_phone character varying(255);
-    
 ----------------------------------
 --registration_secret_questions
 -----------------------------------
@@ -138,6 +135,9 @@ INSERT INTO public.educations(
 INSERT INTO public.educations(
 	id, education)
 	VALUES (4, 'Аспирантура');
+INSERT INTO public.educations(
+	id, education)
+	VALUES (5, 'Специалитет');
     
 ----------------------------------
 --institusions 

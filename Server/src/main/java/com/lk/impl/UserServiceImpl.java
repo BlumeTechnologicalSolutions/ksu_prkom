@@ -3,7 +3,9 @@ package com.lk.impl;
 import com.lk.entity.*;
 import com.lk.persistence.Authentification;
 import com.lk.persistence.HibernateUtil;
+import com.lk.persistence.HtmlMailSenderAddressList;
 import com.lk.service.UserService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
@@ -19,6 +21,7 @@ import java.util.*;
 public class UserServiceImpl implements UserService {
 
     private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+    List<EmailReceiver> emailReceivers = new ArrayList<>();
 
     @Override
     public Response getUserByToken(HttpServletRequest httpServletRequest) {
@@ -29,6 +32,7 @@ public class UserServiceImpl implements UserService {
         else return new Response(false, "Токен не существует");
     }
 
+    @Override
     public Response authorization (User userToAuthorize){
         if(userToAuthorize.getLogin() != null || userToAuthorize.getPassword() != null) {
             logger.info("User authorization start: " + userToAuthorize.getLogin());
@@ -56,6 +60,7 @@ public class UserServiceImpl implements UserService {
                     user = setUserToClient(user);
                     return new Response(true, user);
                 }
+
             } catch (Exception ex){
                 if(transaction!=null) transaction.rollback();
                 logger.info("Exception in authorization: " ,ex.getLocalizedMessage(),ex);
@@ -67,60 +72,170 @@ public class UserServiceImpl implements UserService {
         return new Response(false, "Неверно указан логин или пароль");
     }
 
-    public Response registration(UserRegistration userToRegistration){
-        logger.info("Start user registration with login:"+userToRegistration.getLogin());
-        String login = userToRegistration.getLogin();
-        String password = userToRegistration.getPassword();
-        String controlAnswer = userToRegistration.getControlAnswer();
-        String controlQuestion = userToRegistration.getControlQuestion();
-        String firstName = userToRegistration.getFirstName();
-        String lastName = userToRegistration.getLastName();
-        String petronimic = userToRegistration.getPatronymic();
-        String email = userToRegistration.getEmail();
-        if(login == null || login == "") return new Response(false, "Логин недопустим");
-        if(password == null || password == "") return new Response(false, "Пароль недопустим");
-        if(controlAnswer == null || controlAnswer == "") return new Response(false, "Контрольный ответ недопустим");
-        if(controlQuestion == null || controlQuestion == "") return new Response(false, "Контрольный вопрос недопустим");
-        if(firstName == null || firstName == "") return new Response(false, "Имя недопустимо");
-        if(lastName == null || lastName == "") return new Response(false, "Фамилия недопустима");
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = null;
-        try {
-            if(getUserByLogin(login).size()>0){
-                logger.info("User is already exist with login: " + login);
-                return new Response(false, "Указанный логин уже существует");
-            }
-            Timestamp timestamp =  new Timestamp(System.currentTimeMillis());
-            /*User newUser = new User(null, firstName, lastName, petronimic,email,timestamp,login,password,controlQuestion, controlAnswer,false,false,false);*/
-            transaction = session.beginTransaction();
-            session.createSQLQuery("INSERT INTO public.users(login, password, creation_date, fist_name, last_name, patronymic, email, control_question, control_answer, is_admin, is_operator, is_deleted)\n" +
-                    "VALUES ((:login),(:password),(:timestamp),(:firstName),(:lastName),(:petronimic),(:email),(:controlQuestion),(:controlAnswer),b'0',b'0',b'0')")
-                    .setParameter("firstName", firstName)
-                    .setParameter("lastName", lastName)
-                    .setParameter("petronimic", petronimic)
-                    .setParameter("email", email)
-                    .setParameter("timestamp", timestamp)
-                    .setParameter("login", login)
-                    .setParameter("password", password)
-                    .setParameter("controlQuestion", controlQuestion)
-                    .setParameter("controlAnswer", controlAnswer)
-                    .executeUpdate();
-
-            transaction.commit();
-            return new Response(true, (Object) "Пользователь успешно зарегистрирован");
-        } catch (Exception ex){
-            if(transaction!=null) transaction.rollback();
-            logger.info("Exception in registration: " ,ex.getLocalizedMessage(),ex);
-            return new Response(false, "Ошибка при регистарции пользователя: "+ex.getLocalizedMessage());
-        } finally {
-            session.close();
+    @Override
+    public Response sendRegistrationCode(String toEmail){
+        if(toEmail == null || toEmail == "") return new Response(false, "Указан пустой email");
+        if(getUserByEmail(toEmail).size()>0){
+            logger.info("User is already exist with email: " + toEmail);
+            return new Response(false, "Указанный почтовый ящик уже зарегистрирован");
         }
+        Integer minutesSend = 60;
+        for (EmailReceiver emailReceiver : emailReceivers){
+            if(emailReceiver.getEmail().equals(toEmail)){
+                if(emailReceiver.getReceiveDate().getTime() + (1000 * 60 * minutesSend) > new Date().getTime()) {
+                    return new Response(true, "Код подтверждения уже был отправлен на: " + toEmail);
+                }
+            }
+        }
+        if(createCode(toEmail)){
+            return new Response(true, "Код подтверждения отправлен на: "+toEmail);
+        } else {
+            return new Response(false, "Ошибка при отправке письма");
+        }
+
+    }
+
+    private boolean createCode(String email)  {
+        String code = createCode(); //создаем код  из 5 рандоманых цифр
+        String emailMessage = "Ваш код подтверждения <b>"+code+"</b>"; //, действует в течении 1 часа
+        List<String> toEmails = new ArrayList<>();
+        toEmails.add(email);
+        //отправка кода на email
+        HtmlMailSenderAddressList htmlMailSenderAddressList = new HtmlMailSenderAddressList();
+        if(htmlMailSenderAddressList.send("Код подтверждения", emailMessage, toEmails)){
+            logger.info("Email sended to: "+email+", with activation code: "+code);
+            //saved receive
+            EmailReceiver emailReceiver = new EmailReceiver();
+            emailReceiver.setCode(code);
+            emailReceiver.setEmail(email);
+            emailReceiver.setReceiveDate(new Date());
+            emailReceivers.add(emailReceiver);
+            return true;
+        } else {
+            logger.error("Problems with email service, check debug");
+            return false;
+        }
+    }
+
+    public String createCode(){
+        Random rnd = new Random();
+        Integer digit = rnd.nextInt(10);
+        String code = "";
+        for (int i = 0; i < 5; i++) {
+            code += digit.toString();
+            digit = rnd.nextInt(9);
+        }
+        return code;
+    }
+
+    private void deleteCodeFromEmailReceivers(String email, String code){
+        Iterator<EmailReceiver> iter = emailReceivers.iterator();
+        while(iter.hasNext()) {
+            EmailReceiver emailReceiver = iter.next();
+            //тот который был подтвержден
+            if (emailReceiver.getEmail().equals(email) && emailReceiver.getCode().equals(code)) {
+                iter.remove();
+            }
+            //просроченные
+            if(emailReceiver.getReceiveDate().getTime() + (1000 * 60 * 60) < new Date().getTime()){
+                iter.remove();
+            }
+        }
+    }
+
+    @Override
+    public Response registration(UserRegistration userToRegistration, String code){
+        logger.info("Start user registration with login:"+userToRegistration.getLogin());
+        String email = userToRegistration.getEmail();
+        if(email == null || email == "") return new Response(false, "Email недопустим");
+        if(getUserByEmail(email).size()>0){
+            logger.info("User is already exist with email: " + email);
+            return new Response(false, "Указанный почтовый ящик уже зарегистрирован");
+        }
+        boolean isApprovedCode = false;
+        for(EmailReceiver emailReceiver: emailReceivers){
+            if(emailReceiver.getEmail().equals(email) && emailReceiver.getCode().equals(code)){
+                isApprovedCode = true;
+            }
+        }
+        if(isApprovedCode) {
+            deleteCodeFromEmailReceivers(email, code);
+            String login = userToRegistration.getLogin();
+            String password = userToRegistration.getPassword();
+            String controlAnswer = userToRegistration.getControlAnswer();
+            String controlQuestion = userToRegistration.getControlQuestion();
+            String firstName = userToRegistration.getFirstName();
+            String lastName = userToRegistration.getLastName();
+            String petronimic = userToRegistration.getPatronymic();
+            if (login == null || login == "") return new Response(false, "Логин недопустим");
+            if (password == null || password == "") return new Response(false, "Пароль недопустим");
+            if (controlAnswer == null || controlAnswer == "")
+                return new Response(false, "Контрольный ответ недопустим");
+            if (controlQuestion == null || controlQuestion == "")
+                return new Response(false, "Контрольный вопрос недопустим");
+            if (firstName == null || firstName == "") return new Response(false, "Имя недопустимо");
+            if (lastName == null || lastName == "") return new Response(false, "Фамилия недопустима");
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            Transaction transaction = null;
+            try {
+                if (getUserByLogin(login).size() > 0) {
+                    logger.info("User is already exist with login: " + login);
+                    return new Response(false, "Указанный логин уже существует");
+                }
+
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                /*User newUser = new User(null, firstName, lastName, petronimic,email,timestamp,login,password,controlQuestion, controlAnswer,false,false,false);*/
+                transaction = session.beginTransaction();
+                session.createSQLQuery("INSERT INTO public.users(login, password, creation_date, fist_name, last_name, patronymic, email, control_question, control_answer, is_admin, is_operator, is_deleted)\n" +
+                        "VALUES ((:login),(:password),(:timestamp),(:firstName),(:lastName),(:petronimic),(:email),(:controlQuestion),(:controlAnswer),b'0',b'0',b'0')")
+                        .setParameter("firstName", firstName)
+                        .setParameter("lastName", lastName)
+                        .setParameter("petronimic", petronimic)
+                        .setParameter("email", email)
+                        .setParameter("timestamp", timestamp)
+                        .setParameter("login", login)
+                        .setParameter("password", password)
+                        .setParameter("controlQuestion", controlQuestion)
+                        .setParameter("controlAnswer", controlAnswer)
+                        .executeUpdate();
+
+                transaction.commit();
+                return new Response(true, (Object) "Пользователь успешно зарегистрирован");
+            } catch (Exception ex) {
+                if (transaction != null) transaction.rollback();
+                logger.info("Exception in registration: ", ex.getLocalizedMessage(), ex);
+                return new Response(false, "Ошибка при регистарции пользователя: " + ex.getLocalizedMessage());
+            } finally {
+                session.close();
+            }
+        } else
+            return new Response(false, "Вы указали неверный код подтверждения");
     }
 
     public User setUserToClient(User user){
         user.setPassword(null);
         user.setControlAnswer(null);
         return user;
+    }
+
+    public List<User> getUserByEmail(String email){
+        List<User> users = new ArrayList<>();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            users = session.createSQLQuery("select * from users where email = :thisEmail")
+                    .addEntity(User.class)
+                    .setParameter("thisEmail", email)
+                    .list();
+            transaction.commit();
+        } catch (Exception ex){
+            if(transaction!=null) transaction.rollback();
+            logger.error("Exception in getUserByEmail: " ,ex.getLocalizedMessage(),ex);
+        } finally {
+            session.close();
+        }
+        return users;
     }
 
     public List<User> getUserByLogin(String login){
@@ -166,21 +281,24 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    public Response remember(User user){
-        logger.info("Start user registration with login:"+user.getLogin());
-        if(user.getLogin() == null || user.getLogin() == "") return new Response(false, "Логин не может быть пустым");
-        if(user.getControlAnswer() == null || user.getControlAnswer() == "") return new Response(false, "Ответ на контрольный вопрос не может быть пустым");
-        String login = user.getLogin();
-        /*MongoDatabase database = new MongoDbUtill().getDataBase();
-        MongoCollection<Document> collection =  database.getCollection("Accounts");
-        FindIterable<Document> userList = collection.find(eq("login", login));
-        for(Document doc: userList){
-            if(doc.get("secretanswer") == user.getControlAnswer()){
-                //to do token of restore pass
-                return new Response(true, (Object) "OK");
+    @Override
+    public Response remember(String email){
+        logger.info("Start user remember with email:"+email);
+        List<User> users = getUserByEmail(email);
+        if(users.size()>0){
+            User user = users.get(0);
+            String emailMessage = "Данные для авторизации в личный кабинет Приемной комиссии.<br> Ваш логин: <b>"+user.getLogin()+"</b><br>Ваш пароль: <b>"+user.getPassword()+"</b>";
+            List<String> toEmails = new ArrayList<>();
+            toEmails.add(email);
+            HtmlMailSenderAddressList htmlMailSenderAddressList = new HtmlMailSenderAddressList();
+            if(htmlMailSenderAddressList.send("Восстановление доступа к личному кабинету", emailMessage, toEmails)){
+                return new Response(true, (Object)("Письмо было отправлено на почтовый ящик: "+ email));
+            } else {
+                return new Response(false, "Ошибка при отправке письма");
             }
-        }*/
-        return new Response(false, "Логин не существует или контрольный ответ неверный");
+        } else {
+            return new Response(false, "Вы указали несуществующий email");
+        }
     }
 
     public User getUserById(Integer userId) {
@@ -211,8 +329,8 @@ public class UserServiceImpl implements UserService {
             transaction = session.beginTransaction();
             List<RegistrationSecretQuestion> registrationSecretQuestions =
                     session.createSQLQuery("Select * from registration_secret_questions")
-                    .addEntity(RegistrationSecretQuestion.class)
-                    .list();
+                            .addEntity(RegistrationSecretQuestion.class)
+                            .list();
             transaction.commit();
             return new Response(true, registrationSecretQuestions);
         } catch (Exception ex){
@@ -220,7 +338,6 @@ public class UserServiceImpl implements UserService {
             if (transaction!=null) { transaction.rollback(); }
             return new Response(false, "Ошибка получения секретных вопросов: "+ex.toString());
         }
-
     }
 
 
