@@ -2,37 +2,37 @@
     <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="small margin0">ФАМИЛИЯ</p>
-            <input ng-model="user.firstName" class="border rounded form-control-sm lk_input marginBottom10" type="text" >
+            <input ng-model="user.firstName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">ИМЯ</p>
-            <input ng-model="user.lastName" class="border rounded form-control-sm lk_input marginBottom10" type="text">
-            <p class="small margin0" style="    font-family: Montserrat, sans-serif;">ОТЧЕСТВО</p>
-            <input ng-model="user.patronymic" class="border rounded form-control-sm lk_input marginBottom10" type="text">
+            <input ng-model="user.lastName" class="border rounded form-control-sm lk_input marginBottom20" type="text">
+            <p class="small margin0">ОТЧЕСТВО</p>
+            <input ng-model="user.patronymic" class="border rounded form-control-sm lk_input marginBottom20" type="text">
+            <p class="small margin0">ПОЛ</p>
+            <select class="border rounded form-control-sm lk_input marginBottom20"
+                    ng-model="sex"
+                    ng-change="setSelectedSex(sex)"
+                    ng-options="sx as sx.sex for sx in sexes">
+            </select>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
-            <p class="small margin0">ПОЛ</p>
-            <select class="border rounded form-control-sm lk_input marginBottom10"
-                     ng-model="sex"
-                     ng-change="setSelectedSex(sex)"
-                     ng-options="sx as sx.sex for sx in sexes">
-            </select>
+
             <p class="small margin0 text-nowrap">ДАТА РОЖДЕНИЯ</p>
-           <!-- <input ng-model="user.dateOfBirth" class="border rounded form-control-sm lk_input marginBottom10" type="text" >-->
+            <!-- <input ng-model="user.dateOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >-->
             <input placeholder="дд.мм.гггг" id="date"
                    ng-class="{'ng-invalids':isError && !user.dateOfBirth}"
                    ng-model="user.dateOfBirth"
                    type="text"
-                   class="border rounded form-control-sm lk_input marginBottom10"
+                   class="border rounded form-control-sm lk_input marginBottom20"
                    uib-datepicker-popup="{{format}}">
             <p class="small margin0 text-nowrap">ИНОСТРАННЫЙ ЯЗЫК</p>
-            <input ng-model="user.foreignLanguage" class="border rounded form-control-sm lk_input marginBottom10" type="text"></div>
-        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <input ng-model="user.foreignLanguage" class="border rounded form-control-sm lk_input marginBottom20" type="text">
             <p class="small margin0 text-nowrap">КОНТАКТНЫЙ ТЕЛЕФОН</p>
-            <input type="text" ng-model="employee.contactPhone" class="border rounded form-control-sm lk_input marginBottom10" >
+            <input type="text" ng-model="user.contactPhone" class="border rounded form-control-sm lk_input marginBottom20" >
         </div>
     </div>
-    <div class="row marginBottom10">
+    <div class="row marginBottom25">
         <div class="col-xs-12 col-md-12 col-lg-12">
-            <button class="btn btn-primary" ng-click="saveMainInfo()" type="button">СОХРАНИТЬ</button>
+            <button class="btn btn-primary" ng-click="saveUserMainInfo()" type="button">СОХРАНИТЬ</button>
         </div>
     </div>
 </div>

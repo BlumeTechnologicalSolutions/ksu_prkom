@@ -1,13 +1,13 @@
 var confirmationModal = angular.module('myApp.confirmationModal', ['ngRoute', 'ui.bootstrap']);
-confirmationModal.controller('ConfirmationModalCtrl', function ($scope, $modalInstance, $sce, title, text) {
+confirmationModal.controller('ConfirmationModalCtrl', function ($scope, $uibModalInstance, $sce, title, text) {
 
     $scope.confirmationModalTitle = title;
     $scope.confirmationModalText = $sce.trustAsHtml(text.replace(/\r\n|\r|\n/g, " <br /> "));
 
     $scope.ok = function () {
-        $modalInstance.close();
+        $uibModalInstance.close();
     };
     $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
+        $uibModalInstance.dismiss('cancel');
     };
 });

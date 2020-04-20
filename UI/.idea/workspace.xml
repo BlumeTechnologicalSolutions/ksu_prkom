@@ -7,46 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74c9a43a-d90a-4a09-a92f-4f977e24cf11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/entity/EmailReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/persistence/HtmlMailSenderAddressList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower_components/fonts/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lk/includePages/address.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lk/includePages/documents.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lk/includePages/education.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lk/includePages/mainInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lk/includePages/representative.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/controller/UserServiceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/controller/UserServiceRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/RegistrationSecretQuestions.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/lk/controller/UserServiceRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/lk/controller/UserServiceRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/lk/entity/LichnoeDelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/lk/entity/LichnoeDelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/lk/entity/RegistrationSecretQuestions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/lk/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/lk/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/RegistrationSecretQuestions.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/controller/UserServiceRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/controller/UserServiceRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/entity/LichnoeDelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/entity/LichnoeDelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/entity/RegistrationSecretQuestions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/com/lk/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap-csp.css" beforeDir="false" afterPath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap-csp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" beforeDir="false" afterPath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/includePages/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/includePages/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/includePages/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/education.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/includePages/mainInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/mainInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/includePages/representative.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/representative.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainPage/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/mainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ROOT/ROOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ROOT/ROOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/registration/registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remember/remember.html" beforeDir="false" afterPath="$PROJECT_DIR$/remember/remember.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remember/remember.js" beforeDir="false" afterPath="$PROJECT_DIR$/remember/remember.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prkom/prkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/prkom/prkom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/support/support.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sqlscripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlscripts.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+            <state relative-caret-position="646">
+              <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -72,22 +53,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lk/lk.html">
+        <entry file="file://$PROJECT_DIR$/lk/includePages/mainInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="544">
+              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lk/includePages/mainInfo.html">
+        <entry file="file://$PROJECT_DIR$/lk/lk.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="34" column="59" lean-forward="true" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="283">
+              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lk/includePages/documents.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lk/includePages/representative.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="27" column="47" selection-end-line="40" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -95,23 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lk/includePages/address.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="19" column="129" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -119,31 +100,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lk/includePages/education.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lk/lk.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="4607">
+              <caret line="271" column="26" selection-start-line="271" selection-start-column="15" selection-end-line="271" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -151,8 +118,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+            <state relative-caret-position="207">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/support/support.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,18 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>event-container</find>
-      <find>userServ</find>
-      <find>newUser.controlQuestion</find>
-      <find>findAndReplaceLink</find>
-      <find>.modal-body</find>
-      <find>== 4</find>
-      <find>userInterval</find>
-      <find>ont-size: 14px;</find>
-      <find>style=&quot;margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;&quot;</find>
-      <find>logOut</find>
-      <find>$location.path</find>
-      <find>tryDigest();</find>
       <find>$location</find>
       <find>rootSc</find>
       <find>tryDi</find>
@@ -191,6 +165,18 @@
       <find>mont</find>
       <find>_lk</find>
       <find>patr</find>
+      <find>rootScope</find>
+      <find>userProfile</find>
+      <find>user.</find>
+      <find>map-responsive</find>
+      <find>&lt;input type=&quot;text&quot; style=&quot;margin-bottom: 20px;&quot;&gt;</find>
+      <find>&lt;input type=&quot;text&quot; style=&quot;margin-bottom: 20px;&quot;&gt;</find>
+      <find>Col</find>
+      <find>userRepresentative</find>
+      <find>userAddress</find>
+      <find>small</find>
+      <find>marginBottom10</find>
+      <find>marginCol</find>
     </findStrings>
     <replaceStrings>
       <replace>registration</replace>
@@ -198,9 +184,17 @@
       <replace>$scope.newUser</replace>
       <replace>addClass('ng-invalids')</replace>
       <replace>.removeClass('ng-invalids')</replace>
+      <replace>userDocument.</replace>
+      <replace>&lt;input ng-model=&quot;userRepresentative.citizenship&quot; class=&quot;border rounded form-control-sm lk_input marginBottom10&quot; type=&quot;text&quot; &gt;</replace>
+      <replace>&lt;input ng-model=&quot;userRepresentative.documentType&quot; class=&quot;border rounded form-control-sm lk_input marginBottom10&quot; type=&quot;text&quot; &gt;</replace>
+      <replace>userAddress</replace>
+      <replace>userEducation</replace>
+      <replace>marginBottom20</replace>
+      <replace>small margin0</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components\calendar\css</dir>
+      <dir>C:\Users\dsmirnov\Desktop\ksu_prkom\UI\lk\includePages</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -218,36 +212,36 @@
         <option value="$PROJECT_DIR$/adaptive.css" />
         <option value="$PROJECT_DIR$/../../teaching sys/teachingSystem/UI/index.html" />
         <option value="$PROJECT_DIR$/bower_components/angular-block-ui/src/app/navbar/navbar.css" />
-        <option value="$PROJECT_DIR$/prkom/prkom.html" />
         <option value="$PROJECT_DIR$/login/lk.js" />
         <option value="$PROJECT_DIR$/bower_components/calendar/css/eventCalendar_theme_responsive.css" />
         <option value="$PROJECT_DIR$/bower_components/calendar/css/eventCalendar.css" />
         <option value="$PROJECT_DIR$/bower_components/calendar/js/jquery.eventCalendar.js" />
-        <option value="$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js" />
-        <option value="$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js" />
         <option value="$PROJECT_DIR$/bower_components/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/login/login.html" />
-        <option value="$PROJECT_DIR$/support/support.html" />
         <option value="$PROJECT_DIR$/login/login.js" />
         <option value="$PROJECT_DIR$/mainPage/mainPage.js" />
         <option value="$PROJECT_DIR$/remember/remember.html" />
         <option value="$PROJECT_DIR$/registration/registration.js" />
         <option value="$PROJECT_DIR$/remember/remember.js" />
-        <option value="$PROJECT_DIR$/services.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/bower_components/bootstrap/css/fontawesome.min.css" />
         <option value="$PROJECT_DIR$/registration/registration.html" />
         <option value="$PROJECT_DIR$/mainPage/mainPage.html" />
+        <option value="$PROJECT_DIR$/bower_components/fonts/css" />
+        <option value="$PROJECT_DIR$/lk/lk.html" />
+        <option value="$PROJECT_DIR$/services.js" />
+        <option value="$PROJECT_DIR$/prkom/prkom.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js" />
+        <option value="$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js" />
         <option value="$PROJECT_DIR$/lk/includePages/documents.html" />
         <option value="$PROJECT_DIR$/lk/includePages/representative.html" />
-        <option value="$PROJECT_DIR$/lk/includePages/address.html" />
-        <option value="$PROJECT_DIR$/bower_components/fonts/css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/lk/lk.html" />
-        <option value="$PROJECT_DIR$/lk/includePages/education.html" />
-        <option value="$PROJECT_DIR$/app.css" />
-        <option value="$PROJECT_DIR$/lk/includePages/mainInfo.html" />
         <option value="$PROJECT_DIR$/lk/lk.js" />
+        <option value="$PROJECT_DIR$/lk/includePages/address.html" />
+        <option value="$PROJECT_DIR$/lk/includePages/education.html" />
+        <option value="$PROJECT_DIR$/lk/includePages/mainInfo.html" />
+        <option value="$PROJECT_DIR$/app.css" />
+        <option value="$PROJECT_DIR$/support/support.html" />
       </list>
     </option>
   </component>
@@ -269,6 +263,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,7 +281,13 @@
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="bower_components" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="bower_components" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
@@ -301,12 +303,13 @@
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="modalWindows" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="modalWindows" type="462c0819:PsiDirectoryNode" />
+              <item name="InfoModal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
@@ -350,8 +353,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,9 +362,9 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="ui" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587373866468" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587408368989" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TimeTrackingSystem/UI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -373,11 +374,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components\angular-bootstrap" />
       <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components\bootstrap\css" />
       <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components\calendar\css" />
       <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components" />
       <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI" />
-      <recent name="C:\Users\dsmirnov\Desktop\ksu_prkom\UI\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -420,18 +421,19 @@
       <workItem from="1583564195480" duration="116000" />
       <workItem from="1586252834469" duration="1836000" />
       <workItem from="1587020817747" duration="1575000" />
-      <workItem from="1587030929420" duration="55911000" />
+      <workItem from="1587030929420" duration="60603000" />
+      <workItem from="1587382973009" duration="4876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94831000" />
+    <option name="totallyTimeSpent" value="104399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27836612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -441,7 +443,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.23076923" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.15220949" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -466,13 +468,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/direction/direction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/support/support.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -516,32 +511,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/modalWindows/Auditing/projectAuditingModal.js" />
-    <entry file="file://$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/SITE/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SITE/home.html" />
     <entry file="file://$PROJECT_DIR$/adaptive.css" />
-    <entry file="file://$PROJECT_DIR$/navbarPages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/navbarPages.html" />
     <entry file="file://$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/js/bootstrap.min.js">
@@ -562,40 +535,10 @@
         <state relative-caret-position="-692" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prkom/prkom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/calendar/js/moment.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/calendar/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="51" column="11" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="51" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/calendar/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/calendar/css/eventCalendar_theme_responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/calendar/js/moment.js" />
+    <entry file="file://$PROJECT_DIR$/bower_components/calendar/index.html" />
+    <entry file="file://$PROJECT_DIR$/bower_components/calendar/data.json" />
+    <entry file="file://$PROJECT_DIR$/bower_components/calendar/css/eventCalendar_theme_responsive.css" />
     <entry file="file://$PROJECT_DIR$/bower_components/calendar/css/eventCalendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -646,23 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/support/support.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="http://localhost:63342/UI/app.js?1.0">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
@@ -687,20 +613,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="401" lean-forward="true" selection-start-line="401" selection-end-line="401" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/css/fontawesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="54402" selection-start-column="54402" selection-end-column="54402" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/css/fontawesome.min.css" />
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -719,41 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lk/includePages/representative.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,37 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lk/includePages/documents.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../teaching sys/teachingSystem/UI/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -832,32 +679,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lk/includePages/address.html">
+    <entry file="file://$PROJECT_DIR$/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="4607">
+          <caret line="271" column="26" selection-start-line="271" selection-start-column="15" selection-end-line="271" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modalWindows/InfoModal/infoModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/lk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prkom/prkom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modalWindows/ConfirmationModal/confirmationModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+        <state relative-caret-position="646">
+          <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -865,55 +728,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lk/includePages/education.html">
+    <entry file="file://$PROJECT_DIR$/lk/includePages/documents.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.css">
+    <entry file="file://$PROJECT_DIR$/lk/includePages/representative.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lk/lk.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lk/includePages/mainInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="59" lean-forward="true" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="27" column="47" selection-end-line="40" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lk/lk.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="283">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/includePages/address.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="129" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/includePages/education.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/includePages/mainInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support/support.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

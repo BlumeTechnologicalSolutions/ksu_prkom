@@ -1,29 +1,56 @@
-<div style="margin-top: 20px;margin-bottom: 40px;">
-    <div class="row" style="margin-bottom: 50px;">
-        <div class="col text-left">
-            <p style="margin-bottom: 20px;font-family: Montserrat, sans-serif;font-size: 14px;">ДАННЫЕ ЗАЯВИТЕЛЯ</p>
-            <p >ТИП ДОКУМЕНТА</p><input type="text" style="margin-bottom: 20px;">
-            <p >ГРАЖДАНСТВО</p><input type="text" style="margin-bottom: 20px;">
-            <p >СЕРИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p >НОМЕР</p><input type="text" style="margin-bottom: 20px;"></div>
-        <div class="col">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;margin-top: 40px;">КОД ПОДРАЗДЕЛЕНИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p >ДАТА ВЫДАЧИ</p><input type="text" style="margin-bottom: 20px;">
-            <p >КЕМ ВЫДАН</p><input type="text" style="margin-bottom: 20px;">
-            <p >МЕСТО РОЖДЕНИЯ</p><input type="text" style="margin-bottom: 20px;"></div>
-        <div class="col text-left">
-            <p style="margin-bottom: 19px;font-family: Montserrat, sans-serif;font-size: 14px;">ПРЕДЫДУЩИЙ ДОКУМЕНТ</p>
-            <p >ТИП ДОКУМЕНТА</p><input type="text" style="margin-bottom: 20px;">
-            <p >ГРАЖДАНСТВО</p><input type="text" style="margin-bottom: 20px;">
-            <p >СЕРИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p >НОМЕР</p><input type="text" style="margin-bottom: 20px;"></div>
-        <div class="col">
-            <p style="font-family: Montserrat, sans-serif;font-size: 14px;margin-bottom: 5px;margin-top: 40px;">КОД ПОДРАЗДЕЛЕНИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p >ДАТА ВЫДАЧИ</p><input type="text" style="margin-bottom: 20px;">
-            <p >КЕМ ВЫДАН</p><input type="text" style="margin-bottom: 20px;">
-            <p >МЕСТО РОЖДЕНИЯ</p><input type="text" style="margin-bottom: 20px;"></div>
+<div class="margin_lk">
+    <div class="row" >
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginBottom20">
+                <b>ДАННЫЕ ЗАЯВИТЕЛЯ</b>
+            </p>
+            <p class="margin0 small text-nowrap">ТИП ДОКУМЕНТА</p>
+            <input ng-model="userDocument.documentType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small">ГРАЖДАНСТВО</p>
+            <input ng-model="userDocument.citizenship" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small">СЕРИЯ</p>
+            <input ng-model="userDocument.series" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small">НОМЕР</p>
+            <input ng-model="userDocument.documentNumber" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginCol" >КОД ПОДРАЗДЕЛЕНИЯ</p>
+            <input ng-model="userDocument.documentCode" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap" >ДАТА ВЫДАЧИ</p>
+            <input ng-model="userDocument.receiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap" >КЕМ ВЫДАН</p>
+            <input ng-model="userDocument.receiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap" >МЕСТО РОЖДЕНИЯ</p>
+            <input ng-model="userDocument.placeOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginBottom20">
+                <b>ПРЕДЫДУЩИЙ ДОКУМЕНТ</b>
+            </p>
+            <p class="margin0 small text-nowrap">ТИП ДОКУМЕНТА</p>
+            <input ng-model="userDocument.firstName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small">ГРАЖДАНСТВО</p>
+            <input ng-model="userDocument.oldCitizenship" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">СЕРИЯ</p>
+            <input ng-model="userDocument.oldSeries" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">НОМЕР</p>
+            <input ng-model="userDocument.oldNumer" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginCol">КОД ПОДРАЗДЕЛЕНИЯ</p>
+            <input ng-model="userDocument.oldDocumentCode" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">ДАТА ВЫДАЧИ</p>
+            <input ng-model="userDocument.oldReceiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p  class="margin0 small text-nowrap">КЕМ ВЫДАН</p>
+            <input ng-model="userDocument.oldReceiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p  class="margin0 small text-nowrap">МЕСТО РОЖДЕНИЯ</p>
+            <input ng-model="userDocument.oldPlaceOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
     </div>
-    <div class="row">
-        <div class="col"><button class="btn btn-primary" type="button">СОХРАНИТЬ</button></div>
+    <div class="row marginBottom20" >
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <button ng-click="saveUserDocuments()" class="btn btn-primary" type="button">СОХРАНИТЬ</button>
+        </div>
     </div>
 </div>
+

@@ -269,6 +269,35 @@ services.filter('orderObjectBy', function() {
     };
 });
 
+myApp.factory('userProfile', function($http, $window, $q) {
+
+    var service = {};
+
+    service.getUserEducation = function(userId) {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserEducation/').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in getUserEducation user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.saveUserEducation = function(userEducation) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserProfile/saveUserEducation/',userEducation).success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in saveUserEducation user service function');
+        });
+        return deferred.promise;
+    };
+
+
+    return service;
+
+})
+
 
 myApp.factory('userService', function($http, $window, $q, $location, $rootScope) {
 
@@ -344,6 +373,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope)
                     if(response.isSuccess){
                         var user = response.object;
                         service.User = user;
+                        tryDigest();
                     }
                 });
             } else {

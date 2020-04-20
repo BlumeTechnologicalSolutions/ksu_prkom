@@ -1,28 +1,31 @@
-<div style="margin-top: 20px;margin-bottom: 40px;">
-    <div class="row" style="margin-bottom: 50px;">
-        <div class="col text-left">
-            <p class="small">ТИП ДОКУМЕНТА</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">СЕРИЯ</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">НОМЕР</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">ДАТА ВЫДАЧИ</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">КЕМ ВЫДАН</p>
-            <input type="text" style="margin-bottom: 20px;">
+<div class="margin_lk">
+    <div class="row" >
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="small margin0">ТИП ДОКУМЕНТА</p>
+            <input ng-model="userEducation.documentType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">СЕРИЯ</p>
+            <input ng-model="userEducation.series" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">НОМЕР</p>
+            <input ng-model="userEducation.number" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">ДАТА ВЫДАЧИ</p>
+            <input ng-model="userEducation.receiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">КЕМ ВЫДАН</p>
+            <input ng-model="userEducation.receiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
-        <div class="col text-left" style="margin-left: -395px;">
-            <p class="small">ГОД ОКОНЧАНИЯ</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">СТРАНА</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">РЕГИОН</p>
-            <input type="text" style="margin-bottom: 20px;">
-            <p class="small">РАЙОН</p>
-            <input type="text" style="margin-bottom: 20px;"></div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="small margin0">ГОД ОКОНЧАНИЯ</p>
+            <input ng-model="userEducation.finishDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">СТРАНА</p>
+            <input ng-model="userEducation.country" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">РЕГИОН</p>
+            <input ng-model="userEducation.region" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="small margin0">РАЙОН</p>
+            <input ng-model="userEducation.district" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
     </div>
-    <div class="row">
-        <div class="col-12"><button class="btn btn-primary" type="button">СОХРАНИТЬ</button></div>
+    <div class="row marginBottom20">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <button ng-click="saveUserEducation()" class="btn btn-primary"  type="button">СОХРАНИТЬ</button></div>
     </div>
+
 </div>

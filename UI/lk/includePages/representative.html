@@ -1,21 +1,41 @@
-<div style="margin-top: 20px;">
-    <div class="row" style="margin-bottom: 50px;">
-        <div class="col text-left">
-            <p style="margin-bottom: 20px;font-family: Montserrat, sans-serif;font-size: 14px;">ДАННЫЕ ПРЕДСТАВИТЕЛЯ</p>
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ФАМИЛИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ИМЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ОТЧЕСТВО</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ТИП ДОКУМЕНТА</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ГРАЖДАНСТВО</p><input type="text" style="margin-bottom: 20px;"></div>
-        <div class="col text-left" style="margin-left: -385px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;margin-top: 40px;">СЕРИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">НОМЕР</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">КОД ПОДРАЗДЕЛЕНИЯ</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">ДАТА ВЫДАЧИ</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">КЕМ ВЫДАН</p><input type="text" style="margin-bottom: 20px;">
-            <p style="margin-bottom: 5px;font-family: Montserrat, sans-serif;font-size: 14px;">МЕСТО РОЖДЕНИЯ</p><input type="text" style="margin-bottom: 20px;"></div>
+<div class="margin_lk">
+    <div class="row" >
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginBottom20">
+                <b>ДАННЫЕ ПРЕДСТАВИТЕЛЯ</b>
+            </p>
+            <p class="margin0 small text-nowrap">ФАМИЛИЯ</p>
+            <input ng-model="userRepresentative.lastName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">ИМЯ</p>
+            <input ng-model="userRepresentative.firstName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">ОТЧЕСТВО</p>
+            <input ng-model="userRepresentative.patronymic" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">ГРАЖДАНСТВО</p>
+            <input ng-model="userRepresentative.citizenship" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginCol">ТИП ДОКУМЕНТА</p>
+            <input ng-model="userRepresentative.documentType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap ">СЕРИЯ</p>
+            <input ng-model="userRepresentative.series" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">НОМЕР</p>
+            <input ng-model="userRepresentative.number" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">КОД ПОДРАЗДЕЛЕНИЯ</p>
+            <input ng-model="userRepresentative.documentCode" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3 text-left">
+            <p class="margin0 small text-nowrap marginCol">ДАТА ВЫДАЧИ</p>
+            <input ng-model="userRepresentative.receiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">КЕМ ВЫДАН</p>
+            <input ng-model="userRepresentative.receiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <p class="margin0 small text-nowrap">МЕСТО РОЖДЕНИЯ</p>
+            <input ng-model="userRepresentative.placeOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+        </div>
     </div>
-    <div class="row">
-        <div class="col"><button class="btn btn-primary" type="button">СОХРАНИТЬ</button></div>
+    <div class="row marginBottom20">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <button ng-click="saveUserRepresentative()" class="btn btn-primary"  type="button">СОХРАНИТЬ</button></div>
     </div>
+
 </div>
