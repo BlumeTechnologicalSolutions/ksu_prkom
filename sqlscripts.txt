@@ -173,6 +173,34 @@ id, question)
 VALUES (3, 'Какой цвет глаз вашего отца?');
 
 ----------------------------------
+--education_forms
+----------------------------------
+
+CREATE TABLE public.education_forms
+(
+    id bigint NOT NULL,
+    education_form character varying(255) NOT NULL,
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.education_forms
+    OWNER to postgres;
+
+
+INSERT INTO public.education_forms(
+	id, education_form)
+	VALUES (1, 'Очная');
+INSERT INTO public.education_forms(
+	id, education_form)
+	VALUES (2, 'Очно-заочная');
+INSERT INTO public.education_forms(
+	id, education_form)
+	VALUES (3, 'Заочная');
+
+----------------------------------
 --educations
 ----------------------------------
 

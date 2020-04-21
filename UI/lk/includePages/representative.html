@@ -5,37 +5,37 @@
                 <b>ДАННЫЕ ПРЕДСТАВИТЕЛЯ</b>
             </p>
             <p class="margin0 small text-nowrap">ФАМИЛИЯ</p>
-            <input ng-model="userRepresentative.lastName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.lastName" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.lastName}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ИМЯ</p>
-            <input ng-model="userRepresentative.firstName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.firstName" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.firstName}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ОТЧЕСТВО</p>
-            <input ng-model="userRepresentative.patronymic" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.patronymic" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.patronymic}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ГРАЖДАНСТВО</p>
-            <input ng-model="userRepresentative.citizenship" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.citizenship" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.citizenship}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
 
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap marginCol">ТИП ДОКУМЕНТА</p>
-            <input ng-model="userRepresentative.documentType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.documentType" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.documentType}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap ">СЕРИЯ</p>
-            <input ng-model="userRepresentative.series" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.series" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.series}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">НОМЕР</p>
-            <input ng-model="userRepresentative.number" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.number" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.number}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">КОД ПОДРАЗДЕЛЕНИЯ</p>
-            <input ng-model="userRepresentative.documentCode" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.documentCode" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.documentCode}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap marginCol">ДАТА ВЫДАЧИ</p>
-            <input ng-model="userRepresentative.receiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.receiveDate" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.receiveDate}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">КЕМ ВЫДАН</p>
-            <input ng-model="userRepresentative.receiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.receiveBy" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.receiveBy}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">МЕСТО РОЖДЕНИЯ</p>
-            <input ng-model="userRepresentative.placeOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userRepresentative.placeOfBirth" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.placeOfBirth}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
     </div>
     <div class="row marginBottom20">
         <div class="col-xs-12 col-md-12 col-lg-12">
-            <button ng-click="saveUserRepresentative()" class="btn btn-primary"  type="button">СОХРАНИТЬ</button></div>
+            <button ng-click="saveUserRepresentative()"  class="btn btn-primary"  type="button">СОХРАНИТЬ</button></div>
     </div>
 
 </div>

@@ -46,7 +46,7 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
     $scope.saveUserMainInfo = function(){
         if($scope.sex == $scope.sexes[0]) $scope.user.sex = true;
         if($scope.user && $scope.user.sex && $scope.user.contactPhone  && $scope.user.dateOfBirth
-            && $scope.user.firstName && $scope.user.lastName && $scope.user.patronymic && $scope.user.foreignLanguage){
+            && $scope.user.firstName && $scope.user.lastName  && $scope.user.foreignLanguage){
             var user = JSON.parse(JSON.stringify($scope.user));
             userProfile.saveUserMainInfo(user).then(function (response) {
                 if(response.isSuccess){
@@ -65,14 +65,17 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
     }
 
     $scope.saveUserDocuments = function(){
-        //userDocument.documentType
-        //userDocument.citizenship
-        //userDocument.series
-        //userDocument.documentNumber
-        //userDocument.documentCode
-        //userDocument.receiveDate
-        //userDocument.receiveBy
-        //userDocument.placeOfBirth
+        var userDocument = JSON.parse(JSON.stringify($scope.userDocument));
+        if(!userDocument.documentType || !userDocument.citizenship || !userDocument.series || !userDocument.documentNumber ||
+            !userDocument.documentCode || !userDocument.receiveDate || !userDocument.receiveBy || !userDocument.placeOfBirth){
+            userProfile.saveUserDocuments()
+
+        } else {
+            $scope.isUserDocumentError = true;
+            setTimeout(function () {
+                $scope.isUserDocumentError = false;
+            }, 2500)
+        }
         //userDocument.oldCitizenship
         //userDocument.oldDocumentType
         //userDocument.oldSeries
@@ -81,43 +84,46 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
         //userDocument.oldReceiveDate
         //userDocument.oldReceiveBy
         //userDocument.oldPlaceOfBirth
-
     }
 
     $scope.saveUserRepresentative = function () {
-        //userRepresentative.lastName
-        //userRepresentative.firstName
-        //userRepresentative.patronymic
-        //userRepresentative.citizenship
-        //userRepresentative.documentType
-        //userRepresentative.series
-        //userRepresentative.number
-        //userRepresentative.documentCode
-        //userRepresentative.receiveDate
-        //userRepresentative.receiveBy
-        //userRepresentative.placeOfBirth
+        var userRepresentative = JSON.parse(JSON.stringify($scope.userRepresentative));
+        if(!userRepresentative.lastName || !userRepresentative.firstName ||  !userRepresentative.citizenship ||
+            !userRepresentative.documentType || !userRepresentative.series || !userRepresentative.number || !userRepresentative.documentCode ||
+            !userRepresentative.receiveDate || !userRepresentative.receiveBy || !userRepresentative.placeOfBirth){
+            userProfile.saveUserRepresentative()
+        } else {
+            $scope.isUserRepresentativeError = true;
+            setTimeout(function () {
+                $scope.isUserRepresentativeError = false;
+            }, 2500)
+        }
     }
 
     $scope.saveUserAddress = function () {
-        // userAddress.country
-        // userAddress.region
-        // userAddress.localityType
-        // userAddress.localityName
-        // userAddress.street
-        // userAddress.houseNumber
-        // userAddress.roomNumber
+        var userAddress = JSON.parse(JSON.stringify($scope.userAddress));
+        if(!userAddress.country || !userAddress.region || !userAddress.localityType || !userAddress.localityName ||
+            !userAddress.street || !userAddress.houseNumber || !userAddress.roomNumber){
+            userProfile.saveUserAddress()
+        } else {
+            $scope.isUserAddressError = true;
+            setTimeout(function () {
+                $scope.isUserAddressError = false;
+            }, 2500)
+        }
     }
-    
+
     $scope.saveUserEducation = function () {
-        //userEducation.documentType
-        //userEducation.series
-        //userEducation.number
-        //userEducation.receiveDate
-        //userEducation.receiveBy
-        //userEducation.finishDate
-        //userEducation.country
-        //userEducation.region
-        //userEducation.district
+        var userEducation = JSON.parse(JSON.stringify($scope.userEducation));
+        if(!userEducation.documentType || !userEducation.series || !userEducation.number || !userEducation.receiveDate ||
+            !userEducation.receiveBy || !userEducation.finishDate || !userEducation.country || !userEducation.region || !userEducation.district){
+            userProfile.saveUserAddress()
+        } else {
+            $scope.isUserEducationError = true;
+            setTimeout(function () {
+                $scope.isUserEducationError = false;
+            }, 2500)
+        }
     }
 
 });

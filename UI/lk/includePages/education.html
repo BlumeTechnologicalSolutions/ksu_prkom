@@ -2,25 +2,25 @@
     <div class="row" >
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="small margin0">ТИП ДОКУМЕНТА</p>
-            <input ng-model="userEducation.documentType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.documentType" ng-class="{'ng-invalids':isUserEducationError && userEducation.documentType}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">СЕРИЯ</p>
-            <input ng-model="userEducation.series" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.series" ng-class="{'ng-invalids':isUserEducationError && userEducation.series}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">НОМЕР</p>
-            <input ng-model="userEducation.number" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.number" ng-class="{'ng-invalids':isUserEducationError && userEducation.number}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">ДАТА ВЫДАЧИ</p>
-            <input ng-model="userEducation.receiveDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.receiveDate" ng-class="{'ng-invalids':isUserEducationError && userEducation.receiveDate}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">КЕМ ВЫДАН</p>
-            <input ng-model="userEducation.receiveBy" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.receiveBy" ng-class="{'ng-invalids':isUserEducationError && userEducation.receiveBy}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="small margin0">ГОД ОКОНЧАНИЯ</p>
-            <input ng-model="userEducation.finishDate" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.finishDate" ng-class="{'ng-invalids':isUserEducationError && userEducation.finishDate}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">СТРАНА</p>
-            <input ng-model="userEducation.country" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.country" ng-class="{'ng-invalids':isUserEducationError && userEducation.country}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">РЕГИОН</p>
-            <input ng-model="userEducation.region" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.region" ng-class="{'ng-invalids':isUserEducationError && userEducation.region}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="small margin0">РАЙОН</p>
-            <input ng-model="userEducation.district" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userEducation.district" ng-class="{'ng-invalids':isUserEducationError && userEducation.district}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
     </div>
     <div class="row marginBottom20">

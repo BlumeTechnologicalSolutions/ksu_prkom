@@ -2,22 +2,22 @@
     <div class="row" >
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap">СТРАНА</p>
-            <input ng-model="userAddress.country" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.country" ng-class="{'ng-invalids':isUserAddressError && userAddress.country}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">РЕГИОН</p>
-            <input ng-model="userAddress.region" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.region" ng-class="{'ng-invalids':isUserAddressError && userAddress.region}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ТИП НАСЕЛЕННОГО ПУНКТА</p>
-            <input ng-model="userAddress.localityType" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.localityType" ng-class="{'{ng-invalids':isUserAddressError && userAddress.localityType}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">НАЗВАНИЕ НАСЕЛЕННОГО ПУНКТА</p>
-            <input ng-model="userAddress.localityName" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.localityName" ng-class="{'{ng-invalids':isUserAddressError && userAddress.localityName}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
 
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap">УЛИЦА</p>
-            <input ng-model="userAddress.street" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.street" ng-class="{'{ng-invalids':isUserAddressError && userAddress.street}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap ">ДОМ</p>
-            <input ng-model="userAddress.houseNumber" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.houseNumber" ng-class="'{ng-invalids':isUserAddressError && userAddress.houseNumber}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">КВАРТИРА</p>
-            <input ng-model="userAddress.roomNumber" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userAddress.roomNumber" ng-class="'{ng-invalids':isUserAddressError && userAddress.roomNumber}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
         </div>
     </div>
     <div class="row marginBottom20">

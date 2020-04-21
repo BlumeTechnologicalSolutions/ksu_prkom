@@ -299,7 +299,7 @@ myApp.factory('userProfile', function($http, $window, $q) {
 })
 
 
-myApp.factory('userService', function($http, $window, $q, $location, $rootScope) {
+myApp.factory('userService', function($http, $window, $q, $location, $rootScope, infoService) {
 
     var service = {};
 
@@ -344,7 +344,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope)
             deferred.resolve(user);
         }).error(function(){
             service.User = undefined;
-            $location.path('/main');
+            deferred.reject('Error in GetUserByToken user service function');
         });
         return deferred.promise;
     };
