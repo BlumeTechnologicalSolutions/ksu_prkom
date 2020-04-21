@@ -4,27 +4,31 @@
             <p class="text-left">МОИ ДАННЫЕ</p>
         </div>
     </div>
-    <div  class="thumbnail">
-        <ul class="nav nav-tabs pointer" >
-            <li class="nav-item active" ng-click="selectedPage = 'mainInfo'" >
-                <a class="nav-link" ng-class="{'active':selectedPage == 'mainInfo'}" role="tab" data-toggle="tab" >Основные</a>
-            </li>
-            <li class="nav-item" ng-click="selectedPage = 'documents'" >
-                <a class="nav-link" ng-class="{'active':selectedPage == 'documents'}" role="tab" data-toggle="tab"  >Документы</a>
-            </li>
-            <li class="nav-item" ng-click="selectedPage = 'representative'" >
-                <a class="nav-link" ng-class="{'active':selectedPage == 'representative'}" role="tab" data-toggle="tab">Представитель</a>
-            </li>
-            <li class="nav-item" ng-click="selectedPage = 'address'" >
-                <a class="nav-link" ng-class="{'active':selectedPage == 'address'}" role="tab" data-toggle="tab" >Адрес</a>
-            </li>
-            <li class="nav-item" ng-click="selectedPage = 'education'" >
-                <a class="nav-link" ng-class="{'active':selectedPage == 'education'}" role="tab" data-toggle="tab" >Образование</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane in active" >
-                <div ng-include="setPage(selectedPage)"></div>
+    <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-tabs pointer card-header-tabs" >
+                <li class="nav-item active" ng-click="selectedPage = 'mainInfo'" >
+                    <a class="nav-link" ng-class="{'active':selectedPage == 'mainInfo'}" role="tab" data-toggle="tab" >Основные</a>
+                </li>
+                <li class="nav-item" ng-click="selectedPage = 'documents'" >
+                    <a class="nav-link" ng-class="{'active':selectedPage == 'documents'}" role="tab" data-toggle="tab"  >Документы</a>
+                </li>
+                <li class="nav-item" ng-click="selectedPage = 'representative'" >
+                    <a class="nav-link" ng-class="{'active':selectedPage == 'representative'}" role="tab" data-toggle="tab">Представитель</a>
+                </li>
+                <li class="nav-item" ng-click="selectedPage = 'address'" >
+                    <a class="nav-link" ng-class="{'active':selectedPage == 'address'}" role="tab" data-toggle="tab" >Адрес</a>
+                </li>
+                <li class="nav-item" ng-click="selectedPage = 'education'" >
+                    <a class="nav-link" ng-class="{'active':selectedPage == 'education'}" role="tab" data-toggle="tab" >Образование</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane in active" >
+                    <div ng-include="setPage(selectedPage)"></div>
+                </div>
             </div>
         </div>
     </div>

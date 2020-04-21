@@ -4,6 +4,16 @@ var lk = angular.module('myApp.lk', ['ngRoute']);
 
 lk.controller('LkCtrl', function($scope, userService, $location, userProfile, infoService) {
 
+
+    $scope.isError = false;
+    $scope.sexes = [{'sex':'Мужской'},{'sex':'Женский'}];
+    $scope.selectedPage = 'mainInfo';
+
+    $scope.userRepresentative = {};
+    $scope.userAddress = {};
+    $scope.userEducation = {};
+    $scope.userDocument = {};
+
     getInformation();
 
     function getInformation() {
@@ -18,10 +28,6 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
             $scope.user = JSON.parse(JSON.stringify(userService.User));
         }
     }
-
-    $scope.isError = false;
-    $scope.sexes = [{'sex':'Мужской'},{'sex':'Женский'}];
-    $scope.selectedPage = 'mainInfo';
 
     $scope.setPage = function (selectedPage) {
         return 'lk/includePages/' + selectedPage + '.html';
@@ -59,20 +65,59 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
     }
 
     $scope.saveUserDocuments = function(){
-        // userDocument.documentType userDocument.citizenship userDocument.series  userDocument.documentNumber
+        //userDocument.documentType
+        //userDocument.citizenship
+        //userDocument.series
+        //userDocument.documentNumber
+        //userDocument.documentCode
+        //userDocument.receiveDate
+        //userDocument.receiveBy
+        //userDocument.placeOfBirth
+        //userDocument.oldCitizenship
+        //userDocument.oldDocumentType
+        //userDocument.oldSeries
+        //userDocument.oldDocumentNumber
+        //userDocument.oldDocumentCode
+        //userDocument.oldReceiveDate
+        //userDocument.oldReceiveBy
+        //userDocument.oldPlaceOfBirth
 
     }
 
     $scope.saveUserRepresentative = function () {
-        
+        //userRepresentative.lastName
+        //userRepresentative.firstName
+        //userRepresentative.patronymic
+        //userRepresentative.citizenship
+        //userRepresentative.documentType
+        //userRepresentative.series
+        //userRepresentative.number
+        //userRepresentative.documentCode
+        //userRepresentative.receiveDate
+        //userRepresentative.receiveBy
+        //userRepresentative.placeOfBirth
     }
 
     $scope.saveUserAddress = function () {
-        
+        // userAddress.country
+        // userAddress.region
+        // userAddress.localityType
+        // userAddress.localityName
+        // userAddress.street
+        // userAddress.houseNumber
+        // userAddress.roomNumber
     }
     
     $scope.saveUserEducation = function () {
-        
+        //userEducation.documentType
+        //userEducation.series
+        //userEducation.number
+        //userEducation.receiveDate
+        //userEducation.receiveBy
+        //userEducation.finishDate
+        //userEducation.country
+        //userEducation.region
+        //userEducation.district
     }
 
 });
