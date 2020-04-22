@@ -21,21 +21,20 @@
 </head>
 <body ng-cloak>
 <div ng-controller="UserCtrl">
-<nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
-    <div class="container-fluid" >
-        <div style="display: contents;" ng-include="'navBar.html'"></div>
-    </div>
-</nav>
-
-<div ng-view class="theme-showcase" role="main"></div>
-<div style="display: contents;" ng-include="'footer.html'"></div>
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top  navbar--apple bg-dark-transparent">
+        <div class="container-fluid" >
+            <div style="display: contents;" ng-include="'navBar.html'"></div>
+        </div>
+    </nav>
+    <div ng-view class="theme-showcase" role="main"></div>
+    <div style="display: contents;" ng-include="'footer.html'"></div>
 </div>
 <!--Plugins and other components-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery/jquery.maskedinput.min.js"></script>
 <script src="bower_components/jquery/1.12.1/jquery-ui.js"></script>
 <script src="bower_components/jquery/jquery.blockUI.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -59,17 +58,17 @@
 <script src="modalWindows/ConfirmationModal/confirmationModal.js?1.0"></script>
 <script src="modalWindows/InfoModal/infoModal.js?1.0"></script>
 
-            <!--<ui-select id="tlNewItemSelect"
-                       class="border rounded form-control-sm lk_input marginBottom10"
-                       ng-model="user.sex.selected"
-                       theme="selectize">
-                <ui-select-match class="text-left" style="font-size: 10pt">
-                    <span style="height: 10px">{{$select.selected.lastName+' '+$select.selected.firstName | limitTo:18}}</span>
-                </ui-select-match>
-                <ui-select-choices class="text-left new-item-select-width"
-                                   repeat="tl in teamLeaders">{{tl.lastName+' '+tl.firstName}}
-                </ui-select-choices>
-            </ui-select>-->
+<!--<ui-select id="tlNewItemSelect"
+           class="border rounded form-control-sm lk_input marginBottom10"
+           ng-model="user.sex.selected"
+           theme="selectize">
+    <ui-select-match class="text-left" style="font-size: 10pt">
+        <span style="height: 10px">{{$select.selected.lastName+' '+$select.selected.firstName | limitTo:18}}</span>
+    </ui-select-match>
+    <ui-select-choices class="text-left new-item-select-width"
+                       repeat="tl in teamLeaders">{{tl.lastName+' '+tl.firstName}}
+    </ui-select-choices>
+</ui-select>-->
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?1.0"></script>
 </body>
 </html>

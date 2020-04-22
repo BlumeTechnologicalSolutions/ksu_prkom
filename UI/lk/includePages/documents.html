@@ -17,7 +17,7 @@
             <p class="margin0 small text-nowrap marginCol" >КОД ПОДРАЗДЕЛЕНИЯ</p>
             <input ng-model="userDocument.documentCode" ng-class="{'ng-invalids':isUserDocumentError && userDocument.documentCode}"   class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap" >ДАТА ВЫДАЧИ</p>
-            <input ng-model="userDocument.receiveDate" ng-class="{'ng-invalids':isUserDocumentError && userDocument.receiveDate}"   class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userDocument.receiveDate" placeholder="дд.мм.гггг" id="documentReceiveDate" uib-datepicker-popup="{{format}}" ng-class="{'ng-invalids':isUserDocumentError && userDocument.receiveDate}"   class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap" >КЕМ ВЫДАН</p>
             <input ng-model="userDocument.receiveBy" ng-class="{'ng-invalids':isUserDocumentError && userDocument.receiveBy}"   class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap" >МЕСТО РОЖДЕНИЯ</p>
@@ -40,7 +40,7 @@
             <p class="margin0 small text-nowrap marginCol">КОД ПОДРАЗДЕЛЕНИЯ</p>
             <input ng-model="userDocument.oldDocumentCode"  class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ДАТА ВЫДАЧИ</p>
-            <input ng-model="userDocument.oldReceiveDate"  class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input ng-model="userDocument.oldReceiveDate" placeholder="дд.мм.гггг" id="oldDocumentReceiveDate" uib-datepicker-popup="{{format}}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p  class="margin0 small text-nowrap">КЕМ ВЫДАН</p>
             <input ng-model="userDocument.oldReceiveBy"  class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p  class="margin0 small text-nowrap">МЕСТО РОЖДЕНИЯ</p>

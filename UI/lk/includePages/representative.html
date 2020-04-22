@@ -12,7 +12,6 @@
             <input ng-model="userRepresentative.patronymic" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.patronymic}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">ГРАЖДАНСТВО</p>
             <input ng-model="userRepresentative.citizenship" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.citizenship}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
-
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap marginCol">ТИП ДОКУМЕНТА</p>
@@ -26,7 +25,7 @@
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
             <p class="margin0 small text-nowrap marginCol">ДАТА ВЫДАЧИ</p>
-            <input ng-model="userRepresentative.receiveDate" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.receiveDate}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
+            <input placeholder="дд.мм.гггг" id="representativeDate" uib-datepicker-popup="{{format}}" ng-model="userRepresentative.receiveDate" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.receiveDate}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">КЕМ ВЫДАН</p>
             <input ng-model="userRepresentative.receiveBy" ng-class="{'ng-invalids':isUserRepresentativeError && userRepresentative.receiveBy}" class="border rounded form-control-sm lk_input marginBottom20" type="text" >
             <p class="margin0 small text-nowrap">МЕСТО РОЖДЕНИЯ</p>

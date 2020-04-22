@@ -18,15 +18,35 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
 
     function getInformation() {
         getUser();
-
     }
 
+    function setMasks(){
+        $("#dateOfBirth").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+        $("#documentReceiveDate").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+        $("#oldDocumentReceiveDate").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+        $("#representativeDate").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+        $("#educationDate").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+    };
+
+
     function getUser() {
-        if (!userService.User) {
-            $location.path('/login')
-        } else {
-            $scope.user = JSON.parse(JSON.stringify(userService.User));
-        }
+        setTimeout(function () {
+            if (userService.User) {
+                $scope.user = userService.User;
+                tryDigest();
+                setTimeout(function () {
+                    setMasks();
+                },400);
+            } else {
+                $location.path('/main');
+            }
+        }, 400);
+    }
+
+    function tryDigest() {
+        if(!$scope.$$phase) {
+            $scope.$apply();
+        };
     }
 
     $scope.setPage = function (selectedPage) {
@@ -36,12 +56,6 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
     $scope.setSelectedSex = function (sex) {
         $scope.sex = sex;
     };
-
-    setTimeout(function () {
-        if($scope.user.sex) $scope.sex = $scope.sexes[0];
-        else $scope.sex = $scope.sexes[0];
-    },100);
-
 
     $scope.saveUserMainInfo = function(){
         if($scope.sex == $scope.sexes[0]) $scope.user.sex = true;

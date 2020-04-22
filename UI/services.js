@@ -366,7 +366,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope,
         var count = 0;
         var userInterval = setInterval(function () {
             count++;
-            if (count == 4) {
+            if (count == 5) {
                 clearInterval(userInterval);
                 service.GetUserByToken().then(function (response) {
                     if(response.isSuccess){
@@ -396,7 +396,7 @@ myApp.factory('userService', function($http, $window, $q, $location, $rootScope,
                     defered.resolve(null);
                 }
             };
-        }, 50);
+        }, 40);
 
         return defered.promise;
     };

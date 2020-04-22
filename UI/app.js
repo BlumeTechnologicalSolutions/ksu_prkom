@@ -57,7 +57,7 @@ myApp.config(function($routeProvider, $httpProvider) {
 
     var AuthResolve = {
         authorizeCheck: function(userService) {
-             return userService.resolveCheck();
+            return userService.resolveCheck();
         }
     };
 
@@ -111,15 +111,19 @@ myApp.config(function($routeProvider, $httpProvider) {
 
 });
 
-myApp.controller('UserCtrl', function($scope, userService, $rootScope, $window) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
+myApp.controller('UserCtrl', function($scope, userService, $window) { //это контроллер , он ставится в шаблоне html ng-controller="UserCtrl" - и отвечает за видимость внутри вложенных dom элементов старницы
 
-    var userInterval = setInterval(function(){
-        if (userService.User) {
-            $scope.user = userService.User;
-            tryDigest();
-            clearInterval(userInterval);
-        };
-    }, 100);
+    getUser();
+
+    function getUser() {
+        var userInterval = setInterval(function () {
+            if (userService.User) {
+                $scope.user = userService.User;
+                tryDigest();
+                clearInterval(userInterval);
+            }
+        }, 100);
+    }
 
     function tryDigest() {
         if(!$scope.$$phase) {
@@ -130,7 +134,7 @@ myApp.controller('UserCtrl', function($scope, userService, $rootScope, $window) 
     $scope.logOut = function() {
         userService.logOut();
         $scope.user = null;
-        $window.location.reload();
+        getUser();
     };
 
     $scope.getCurrentYear = function(){

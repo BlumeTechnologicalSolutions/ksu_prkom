@@ -18,12 +18,11 @@
 
             <p class="small margin0 text-nowrap">ДАТА РОЖДЕНИЯ</p>
             <!-- <input ng-model="user.dateOfBirth" class="border rounded form-control-sm lk_input marginBottom20" type="text" >-->
-            <input placeholder="дд.мм.гггг" id="date"
+            <input placeholder="дд.мм.гггг" id="dateOfBirth" uib-datepicker-popup="{{format}}"
                    ng-class="{'ng-invalids':isError && !user.dateOfBirth}"
                    ng-model="user.dateOfBirth"
                    type="text"
-                   class="border rounded form-control-sm lk_input marginBottom20"
-                   uib-datepicker-popup="{{format}}">
+                   class="border rounded form-control-sm lk_input marginBottom20">
             <p class="small margin0 text-nowrap">ИНОСТРАННЫЙ ЯЗЫК</p>
             <input ng-model="user.foreignLanguage" class="border rounded form-control-sm lk_input marginBottom20" ng-class="{'ng-invalids':isError && !user.foreignLanguage}" type="text">
             <p class="small margin0 text-nowrap">КОНТАКТНЫЙ ТЕЛЕФОН</p>
