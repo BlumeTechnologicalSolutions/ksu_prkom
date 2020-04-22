@@ -289,7 +289,8 @@ CREATE TABLE public.directions
     code character varying(100) NOT NULL,
     direction character varying(255) NOT NULL,
     institute_id bigint NOT NULL,
-    education_id bigint NOT NULL
+    education_id bigint NOT NULL,
+    is_deleted bit(1) DEFAULT b'0'
 )
 WITH (
     OIDS = FALSE
@@ -317,6 +318,11 @@ INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('04.04.01','Химия',1,3);
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('06.04.01','Биология',1,3);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('01.06.01','Математика и механика',1,4);
+INSERT INTO public.directions( code ,direction, institute_id,education_id)
+VALUES ('06.06.01','Биологические науки',1,4);
+
 --2
 INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('09.03.02','Информационные системы и технологии',2,2);
@@ -416,20 +422,23 @@ INSERT INTO public.directions( code ,direction, institute_id,education_id)
 VALUES ('38.04.02','Менеджмент',8,3);
 
 --------------------------
---specialty_directionality
+--specialty_profile
 --------------------------
-CREATE SEQUENCE public.sd_seq;
+CREATE SEQUENCE public.profile_seq;
 
-ALTER SEQUENCE public.sd_seq
+ALTER SEQUENCE public.profile_seq
     OWNER TO postgres;
 
-CREATE TABLE public.specialty_directionality
+CREATE TABLE public.specialty_profile
 (
-    id bigint NOT NULL DEFAULT nextval('sd_seq'::regclass),
-    directionality character varying(255) NOT NULL,
+    id bigint NOT NULL DEFAULT nextval('profile_seq'::regclass),
+    profile character varying(255) NOT NULL,
     budget_places bigint NOT NULL,
     commercial_places bigint NOT NULL,
+    quota_places bigint NOT NULL,
+    targeted_places bigint NOT NULL,
     direction_id bigint NOT NULL,
+    education_form_id bigint NOT NULL,
     is_deleted bit(1) DEFAULT b'0',
     PRIMARY KEY (id)
 )
@@ -437,26 +446,36 @@ WITH (
     OIDS = FALSE
 );
 
-ALTER TABLE public.specialty_directionality
+ALTER TABLE public.specialty_profile
     OWNER to postgres;
  
 --1 
-INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Прикладная математика и информатика (очная форма)',17,15,1);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Физика (очная форма)','21','11',2);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Химия (очная форма)','20','12',3);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Биология (очная форма)','16','16',4);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Организация и технология защиты информации (очная форма)','25','7',5);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Математика, физика (очная форма)','25','7',6);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Математическое моделирование и программирование (очная форма)','5','10',7);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Физическая химия (очная форма)','8','7',8);
- INSERT INTO public.specialty_directionality( directionality, budget_places, commercial_places, direction_id)
-        VALUES ('Экология (очная форма)','10','5',9);
+-- education_form_id (1 - очная, 2 очно заочная , 3 заочная)
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Прикладная математика и информатика',17,2,0,15,1,1);
 
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Химия',20,2,0,12,2,1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Физика',21,3,0,11,3,1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Биология',16,2,0,16,4,1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Организация и технология защиты информации',25, 3, 0, 7,5, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Математика, физика',25, 3, 0, 7,6, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Математическое моделирование и программирование',5, 0, 0, 10,7, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Физическая химия',8, 0, 0, 7,8, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Экология',10, 0, 0, 5,9, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Дифференциальные уравнения, динамические системы и оптимальное управление',2, 0, 0, 1,10, 1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Дифференциальные уравнения, динамические системы и оптимальное управление',0, 0, 0, 2,10, 2);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Экология (в биологии) ',2,0,0,1,11,1);
+
+INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('Экология (в биологии) ',0,0,0,3,11,2);
+
+--INSERT INTO public.specialty_profile(profile, budget_places, quota_places, targeted_places, commercial_places, direction_id, education_form_id) VALUES ('',budget_places, quota_places, targeted_places, commercial_places,direction_id, education_form_id);
+       

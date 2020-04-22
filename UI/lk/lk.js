@@ -39,6 +39,7 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
                 },400);
             } else {
                 $location.path('/main');
+                tryDigest();
             }
         }, 400);
     }

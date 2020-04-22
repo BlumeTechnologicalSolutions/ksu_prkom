@@ -55,7 +55,7 @@ myApp.directive('htmlCompile', ['$compile', function ($compile) {
 myApp.config(function($routeProvider, $httpProvider) {
     $httpProvider.defaults.withCredentials = true;
 
-    var AuthResolve = {
+    var UserResolve = {
         authorizeCheck: function(userService) {
             return userService.resolveCheck();
         }
@@ -66,47 +66,47 @@ myApp.config(function($routeProvider, $httpProvider) {
         .when('/main', {
             templateUrl: 'mainPage/mainPage.html',
             controller: 'MainPageCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/lk', {
             templateUrl: 'lk/lk.html',
             controller: 'LkCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/login', {
             templateUrl: 'login/login.html',
             controller: 'LoginCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/apply', {
             templateUrl: 'apply/applyDocuments.html',
             controller: 'ApplyDocumentCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/direction', {
             templateUrl: 'direction/direction.html',
             controller: 'DirectionCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/priemnaya-komissiya', {
             templateUrl: 'prkom/prkom.html',
             controller: 'PriemCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/support', {
             templateUrl: 'support/support.html',
             controller: 'SupportCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/registration', {
             templateUrl: 'registration/registration.html',
             controller: 'RegistrationCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
         .when('/remember', {
             templateUrl: 'remember/remember.html',
             controller: 'RememberCtrl',
-            resolve: AuthResolve
+            resolve: UserResolve
         })
 
 });

@@ -7,29 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74c9a43a-d90a-4a09-a92f-4f977e24cf11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/META-INF/ksu-prkom-rest.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/lk/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/ksu-prkom-rest/WEB-INF/classes/META-INF/ksu-prkom-rest.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/includePages/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/includePages/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/includePages/mainInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/mainInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk/includePages/representative.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/includePages/representative.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lk/lk.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk/lk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ROOT/ROOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sqlscripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlscripts.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,15 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lk/includePages/address.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lk/includePages/education.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,17 +38,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lk/lk.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+            <state relative-caret-position="391">
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/login/login.html">
+        <entry file="file://$PROJECT_DIR$/lk/lk.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
+            <state relative-caret-position="306">
+              <caret line="18" column="74" lean-forward="true" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -88,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="136" column="18" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="18" />
+            <state relative-caret-position="187">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -97,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="452" column="32" selection-start-line="452" selection-start-column="32" selection-end-line="452" selection-end-column="32" />
+            <state relative-caret-position="1343">
+              <caret line="362" selection-start-line="362" selection-end-line="362" />
             </state>
           </provider>
         </entry>
@@ -128,7 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>userProfile</find>
       <find>user.</find>
       <find>map-responsive</find>
       <find>&lt;input type=&quot;text&quot; style=&quot;margin-bottom: 20px;&quot;&gt;</find>
@@ -158,6 +143,7 @@
       <find>$rootScope</find>
       <find>UserCtrl</find>
       <find>logOut</find>
+      <find>AuthResolve</find>
     </findStrings>
     <replaceStrings>
       <replace>registration</replace>
@@ -175,6 +161,7 @@
       <replace>isUserDocumentError</replace>
       <replace>isUserRepresentativeError</replace>
       <replace>.mask(&quot;99.99.9999&quot;, {placeholder: &quot;дд.мм.гггг&quot; });</replace>
+      <replace>UserResolve</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\dsmirnov\Desktop\ksu_prkom\UI\bower_components\calendar\css</dir>
@@ -216,18 +203,18 @@
         <option value="$PROJECT_DIR$/support/support.html" />
         <option value="$PROJECT_DIR$/navBar.html" />
         <option value="$PROJECT_DIR$/footer.html" />
-        <option value="$PROJECT_DIR$/lk/lk.html" />
         <option value="$PROJECT_DIR$/lk/includePages/address.html" />
         <option value="$PROJECT_DIR$/lk/includePages/mainInfo.html" />
         <option value="$PROJECT_DIR$/lk/includePages/documents.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/lk/includePages/education.html" />
         <option value="$PROJECT_DIR$/lk/includePages/representative.html" />
-        <option value="$PROJECT_DIR$/lk/lk.js" />
-        <option value="$PROJECT_DIR$/services.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app.css" />
         <option value="$PROJECT_DIR$/login/login.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/services.js" />
+        <option value="$PROJECT_DIR$/lk/lk.js" />
+        <option value="$PROJECT_DIR$/lk/lk.html" />
       </list>
     </option>
   </component>
@@ -339,9 +326,9 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="ui" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587495535018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587557535410" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -402,12 +389,12 @@
       <workItem from="1587382973009" duration="7308000" />
       <workItem from="1587448830357" duration="2449000" />
       <workItem from="1587459181594" duration="1288000" />
-      <workItem from="1587485912434" duration="6419000" />
+      <workItem from="1587485912434" duration="9509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116987000" />
+    <option name="totallyTimeSpent" value="120077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -448,7 +435,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiments.css" />
     <entry file="file://$PROJECT_DIR$/UI.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -609,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lk/lk.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/support/support.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -646,9 +625,6 @@
           <caret line="20" column="94" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="94" />
         </state>
       </provider>
-    </entry>
-    <entry file="http://localhost:63342/UI/app.js?1.0">
-      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/jquery/dist/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,24 +692,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services.js">
+    <entry file="http://localhost:63342/UI/app.js?1.0">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="452" column="32" selection-start-line="452" selection-start-column="32" selection-end-line="452" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="11999" column="4" selection-start-line="11999" selection-start-column="4" selection-end-line="11999" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="136" column="18" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lk/lk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        <state relative-caret-position="187">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -744,10 +716,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="362" selection-start-line="362" selection-end-line="362" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/lk.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
+        <state relative-caret-position="357">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lk/lk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="74" lean-forward="true" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
         </state>
       </provider>
     </entry>
