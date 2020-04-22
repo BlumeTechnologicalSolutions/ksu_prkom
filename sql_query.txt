@@ -1,0 +1,6 @@
+SELECT ins.institute,ins.short_name, dir.code, ed.education, dir.direction, ef.education_form, sp.profile, sp.budget_places, sp.commercial_places, sp.quota_places, sp.targeted_places
+FROM public.specialty_profile as sp
+	join directions as dir on dir.id = sp.direction_id
+	join education_forms as ef on ef.id = sp.education_form_id
+	join educations as ed on ed.id = dir.education_id
+	join institutions as ins on ins.id = dir.institute_id
