@@ -5,7 +5,6 @@ import com.lk.persistence.Authentification;
 import com.lk.persistence.HibernateUtil;
 import com.lk.persistence.HtmlMailSenderAddressList;
 import com.lk.service.UserService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
@@ -90,7 +89,7 @@ public class UserServiceImpl implements UserService {
         if(createCode(toEmail)){
             return new Response(true, "Код подтверждения отправлен на: "+toEmail);
         } else {
-            return new Response(false, "Ошибка при отправке письма");
+            return new Response(false, "Ошибка при отправке письма на почту: "+toEmail);
         }
 
     }
@@ -178,7 +177,7 @@ public class UserServiceImpl implements UserService {
             Session session = HibernateUtil.getSessionFactory().openSession();
             Transaction transaction = null;
             try {
-                if (getUserByLogin(login).size() > 0) {
+                if (getUserByLogin(login)!=null) {
                     logger.info("User is already exist with login: " + login);
                     return new Response(false, "Указанный логин уже существует");
                 }
@@ -198,7 +197,11 @@ public class UserServiceImpl implements UserService {
                         .setParameter("controlQuestion", controlQuestion)
                         .setParameter("controlAnswer", controlAnswer)
                         .executeUpdate();
-
+                User user = getUserByLogin(login);
+                session.createSQLQuery("INSERT INTO public.private_user_affair(user_id)\n" +
+                        "VALUES ((:userId))")
+                        .setParameter("userId", user.getId())
+                        .executeUpdate();
                 transaction.commit();
                 return new Response(true, (Object) "Пользователь успешно зарегистрирован");
             } catch (Exception ex) {
@@ -238,24 +241,24 @@ public class UserServiceImpl implements UserService {
         return users;
     }
 
-    public List<User> getUserByLogin(String login){
-        List<User> users = new ArrayList<>();
+    public User getUserByLogin(String login){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            users = session.createSQLQuery("select * from users where login = :thisLogin")
+            List<User> users  = session.createSQLQuery("select * from users where login = :thisLogin")
                     .addEntity(User.class)
                     .setParameter("thisLogin", login)
                     .list();
             transaction.commit();
+            if(users.size()>0) return  users.get(0);
         } catch (Exception ex){
             if(transaction!=null) transaction.rollback();
             logger.error("Exception in getUserByLogin: " ,ex.getLocalizedMessage(),ex);
         } finally {
             session.close();
         }
-        return users;
+        return null;
     }
 
     public void saveToken(String token, Integer UserId){

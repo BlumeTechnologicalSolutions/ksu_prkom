@@ -273,12 +273,54 @@ myApp.factory('userProfile', function($http, $window, $q) {
 
     var service = {};
 
-    service.getUserEducation = function(userId) {
+    service.getUserEducation = function() {
         var deferred = $q.defer();
-        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserEducation/').success(function(response){
+        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserEducation').success(function(response){
             deferred.resolve(response);
         }).error(function(){
             deferred.reject('Error in getUserEducation user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.getUserAddress = function() {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserAddress').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in getUserAddress user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.getUserRepresentative = function() {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserRepresentative').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in getUserRepresentative user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.getUserDocuments = function() {
+        var deferred = $q.defer();
+        $http.get(ipAdress + '/ksu-prkom-rest/UserProfile/getUserDocuments').success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in getUserDocuments user service function');
+        });
+        return deferred.promise;
+    };
+
+    // SAVES
+
+    service.saveUserMainInfo = function(user) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserProfile/saveUserMainInfo/',user).success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in saveUserMainInfo user service function');
         });
         return deferred.promise;
     };
@@ -292,6 +334,38 @@ myApp.factory('userProfile', function($http, $window, $q) {
         });
         return deferred.promise;
     };
+
+    service.saveUserAddress = function(userAddress) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserProfile/saveUserAddress/',userAddress).success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in saveUserAddress user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.saveUserRepresentative = function(userRepresentative) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserProfile/saveUserRepresentative/',userRepresentative).success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in saveUserRepresentative user service function');
+        });
+        return deferred.promise;
+    };
+
+    service.saveUserDocuments = function(userDocuments) {
+        var deferred = $q.defer();
+        $http.post(ipAdress + '/ksu-prkom-rest/UserProfile/saveUserDocuments/',userDocuments).success(function(response){
+            deferred.resolve(response);
+        }).error(function(){
+            deferred.reject('Error in saveUserDocuments user service function');
+        });
+        return deferred.promise;
+    };
+
+
 
 
     return service;

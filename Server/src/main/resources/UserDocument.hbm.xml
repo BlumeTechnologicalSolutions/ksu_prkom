@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.UserDocument" table="private_user_affair" catalog="prkom">
+        <id name="UserId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="Citizenship" type="java.lang.String">
+            <column name="usr_document_citizenship" not-null="true"/>
+        </property>
+        <property name="DocumentType" type="java.lang.String">
+            <column name="usr_document_type" not-null="true"/>
+        </property>
+        <property name="Series" type="java.lang.String">
+            <column name="usr_document_series" not-null="true"/>
+        </property>
+        <property name="DocumentNumber" type="java.lang.String">
+            <column name="usr_document_number" not-null="true"/>
+        </property>
+        <property name="DocumentCode" type="java.lang.String">
+            <column name="usr_document_code" not-null="true"/>
+        </property>
+        <property name="ReceiveDate" type="java.util.Date">
+            <column name="usr_document_receive_date" not-null="true"/>
+        </property>
+        <property name="ReceiveBy" type="java.lang.String">
+            <column name="usr_document_receive_by" not-null="true"/>
+        </property>
+        <property name="PlaceOfBirth" type="java.lang.String">
+            <column name="usr_document_place_of_birth" not-null="true"/>
+        </property>
+
+        <property name="OldCitizenship" type="java.lang.String">
+            <column name="usr_old_document_citizenship" not-null="true"/>
+        </property>
+        <property name="OldDocumentType" type="java.lang.String">
+            <column name="usr_old_document_type" not-null="true"/>
+        </property>
+        <property name="OldSeries" type="java.lang.String">
+            <column name="usr_old_document_series" not-null="true"/>
+        </property>
+        <property name="OldDocumentNumber" type="java.lang.String">
+            <column name="usr_old_document_number" not-null="true"/>
+        </property>
+        <property name="OldDocumentCode" type="java.lang.String">
+            <column name="usr_old_document_code" not-null="true"/>
+        </property>
+        <property name="OldReceiveDate" type="java.util.Date">
+            <column name="usr_old_document_receive_date" not-null="true"/>
+        </property>
+        <property name="OldReceiveBy" type="java.lang.String">
+            <column name="usr_old_document_receive_by" not-null="true"/>
+        </property>
+        <property name="OldPlaceOfBirth" type="java.lang.String">
+            <column name="usr_old_document_place_of_birth" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

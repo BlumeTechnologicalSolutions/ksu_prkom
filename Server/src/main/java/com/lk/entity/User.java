@@ -1,6 +1,7 @@
 package com.lk.entity;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 public class User {
 
@@ -18,6 +19,10 @@ public class User {
     private Boolean IsOperator;
     private Boolean IsDeleted;
     private String Token;
+    private Date DateOfBirth ;
+    private Boolean Sex;
+    private String ContactPhone;
+    private String ForeignLanguage;
 
     public User(){}
 
@@ -64,12 +69,14 @@ public class User {
     public void setEmail(String email) { Email = email; }
     public Boolean getIsDeleted() { return IsDeleted; }
     public void setIsDeleted(Boolean deleted) { IsDeleted = deleted; }
-
-    public String getToken() {
-        return Token;
-    }
-
-    public void setToken(String token) {
-        Token = token;
-    }
+    public String getToken() { return Token; }
+    public void setToken(String token) { Token = token; }
+    public Date getDateOfBirth() { return DateOfBirth; }
+    public void setDateOfBirth(Date dateOfBirth) { DateOfBirth = dateOfBirth; }
+    public Boolean getSex() { return Sex; }
+    public void setSex(Boolean sex) { Sex = sex; }
+    public String getForeignLanguage() { return ForeignLanguage; }
+    public void setForeignLanguage(String foreignLanguage) { ForeignLanguage = foreignLanguage; }
+    public String getContactPhone() { return ContactPhone; }
+    public void setContactPhone(String contactPhone) { ContactPhone = contactPhone; }
 }

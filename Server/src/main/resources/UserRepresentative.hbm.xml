@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.User" table="users" catalog="prkom">
+        <id name="UserId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_last_name" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_first_name" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_patronymic" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_series" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_document_type" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_series" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_number" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_document_code" not-null="true"/>
+        </property>
+        <property name="" type="java.util.Date">
+            <column name="usr_representative_receive_date" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_receive_by" not-null="true"/>
+        </property>
+        <property name="" type="java.lang.String">
+            <column name="usr_representative_place_of_birth" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

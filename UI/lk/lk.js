@@ -18,6 +18,10 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
 
     function getInformation() {
         getUser();
+        getUserDocuments();
+        getUserEducation();
+        getUserAddress();
+        getUserRepresentative():
     }
 
     function setMasks(){
@@ -42,6 +46,46 @@ lk.controller('LkCtrl', function($scope, userService, $location, userProfile, in
                 tryDigest();
             }
         }, 400);
+    }
+
+    function getUserDocuments() {
+        userProfile.getUserDocuments().then(function (response) {
+            if(response.isSuccess){
+                $scope.userDocument = response.object;
+            } else {
+                infoService.infoFunction(response.message, "Ошибка");
+            }
+        })
+    }
+
+    function getUserEducation() {
+        userProfile.getUserEducation().then(function (response) {
+            if(response.isSuccess){
+                $scope.userEducation = response.object;
+            } else {
+                infoService.infoFunction(response.message, "Ошибка");
+            }
+        })
+    }
+
+    function getUserAddress() {
+        userProfile.getUserAddress().then(function (response) {
+            if(response.isSuccess){
+                $scope.userAddress = response.object;
+            } else {
+                infoService.infoFunction(response.message, "Ошибка");
+            }
+        })
+    }
+
+    function getUserRepresentative() {
+        userProfile.getUserRepresentative().then(function (response) {
+            if(response.isSuccess){
+                $scope.userRepresentative = response.object;
+            } else {
+                infoService.infoFunction(response.message, "Ошибка");
+            }
+        })
     }
 
     function tryDigest() {
