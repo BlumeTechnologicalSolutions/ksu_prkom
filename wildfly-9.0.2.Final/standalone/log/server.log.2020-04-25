@@ -1,0 +1,705 @@
+2020-04-25 21:24:30,591 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+2020-04-25 21:24:31,154 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2020-04-25 21:24:31,278 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) starting
+2020-04-25 21:24:31,281 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	file.encoding = Cp1251
+	file.separator = \
+	java.class.path = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\jboss-modules.jar
+	java.class.version = 58.0
+	java.home = C:\Program Files\Java\jdk-14.0.1
+	java.io.tmpdir = C:\Temp\
+	java.library.path = C:\Program Files\Java\jdk-14.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\C++ Builder\Embarcadero\Studio\19.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl;D:\C++ Builder\Embarcadero\Studio\19.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\Win64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Программы\NodeJs\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;D:\MathLab\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\Users\Done\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Done\AppData\Local\Programs\Python\Python37-32\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;D:\Программы\Microsoft VS Code\bin;C:\Users\Done\AppData\Roaming\npm;C:\Program Files\Java\jdk-13\bin;;D:\Программы\IntelliJ IDEA Community Edition 2019.2.3\bin;;D:\Программы\heroku\bin;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 14.0.1+7
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 14
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = https://java.oracle.com/
+	java.vendor.url.bug = https://bugreport.java.com/bugreport/
+	java.version = 14.0.1
+	java.version.date = 2020-04-14
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 14
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 14.0.1+7
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final
+	jboss.host.name = home-pc
+	jboss.modules.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = home-pc
+	jboss.qualified.host.name = home-pc
+	jboss.server.base.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone
+	jboss.server.config.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration
+	jboss.server.data.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\data
+	jboss.server.deploy.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\data\content
+	jboss.server.log.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log
+	jboss.server.name = home-pc
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration/logging.properties
+	module.path = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules
+	org.jboss.boot.log.file = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.library.path = C:\Program Files\Java\jdk-14.0.1\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\jboss-modules.jar -mp D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules org.jboss.as.standalone -Djboss.home.dir=D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1251
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = RU
+	user.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\bin
+	user.home = C:\Users\Done
+	user.language = ru
+	user.name = Done
+	user.script = 
+	user.timezone = Europe/Moscow
+	user.variant = 
+2020-04-25 21:24:31,284 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MaxPermSize=256M -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log\server.log -Dlogging.configuration=file:D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration/logging.properties 
+2020-04-25 21:24:35,745 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 25) WFLYCTL0028: Attribute 'job-repository-type' in the resource at address '/subsystem=batch' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2020-04-25 21:24:35,749 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 19) WFLYCTL0028: Attribute 'enabled' in the resource at address '/subsystem=datasources/data-source=ExampleDS' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2020-04-25 21:24:35,785 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2020-04-25 21:24:35,829 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.3.1.Final
+2020-04-25 21:24:35,837 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.3.1.Final
+2020-04-25 21:24:35,894 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2020-04-25 21:24:35,900 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2020-04-25 21:24:35,913 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2020-04-25 21:24:35,904 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2020-04-25 21:24:35,905 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2020-04-25 21:24:35,938 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2020-04-25 21:24:35,942 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2020-04-25 21:24:35,943 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+2020-04-25 21:24:35,948 INFO  [org.jboss.as.security] (MSC service thread 1-3) WFLYSEC0001: Current PicketBox version=4.9.2.Final
+2020-04-25 21:24:36,124 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0003: Undertow 1.2.9.Final starting
+2020-04-25 21:24:36,130 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0003: Undertow 1.2.9.Final starting
+2020-04-25 21:24:36,157 INFO  [org.jboss.as.naming] (MSC service thread 1-3) WFLYNAM0003: Starting Naming Service
+2020-04-25 21:24:36,160 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2020-04-25 21:24:36,194 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2020-04-25 21:24:36,224 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+2020-04-25 21:24:36,475 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final/welcome-content
+2020-04-25 21:24:36,470 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 38) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "infinispan"),
+    ("cache-container" => "server"),
+    ("local-cache" => "default")
+]): java.util.ServiceConfigurationError: org.infinispan.configuration.parsing.ConfigurationParser: Provider org.infinispan.configuration.parsing.Parser71 could not be instantiated
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:584)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:806)
+	at java.base/java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:724)
+	at java.base/java.util.ServiceLoader$3.next(ServiceLoader.java:1396)
+	at org.infinispan.commons.util.ServiceFinder.addServices(ServiceFinder.java:60)
+	at org.infinispan.commons.util.ServiceFinder.load(ServiceFinder.java:42)
+	at org.infinispan.configuration.parsing.ParserRegistry.<init>(ParserRegistry.java:57)
+	at org.infinispan.configuration.parsing.ParserRegistry.<init>(ParserRegistry.java:51)
+	at org.jboss.as.clustering.infinispan.subsystem.AdvancedCacheConfigurationBuilder.load(AdvancedCacheConfigurationBuilder.java:97)
+	at org.jboss.as.clustering.infinispan.subsystem.AdvancedCacheConfigurationBuilder.getDefaultConfiguration(AdvancedCacheConfigurationBuilder.java:79)
+	at org.jboss.as.clustering.infinispan.subsystem.AdvancedCacheConfigurationBuilder.<init>(AdvancedCacheConfigurationBuilder.java:137)
+	at org.jboss.as.clustering.infinispan.subsystem.CacheAddHandler.installRuntimeServices(CacheAddHandler.java:124)
+	at org.jboss.as.clustering.infinispan.subsystem.CacheAddHandler.performRuntime(CacheAddHandler.java:107)
+	at org.jboss.as.controller.AbstractAddStepHandler.performRuntime(AbstractAddStepHandler.java:276)
+	at org.jboss.as.controller.AbstractAddStepHandler$1.execute(AbstractAddStepHandler.java:128)
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:803)
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:601)
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:354)
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:330)
+	at org.jboss.as.controller.ParallelBootOperationStepHandler$ParallelBootTask.run(ParallelBootOperationStepHandler.java:356)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.System$2.defineClass(System.java:2196)
+	at java.base/jdk.internal.reflect.ClassDefiner.defineClass(ClassDefiner.java:65)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:400)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generateConstructor(MethodAccessorGenerator.java:92)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:55)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.jboss.logging.Logger$1.run(Logger.java:2565)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at org.jboss.logging.Logger.getMessageLogger(Logger.java:2529)
+	at org.jboss.logging.Logger.getMessageLogger(Logger.java:2516)
+	at org.infinispan.util.logging.LogFactory.getLog(LogFactory.java:17)
+	at org.infinispan.configuration.parsing.Parser71.<clinit>(Parser71.java:71)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:782)
+	... 22 more
+Caused by: java.lang.ClassNotFoundException: jdk.internal.reflect.ConstructorAccessorImpl from [Module "org.infinispan:main" from local module loader @27a8c74e (finder: local module finder @2d8f65a4 (roots: D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules,D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules\system\layers\base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 46 more
+
+2020-04-25 21:24:36,562 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 56) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "webservices")]): java.lang.NoClassDefFoundError: jdk/internal/reflect/MethodAccessorImpl
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.System$2.defineClass(System.java:2196)
+	at java.base/jdk.internal.reflect.ClassDefiner.defineClass(ClassDefiner.java:65)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:400)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generateMethod(MethodAccessorGenerator.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:53)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.jboss.as.webservices.parser.WSDeploymentAspectParser.parseProperty(WSDeploymentAspectParser.java:186)
+	at org.jboss.as.webservices.parser.WSDeploymentAspectParser.parseDeploymentAspect(WSDeploymentAspectParser.java:162)
+	at org.jboss.as.webservices.parser.WSDeploymentAspectParser.parseDeploymentAspects(WSDeploymentAspectParser.java:118)
+	at org.jboss.as.webservices.parser.WSDeploymentAspectParser.parse(WSDeploymentAspectParser.java:96)
+	at org.jboss.as.webservices.parser.WSDeploymentAspectParser.parse(WSDeploymentAspectParser.java:73)
+	at org.jboss.as.webservices.deployers.deployment.DeploymentAspectsProvider.getDeploymentAspects(DeploymentAspectsProvider.java:68)
+	at org.jboss.as.webservices.deployers.deployment.DeploymentAspectsProvider.getSortedDeploymentAspects(DeploymentAspectsProvider.java:53)
+	at org.jboss.as.webservices.dmr.WSDeploymentActivator.addDeploymentProcessors(WSDeploymentActivator.java:84)
+	at org.jboss.as.webservices.dmr.WSDeploymentActivator.activate(WSDeploymentActivator.java:78)
+	at org.jboss.as.webservices.dmr.WSSubsystemAdd$1.execute(WSSubsystemAdd.java:82)
+	at org.jboss.as.server.AbstractDeploymentChainStep.execute(AbstractDeploymentChainStep.java:50)
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:803)
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:601)
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:354)
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:330)
+	at org.jboss.as.controller.ParallelBootOperationStepHandler$ParallelBootTask.run(ParallelBootOperationStepHandler.java:356)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: java.lang.ClassNotFoundException: jdk.internal.reflect.MethodAccessorImpl from [Module "org.jboss.ws.common:main" from local module loader @27a8c74e (finder: local module finder @2d8f65a4 (roots: D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules,D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules\system\layers\base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 31 more
+
+2020-04-25 21:24:36,661 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 55) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "undertow")]): javax.xml.stream.FactoryConfigurationError: Provider __redirected.__XMLInputFactory could not be instantiated: java.lang.reflect.InvocationTargetException
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:200)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:148)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:260)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:222)
+	at java.xml/javax.xml.stream.XMLInputFactory.newInstance(XMLInputFactory.java:161)
+	at org.jboss.as.web.common.SharedTldsMetaDataBuilder.parseTLD(SharedTldsMetaDataBuilder.java:98)
+	at org.jboss.as.web.common.SharedTldsMetaDataBuilder.init(SharedTldsMetaDataBuilder.java:72)
+	at org.jboss.as.web.common.SharedTldsMetaDataBuilder.<init>(SharedTldsMetaDataBuilder.java:63)
+	at org.wildfly.extension.undertow.UndertowSubsystemAdd$1.execute(UndertowSubsystemAdd.java:109)
+	at org.jboss.as.server.AbstractDeploymentChainStep.execute(AbstractDeploymentChainStep.java:50)
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:803)
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:601)
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:354)
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:330)
+	at org.jboss.as.controller.ParallelBootOperationStepHandler$ParallelBootTask.run(ParallelBootOperationStepHandler.java:356)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:189)
+	... 18 more
+Caused by: java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.System$2.defineClass(System.java:2196)
+	at java.base/jdk.internal.reflect.ClassDefiner.defineClass(ClassDefiner.java:65)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:400)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generateConstructor(MethodAccessorGenerator.java:92)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:55)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at __redirected.__XMLInputFactory.<init>(__XMLInputFactory.java:111)
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: jdk.internal.reflect.ConstructorAccessorImpl from [Module "org.codehaus.woodstox:main" from local module loader @27a8c74e (finder: local module finder @2d8f65a4 (roots: D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules,D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules\system\layers\base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 37 more
+
+2020-04-25 21:24:36,677 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 1.2.9.Final stopping
+2020-04-25 21:24:36,688 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 36) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "ejb3"),
+    ("service" => "timer-service"),
+    ("file-data-store" => "default-file-store")
+]): javax.xml.stream.FactoryConfigurationError: Provider __redirected.__XMLInputFactory could not be instantiated: java.lang.reflect.InvocationTargetException
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:200)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:148)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:260)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:222)
+	at java.xml/javax.xml.stream.XMLInputFactory.newInstance(XMLInputFactory.java:161)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.FileTimerPersistence.<clinit>(FileTimerPersistence.java:85)
+	at org.jboss.as.ejb3.subsystem.FileDataStoreAdd.performRuntime(FileDataStoreAdd.java:76)
+	at org.jboss.as.controller.AbstractAddStepHandler.performRuntime(AbstractAddStepHandler.java:302)
+	at org.jboss.as.controller.AbstractAddStepHandler.performRuntime(AbstractAddStepHandler.java:276)
+	at org.jboss.as.controller.AbstractAddStepHandler$1.execute(AbstractAddStepHandler.java:128)
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:803)
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:601)
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:354)
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:330)
+	at org.jboss.as.controller.ParallelBootOperationStepHandler$ParallelBootTask.run(ParallelBootOperationStepHandler.java:356)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedConstructorAccessor3.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:189)
+	... 18 more
+Caused by: java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.System$2.defineClass(System.java:2196)
+	at java.base/jdk.internal.reflect.ClassDefiner.defineClass(ClassDefiner.java:65)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:400)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generateConstructor(MethodAccessorGenerator.java:92)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:55)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at __redirected.__XMLInputFactory.<init>(__XMLInputFactory.java:111)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: jdk.internal.reflect.ConstructorAccessorImpl from [Module "org.codehaus.woodstox:main" from local module loader @27a8c74e (finder: local module finder @2d8f65a4 (roots: D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules,D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules\system\layers\base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 36 more
+
+2020-04-25 21:24:36,941 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 54) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "transactions")]): java.lang.RuntimeException: javax.xml.stream.FactoryConfigurationError: Provider __redirected.__XMLInputFactory could not be instantiated: java.lang.reflect.InvocationTargetException
+	at com.arjuna.common.internal.util.propertyservice.BeanPopulator.getNamedInstance(BeanPopulator.java:90)
+	at com.arjuna.common.internal.util.propertyservice.BeanPopulator.getDefaultInstance(BeanPopulator.java:53)
+	at com.arjuna.ats.arjuna.common.arjPropertyManager.getCoreEnvironmentBean(arjPropertyManager.java:46)
+	at org.jboss.as.txn.service.CoreEnvironmentService.getValue(CoreEnvironmentService.java:60)
+	at org.jboss.as.txn.service.CoreEnvironmentService.setProcessImplementation(CoreEnvironmentService.java:114)
+	at org.jboss.as.txn.subsystem.TransactionSubsystemAdd.performCoreEnvironmentBootTime(TransactionSubsystemAdd.java:369)
+	at org.jboss.as.txn.subsystem.TransactionSubsystemAdd.performBoottime(TransactionSubsystemAdd.java:214)
+	at org.jboss.as.controller.AbstractBoottimeAddStepHandler.performBoottime(AbstractBoottimeAddStepHandler.java:153)
+	at org.jboss.as.controller.AbstractBoottimeAddStepHandler.performRuntime(AbstractBoottimeAddStepHandler.java:112)
+	at org.jboss.as.controller.AbstractAddStepHandler$1.execute(AbstractAddStepHandler.java:128)
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:803)
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:601)
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:354)
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:330)
+	at org.jboss.as.controller.ParallelBootOperationStepHandler$ParallelBootTask.run(ParallelBootOperationStepHandler.java:356)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: javax.xml.stream.FactoryConfigurationError: Provider __redirected.__XMLInputFactory could not be instantiated: java.lang.reflect.InvocationTargetException
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:200)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:148)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:260)
+	at java.xml/javax.xml.stream.FactoryFinder.find(FactoryFinder.java:222)
+	at java.xml/javax.xml.stream.XMLInputFactory.newInstance(XMLInputFactory.java:161)
+	at com.arjuna.common.util.propertyservice.PropertiesFactoryStax.loadFromXML(PropertiesFactoryStax.java:46)
+	at com.arjuna.common.util.propertyservice.AbstractPropertiesFactory.loadFromFile(AbstractPropertiesFactory.java:149)
+	at com.arjuna.common.util.propertyservice.AbstractPropertiesFactory.getPropertiesFromFile(AbstractPropertiesFactory.java:102)
+	at com.arjuna.common.util.propertyservice.AbstractPropertiesFactory.initDefaultProperties(AbstractPropertiesFactory.java:195)
+	at com.arjuna.common.util.propertyservice.AbstractPropertiesFactory.getDefaultProperties(AbstractPropertiesFactory.java:62)
+	at com.arjuna.common.util.propertyservice.PropertiesFactory.getDefaultProperties(PropertiesFactory.java:37)
+	at com.arjuna.common.internal.util.propertyservice.BeanPopulator.getNamedInstance(BeanPopulator.java:86)
+	... 18 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedConstructorAccessor3.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at java.xml/javax.xml.stream.FactoryFinder.newInstance(FactoryFinder.java:189)
+	... 29 more
+Caused by: java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.System$2.defineClass(System.java:2196)
+	at java.base/jdk.internal.reflect.ClassDefiner.defineClass(ClassDefiner.java:65)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:400)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)
+	at java.base/jdk.internal.reflect.MethodAccessorGenerator.generateConstructor(MethodAccessorGenerator.java:92)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:55)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at __redirected.__XMLInputFactory.<init>(__XMLInputFactory.java:111)
+	... 34 more
+Caused by: java.lang.ClassNotFoundException: jdk.internal.reflect.ConstructorAccessorImpl from [Module "org.codehaus.woodstox:main" from local module loader @27a8c74e (finder: local module finder @2d8f65a4 (roots: D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules,D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules\system\layers\base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 47 more
+
+2020-04-25 21:24:36,949 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem ejb3 boot operations"
+2020-04-25 21:24:36,950 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem infinispan boot operations"
+2020-04-25 21:24:36,950 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem transactions boot operations"
+2020-04-25 21:24:36,953 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem undertow boot operations"
+2020-04-25 21:24:36,953 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem webservices boot operations"
+2020-04-25 21:24:36,954 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem ejb3 boot operations\""
+2020-04-25 21:24:37,006 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\deployments
+2020-04-25 21:24:37,023 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 4.0.9.Final
+2020-04-25 21:24:37,249 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "jpa")]) - failure description: {"WFLYCTL0180: Services with missing/unavailable dependencies" => [
+    "jboss.jpa is missing [jboss.txn.TransactionManager, jboss.txn.TransactionSynchronizationRegistry]",
+    "jboss.jpa-usertransactionlistener is missing [jboss.txn.UserTransactionRegistry]"
+]}
+2020-04-25 21:24:37,251 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "ExampleDS")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.data-source.java:jboss/datasources/ExampleDS"],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,255 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "ee"),
+    ("context-service" => "default")
+]) - failure description: {"WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.concurrent.ee.context.service.default is missing [jboss.concurrent.ee.tsp]"]}
+2020-04-25 21:24:37,258 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "jca")]) - failure description: {
+    "WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.connector.transactionintegration is missing [jboss.txn.TransactionManager, jboss.txn.UserTransactionRegistry, jboss.txn.XATerminator, jboss.txn.ArjunaRecoveryManager, jboss.txn.TransactionSynchronizationRegistry]"],
+    "WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+        "Services that were unable to start:" => ["jboss.rarepository"],
+        "Services that may be the cause:" => [
+            "jboss.concurrent.ee.tsp",
+            "jboss.txn.ArjunaRecoveryManager",
+            "jboss.txn.ArjunaTransactionManager",
+            "jboss.txn.TransactionManager",
+            "jboss.txn.TransactionSynchronizationRegistry",
+            "jboss.txn.UserTransactionRegistry",
+            "jboss.txn.XATerminator"
+        ]
+    }
+}
+2020-04-25 21:24:37,261 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "ee"),
+    ("managed-thread-factory" => "default")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.concurrent.ee.threadfactory.default"],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,262 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "ee"),
+    ("managed-executor-service" => "default")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.concurrent.ee.executor.default"],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,263 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "ee"),
+    ("managed-scheduled-executor-service" => "default")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.concurrent.ee.scheduledexecutor.default"],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,263 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "jca"),
+    ("workmanager" => "default")
+]) - failure description: {"WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.connector.workmanager.default is missing [jboss.txn.XATerminator]"]}
+2020-04-25 21:24:37,264 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "webservices")]) - failure description: "WFLYCTL0158: Operation handler failed: java.lang.NoClassDefFoundError: jdk/internal/reflect/MethodAccessorImpl"
+2020-04-25 21:24:37,264 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "jca"),
+    ("bootstrap-context" => "default")
+]) - failure description: {"WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.connector.bootstrapcontext.default is missing [jboss.txn.XATerminator, jboss.txn.ArjunaTransactionManager]"]}
+2020-04-25 21:24:37,264 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "jca"),
+    ("cached-connection-manager" => "cached-connection-manager")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.cached-connection-manager"],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,268 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "ExampleDS")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => [
+        "jboss.data-source.java:jboss/datasources/ExampleDS",
+        "jboss.data-source.java:jboss/datasources/ExampleDS",
+        "jboss.data-source.reference-factory.ExampleDS",
+        "jboss.naming.context.java.jboss.datasources.ExampleDS"
+    ],
+    "Services that may be the cause:" => [
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator",
+        "jboss.concurrent.ee.tsp",
+        "jboss.txn.ArjunaRecoveryManager",
+        "jboss.txn.ArjunaTransactionManager",
+        "jboss.txn.TransactionManager",
+        "jboss.txn.TransactionSynchronizationRegistry",
+        "jboss.txn.UserTransactionRegistry",
+        "jboss.txn.XATerminator"
+    ]
+}}
+2020-04-25 21:24:37,270 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" => "undertow")]) - failure description: "WFLYCTL0158: Operation handler failed: javax.xml.stream.FactoryConfigurationError: Provider __redirected.__XMLInputFactory could not be instantiated: java.lang.reflect.InvocationTargetException"
+2020-04-25 21:24:37,325 INFO  [org.jboss.as.controller] (Controller Boot Thread) WFLYCTL0183: Service status report
+WFLYCTL0184:    New missing/unsatisfied dependencies:
+      service jboss.concurrent.ee.tsp (missing) dependents: [service jboss.concurrent.ee.context.service.default] 
+      service jboss.txn.ArjunaRecoveryManager (missing) dependents: [service jboss.connector.transactionintegration] 
+      service jboss.txn.ArjunaTransactionManager (missing) dependents: [service jboss.connector.bootstrapcontext.default] 
+      service jboss.txn.TransactionManager (missing) dependents: [service jboss.connector.transactionintegration, service jboss.jpa] 
+      service jboss.txn.TransactionSynchronizationRegistry (missing) dependents: [service jboss.connector.transactionintegration, service jboss.jpa] 
+      service jboss.txn.UserTransactionRegistry (missing) dependents: [service jboss.jpa-usertransactionlistener, service jboss.connector.transactionintegration] 
+      service jboss.txn.XATerminator (missing) dependents: [service jboss.connector.bootstrapcontext.default, service jboss.connector.transactionintegration, service jboss.connector.workmanager.default] 
+
+2020-04-25 21:24:37,596 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2020-04-25 21:24:37,596 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2020-04-25 21:24:37,596 ERROR [org.jboss.as] (Controller Boot Thread) WFLYSRV0026: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) started (with errors) in 7783ms - Started 103 of 127 services (14 services failed or missing dependencies, 26 services are lazy, passive or on-demand)
+2020-04-25 21:25:52,021 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+2020-04-25 21:25:52,242 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2020-04-25 21:25:52,324 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) starting
+2020-04-25 21:25:52,326 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1251
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files (x86)\Java\jre1.8.0_251\lib\endorsed
+	java.ext.dirs = C:\Program Files (x86)\Java\jre1.8.0_251\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files (x86)\Java\jre1.8.0_251
+	java.io.tmpdir = C:\Temp\
+	java.library.path = C:\Program Files (x86)\Java\jre1.8.0_251\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\C++ Builder\Embarcadero\Studio\19.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl;D:\C++ Builder\Embarcadero\Studio\19.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\Win64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Программы\NodeJs\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;D:\MathLab\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\Users\Done\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Done\AppData\Local\Programs\Python\Python37-32\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;D:\Программы\Microsoft VS Code\bin;C:\Users\Done\AppData\Roaming\npm;C:\Program Files\Java\jdk-13\bin;;D:\Программы\IntelliJ IDEA Community Edition 2019.2.3\bin;;D:\Программы\heroku\bin;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_251-b08
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_251
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) Client VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.251-b08
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final
+	jboss.host.name = home-pc
+	jboss.modules.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = home-pc
+	jboss.qualified.host.name = home-pc
+	jboss.server.base.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone
+	jboss.server.config.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration
+	jboss.server.data.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\data
+	jboss.server.deploy.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\data\content
+	jboss.server.log.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log
+	jboss.server.name = home-pc
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration/logging.properties
+	module.path = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules
+	org.jboss.boot.log.file = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = x86
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 32
+	sun.boot.class.path = C:\Program Files (x86)\Java\jre1.8.0_251\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_251\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_251\classes
+	sun.boot.library.path = C:\Program Files (x86)\Java\jre1.8.0_251\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\jboss-modules.jar -mp D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\modules org.jboss.as.standalone -Djboss.home.dir=D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1251
+	sun.management.compiler = HotSpot Client Compiler
+	sun.os.patch.level = 
+	user.country = RU
+	user.dir = D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\bin
+	user.home = C:\Users\Done
+	user.language = ru
+	user.name = Done
+	user.script = 
+	user.timezone = Europe/Moscow
+	user.variant = 
+2020-04-25 21:25:52,327 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MaxPermSize=256M -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\log\server.log -Dlogging.configuration=file:D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\configuration/logging.properties 
+2020-04-25 21:25:53,254 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'enabled' in the resource at address '/subsystem=datasources/data-source=ExampleDS' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2020-04-25 21:25:53,255 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 3) WFLYCTL0028: Attribute 'job-repository-type' in the resource at address '/subsystem=batch' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2020-04-25 21:25:53,270 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2020-04-25 21:25:53,283 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.3.1.Final
+2020-04-25 21:25:53,290 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.3.1.Final
+2020-04-25 21:25:53,391 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2020-04-25 21:25:53,401 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2020-04-25 21:25:53,405 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2020-04-25 21:25:53,409 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0003: Undertow 1.2.9.Final starting
+2020-04-25 21:25:53,412 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2020-04-25 21:25:53,432 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2020-04-25 21:25:53,436 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2020-04-25 21:25:53,508 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final/welcome-content
+2020-04-25 21:25:53,532 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.2.9.Final starting
+2020-04-25 21:25:53,533 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=4.9.2.Final
+2020-04-25 21:25:53,541 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+2020-04-25 21:25:53,548 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+2020-04-25 21:25:53,550 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2020-04-25 21:25:53,574 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2020-04-25 21:25:53,631 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2020-04-25 21:25:53,632 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2020-04-25 21:25:54,049 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) WFLYDS0013: Started FileSystemDeploymentService for directory D:\JustCODE\Repositories\ksu_prkom\wildfly-9.0.2.Final\standalone\deployments
+2020-04-25 21:25:54,053 INFO  [org.jboss.remoting] (MSC service thread 1-5) JBoss Remoting version 4.0.9.Final
+2020-04-25 21:25:54,056 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2020-04-25 21:25:54,064 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0018: Host default-host starting
+2020-04-25 21:25:54,089 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on /127.0.0.1:8080
+2020-04-25 21:25:54,238 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2020-04-25 21:25:54,463 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.0.0.Final
+2020-04-25 21:25:54,569 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2020-04-25 21:25:54,569 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2020-04-25 21:25:54,570 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) started in 2874ms - Started 203 of 379 services (210 services are lazy, passive or on-demand)
+2020-04-25 21:25:55,441 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "ksu-prkom-rest.war" (runtime-name: "ksu-prkom-rest.war")
+2020-04-25 21:26:00,214 WARN  [org.jboss.as.ee] (MSC service thread 1-2) WFLYEE0007: Not installing optional component org.springframework.http.server.ServletServerHttpAsyncRequestControl due to an exception (enable DEBUG log level to see the cause)
+2020-04-25 21:26:00,215 WARN  [org.jboss.as.ee] (MSC service thread 1-2) WFLYEE0007: Not installing optional component org.springframework.web.context.request.async.StandardServletAsyncWebRequest due to an exception (enable DEBUG log level to see the cause)
+2020-04-25 21:26:00,351 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.0)
+2020-04-25 21:26:00,383 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = ksu-prkom-rest.war_org.postgresql.Driver_9_0
+2020-04-25 21:26:00,770 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 23) No Spring WebApplicationInitializer types detected on classpath
+2020-04-25 21:26:00,813 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 23) Initializing Spring root WebApplicationContext
+2020-04-25 21:26:00,814 INFO  [org.springframework.web.context.ContextLoader] (ServerService Thread Pool -- 23) Root WebApplicationContext: initialization started
+2020-04-25 21:26:00,877 INFO  [org.springframework.web.context.support.XmlWebApplicationContext] (ServerService Thread Pool -- 23) Refreshing Root WebApplicationContext: startup date [Sat Apr 25 21:26:00 MSK 2020]; root of context hierarchy
+2020-04-25 21:26:00,900 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (ServerService Thread Pool -- 23) Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2020-04-25 21:26:01,332 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] (ServerService Thread Pool -- 23) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-04-25 21:26:01,502 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (ServerService Thread Pool -- 23) Mapped "{[/UserService/registration],methods=[POST]}" onto public com.lk.entity.Response com.lk.controller.UserServiceRestController.authorization(com.lk.entity.UserRegistration)
+2020-04-25 21:26:01,507 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (ServerService Thread Pool -- 23) Mapped "{[/UserService/authorization],methods=[POST]}" onto public com.lk.entity.Response com.lk.controller.UserServiceRestController.authorization(com.lk.entity.User)
+2020-04-25 21:26:01,508 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (ServerService Thread Pool -- 23) Mapped "{[/UserService/remember],methods=[POST]}" onto public com.lk.entity.Response com.lk.controller.UserServiceRestController.remember(com.lk.entity.User)
+2020-04-25 21:26:01,508 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (ServerService Thread Pool -- 23) Mapped "{[/UserService/getRegistrationSecretQuestions],methods=[GET]}" onto public com.lk.entity.Response com.lk.controller.UserServiceRestController.getRegistrationSecretQuestions()
+2020-04-25 21:26:01,509 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (ServerService Thread Pool -- 23) Mapped "{[/UserService/getUserByToken],methods=[GET]}" onto public com.lk.entity.Response com.lk.controller.UserServiceRestController.getUserByToken(javax.servlet.http.HttpServletRequest)
+2020-04-25 21:26:01,563 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 23) HV000001: Hibernate Validator 5.1.3.Final
+2020-04-25 21:26:02,167 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] (ServerService Thread Pool -- 23) Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sat Apr 25 21:26:00 MSK 2020]; root of context hierarchy
+2020-04-25 21:26:02,188 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] (ServerService Thread Pool -- 23) Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sat Apr 25 21:26:00 MSK 2020]; root of context hierarchy
+2020-04-25 21:26:02,320 INFO  [org.springframework.web.context.ContextLoader] (ServerService Thread Pool -- 23) Root WebApplicationContext: initialization completed in 1506 ms
+2020-04-25 21:26:02,401 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 23) Initializing Mojarra 2.2.12-jbossorg-2 20150729-1131 for context '/ksu-prkom-rest'
+2020-04-25 21:26:05,845 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 23) Initializing Spring FrameworkServlet 'spring'
+2020-04-25 21:26:05,845 INFO  [org.springframework.web.servlet.DispatcherServlet] (ServerService Thread Pool -- 23) FrameworkServlet 'spring': initialization started
+2020-04-25 21:26:05,848 INFO  [org.springframework.web.context.support.XmlWebApplicationContext] (ServerService Thread Pool -- 23) Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Sat Apr 25 21:26:05 MSK 2020]; parent: Root WebApplicationContext
+2020-04-25 21:26:05,849 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (ServerService Thread Pool -- 23) Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-servlet.xml]
+2020-04-25 21:26:05,910 INFO  [org.springframework.web.servlet.DispatcherServlet] (ServerService Thread Pool -- 23) FrameworkServlet 'spring': initialization completed in 64 ms
+2020-04-25 21:26:05,911 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 23) WFLYUT0021: Registered web context: /ksu-prkom-rest
+2020-04-25 21:26:06,312 INFO  [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0010: Deployed "ksu-prkom-rest.war" (runtime-name : "ksu-prkom-rest.war")
+2020-04-25 21:30:56,576 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = ksu-prkom-rest.war_org.postgresql.Driver_9_0
+2020-04-25 21:30:56,576 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 63) WFLYUT0022: Unregistered web context: /ksu-prkom-rest
+2020-04-25 21:30:56,577 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 63) Destroying Spring FrameworkServlet 'spring'
+2020-04-25 21:30:56,578 INFO  [org.springframework.web.context.support.XmlWebApplicationContext] (ServerService Thread Pool -- 63) Closing WebApplicationContext for namespace 'spring-servlet': startup date [Sat Apr 25 21:26:05 MSK 2020]; parent: Root WebApplicationContext
+2020-04-25 21:30:56,581 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 63) Closing Spring root WebApplicationContext
+2020-04-25 21:30:56,581 INFO  [org.springframework.web.context.support.XmlWebApplicationContext] (ServerService Thread Pool -- 63) Closing Root WebApplicationContext: startup date [Sat Apr 25 21:26:00 MSK 2020]; root of context hierarchy
+2020-04-25 21:30:56,989 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0028: Stopped deployment ksu-prkom-rest.war (runtime-name: ksu-prkom-rest.war) in 416ms
+2020-04-25 21:30:57,020 INFO  [org.jboss.as.server] (management-handler-thread - 7) WFLYSRV0009: Undeployed "ksu-prkom-rest.war" (runtime-name: "ksu-prkom-rest.war")
+2020-04-25 21:30:57,067 INFO  [org.jboss.as.server] (management-handler-thread - 6) WFLYSRV0211: Suspending server
+2020-04-25 21:30:57,072 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested.
+2020-04-25 21:30:57,078 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2020-04-25 21:30:57,082 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0019: Host default-host stopping
+2020-04-25 21:30:57,084 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2020-04-25 21:30:57,091 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0008: Undertow HTTP listener default suspending
+2020-04-25 21:30:57,092 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0007: Undertow HTTP listener default stopped, was bound to /127.0.0.1:8080
+2020-04-25 21:30:57,093 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0004: Undertow 1.2.9.Final stopping
+2020-04-25 21:30:57,114 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0050: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) stopped in 36ms

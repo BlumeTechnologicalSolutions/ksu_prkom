@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lk.entity.Institute" table="institutions" catalog="prkom">
+        <id name="Id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="Institute" type="java.lang.String">
+            <column name="institute" not-null="true"/>
+        </property>
+        <property name="ShortName" type="java.lang.String">
+            <column name="short_name" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

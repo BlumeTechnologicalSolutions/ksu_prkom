@@ -8,9 +8,9 @@
 
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/prkom</property>
+        <property name="hibernate.connection.url">jdbc:postgres://localhost:5432/prkom?autoReconnect=true</property>
         <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">7417</property>
+        <property name="hibernate.connection.password">para754301</property>
 
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
         <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
@@ -37,6 +37,7 @@
         <mapping resource="Direction.hbm.xml"></mapping>
         <mapping resource="Institution.hbm.xml"></mapping>
         <mapping resource="SpecialtyDirectionality.hbm.xml"></mapping>
+        <mapping resource="Event.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

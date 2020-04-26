@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ksu-lk-rest" />
+        <module name="Server" />
         <module name="ksu-prkom-rest" />
+        <module name="ksu-lk-rest" />
       </profile>
     </annotationProcessing>
   </component>
