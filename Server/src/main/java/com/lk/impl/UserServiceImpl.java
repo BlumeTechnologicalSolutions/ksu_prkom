@@ -343,6 +343,75 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public Response getInstitutes() {
+        logger.info("Start function getInstitutes");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            List<Institute> institutes = session.createSQLQuery("SELECT * FROM institutions")
+                    .addEntity(Institute.class)
+                    .list();
+            transaction.commit();
+            return new Response(true, institutes);
+        } catch (Exception ex){
+            logger.error("Exception in getInstitutes with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка получения институтов: "+ex.toString());
+        }
+    }
 
+    public Response getDirections() {
+        logger.info("Start function getDirections");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            List<Direction> directions = session.createSQLQuery("SELECT * FROM directions")
+                    .addEntity(Direction.class)
+                    .list();
+            transaction.commit();
+            return new Response(true, directions);
+        } catch (Exception ex){
+            logger.error("Exception in getDirections with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка получения направлений: "+ex.toString());
+        }
+    }
 
+    public Response getEducationForms() {
+        logger.info("Start function getEducationForms");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            List<EducationForm> education_forms = session.createSQLQuery("SELECT * FROM education_forms")
+                    .addEntity(EducationForm.class)
+                    .list();
+            transaction.commit();
+            return new Response(true, education_forms);
+        } catch (Exception ex){
+            logger.error("Exception in getEducationForms with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка получения форм обучения: "+ex.toString());
+        }
+    }
+
+    public Response getEducations() {
+        logger.info("Start function getEducations");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            List<Educations> educations = session.createSQLQuery("SELECT * FROM educations")
+                    .addEntity(Educations.class)
+                    .list();
+            transaction.commit();
+            return new Response(true, educations);
+        } catch (Exception ex){
+            logger.error("Exception in getEducations with:",ex.getLocalizedMessage(),ex);
+            if (transaction!=null) { transaction.rollback(); }
+            return new Response(false, "Ошибка получения ступеней образования: "+ex.toString());
+        }
+    }
 }

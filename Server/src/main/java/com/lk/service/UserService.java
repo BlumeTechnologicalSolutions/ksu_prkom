@@ -24,6 +24,13 @@ public interface UserService {
 
     public Response getRegistrationSecretQuestions();
 
+    public Response getInstitutes();
+
+    public Response getDirections();
+
+    public Response getEducationForms();
+
+    public Response getEducations();
 }
 
 

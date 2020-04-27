@@ -8,8 +8,20 @@
             <column name="id" />
             <generator class="identity" />
         </id>
+        <property name="Code" type="java.lang.String">
+            <column name="code" not-null="true"/>
+        </property>
         <property name="Direction" type="java.lang.String">
             <column name="direction" not-null="true"/>
+        </property>
+        <property name="InstituteId" type="java.lang.Integer">
+            <column name="institute_id" not-null="true"/>
+        </property>
+        <property name="EducationId" type="java.lang.Integer">
+            <column name="education_id" not-null="true"/>
+        </property>
+        <property name="IsDeleted" type="java.lang.Integer">
+            <column name="is_deleted" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

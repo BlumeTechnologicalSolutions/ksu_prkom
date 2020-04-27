@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class UserServiceRestController {
 
-    private UserService userService;
+ private UserService userService;
     private Logger logger = LoggerFactory.getLogger(UserServiceRestController.class);
 
     @Inject
@@ -63,6 +63,31 @@ public class UserServiceRestController {
     @ResponseStatus(HttpStatus.OK)
     public Response getRegistrationSecretQuestions () {
         return userService.getRegistrationSecretQuestions();
+    }
+
+
+    @RequestMapping(value = "/getInstitutes", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Response getInstitutions () {
+        return userService.getInstitutes();
+    }
+
+    @RequestMapping(value = "/getDirections", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Response getDirections () {
+        return userService.getDirections();
+    }
+
+    @RequestMapping(value = "/getEducationForms", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Response getEducationForms () {
+        return userService.getEducationForms();
+    }
+
+    @RequestMapping(value = "/getEducations", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Response getEducations () {
+        return userService.getEducations();
     }
 
     /*@RequestMapping(value = "/get", method = RequestMethod.GET) // JUST EXAMPLE

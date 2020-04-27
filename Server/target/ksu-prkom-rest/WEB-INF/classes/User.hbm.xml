@@ -44,6 +44,18 @@
         <property name="ControlQuestion" type="java.lang.String">
             <column name="control_question" not-null="true"/>
         </property>
+        <property name="Sex" type="java.lang.Boolean">
+            <column name="sex" not-null="true"/>
+        </property>
+        <property name="DateOfBirth" type="java.util.Date">
+            <column name="date_of_birth" not-null="true"/>
+        </property>
+        <property name="ContactPhone" type="java.lang.String">
+            <column name="contact_phone" not-null="true"/>
+        </property>
+        <property name="ForeignLanguage" type="java.lang.String">
+            <column name="foreign_language" not-null="true"/>
+        </property>
 
     </class>
 </hibernate-mapping>
