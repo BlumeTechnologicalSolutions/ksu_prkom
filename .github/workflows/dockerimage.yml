@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry
-      uses: whitetech7417/ksu_prkom@master
+      uses: whitetech7417/ksu_prkom
       with:
         name: blumetechsolutions/ksu_prkom
         username: ${{ secrets.DOCKER_USERNAME }}
