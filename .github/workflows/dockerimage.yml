@@ -1,32 +1,13 @@
 name: DeployToDockerHub
-
-on:
-   push:
-     branches:    
-      - master
-
-
-
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@master
-
-      - name: Login to docker hub
-        if: success()
-        uses: actions-hub/docker/login@master
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Build image
-        if: success()
-        run: docker build -t ${GITHUB_REPOSITORY} .
-
-      - name: Push to docker registry
-        if: success()
-        uses: actions-hub/docker@master
-        with:
-          args: push ${GITHUB_REPOSITORY}
+    - uses: actions/checkout@master
+    - name: Publish to Docker Repository
+      uses: Whitetech7417/ksu_prkom@master
+      with:
+        name: dockerfromgithub
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
