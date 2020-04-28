@@ -9,12 +9,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
 
       - name: Docker Build & Push to Docker Hub
-        uses: Whitetech7417/ksu_prkom@master
+        uses: Whitetech7417/ksu_prkom/.github/workflows@master
         with:
           args: --docker
         env:
